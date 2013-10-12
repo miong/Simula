@@ -13,5 +13,7 @@ git@github.com:miong/poca_project_2013-2014.git
 
 email:
 
-Mion Giovanni: mion.ggb@gmail.com
-sylvain.carpe@infonie.fr
+Mion Giovanni:
+	mion.ggb@gmail.com
+Carpentier Sylvain:
+	sylvain.carpe@infonie.fr
