@@ -19,3 +19,6 @@ Carpentier Sylvain:
 	sylvain.carpe@infonie.fr
 Pancarte Kenny:
 	kenny.pancarte@gmail.com
+
+Lien jeu micropolis:
+http://sourceforge.net/projects/micropolis.mirror/
