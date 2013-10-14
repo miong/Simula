@@ -1,0 +1,279 @@
+
+
+
+
+
+
+
+
+
+
+
+
+Programmation Orientée Objet – Concepts Avancés
+
+Cahier des charges – SIM CITY
+
+
+
+
+Mion Giovanni
+Pancarte Kenny
+Carpentier Sylvain
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+1. Introduction
+
+Le but de ce projet est de développer une copie du jeu Sim City (sorti en 1989) implémentée en Scala.
+
+Notre groupe se compose de :
+CARPENTIER Sylvain
+MION Giovanni
+PANCARTE Kenny
+
+
+2. Contexte
+
+	Dans le cadre de notre formation en informatique, nous sommes amenés à développer une version du jeu Sim City en utilisant le langage Scala et les notions vues tout au long de notre parcours.
+	Ce logiciel doit être extensible, modulable et doit ressembler le plus possible à la version Open Source de Sim City nommée Micropolis, qui peut être téléchargée à l'adresse suivante : http://sourceforge.net/projects/micropolis.mirror/
+
+
+3. Description de la demande
+
+3.1 Objectifs
+
+	Obtenir un logiciel reprenant les concepts majeurs du jeu Sim City. Le fonctionnement de ce jeu sera décrit dans la partie blblblbl
+
+3.2 Produit du projet
+	
+	Le produit est programme développé dans le langage Scala, capable de supporter des modifications ultérieures.
+
+3.4 Fonctions du produit
+
+	Sim City est un jeu de gestion de ville. Le joueur, simulant le maire d'une ville, construit des infrastructures, lève des impôts, gère le budget, la satisfaction des citoyens, la criminalité, etc... Le jeu n'a pas de fin prédéfinie, le joueur est laissé libre quand au développement de sa ville.
+	Plus de détails à l'adresse suivante : http://fr.wikipedia.org/wiki/SimCity_(jeu_vidéo,_1989)
+
+
+3.5 Détail des fonctionnalités
+
+
+3.5.1 Environnement du jeu
+
+	Le jeu se déroule sur une carte interractive générée aléatoirement, composée de zones terrestres, forestières et maritimes ayant des propriétés propres.
+	Le joueur peut construire sur ces zones des infrastructures selon des rêgles spécifiques (voir paragraphe 3.5.3).
+	Ces infrastructures vont influencer les paramètres du jeu (voir paragraphe 3.5.2) et donc influencer la partie.
+
+
+	
+3.5.2 Paramètres de jeu
+
+	La ville administrée par le joueur est modélisée par la série de paramètres suivants :
+difficulté : affecte les rentrées et sorties d'argent, et les chances de désastres
+vitesse de jeu
+population : nombre d'habitants, lesquels sont caractérisés par leur classe sociale
+pollution : générée par certains bâtiments, elles affecte la croissance de la population
+criminalité : affecte la croissance de la population
+impôts : affectent la population, source de revenus du joueur
+investissements : argent dépenssé pour l'entretien des infrastructures (voir)
+
+
+
+3.5.3 Zones
+
+Une carte vierge est constituée de zones de trois types :
+-Terre : zone constructible sans restriction
+Forêt : zone constructible sans restriction absorbant la pollution
+Eau : seules les routes et rails peuvent y être construits
+Terrain contaminé : inconstructible et augmente la pollution pendant un certain temps
+
+3.5.2 Budget
+
+Le joueur dispose d'une certaine somme au départ dont il se sert pour construire des infrastructures.
+Cette somme augment grâce aux taxes et sert également à l'entretien des infrastructures auquelles la somme allouée est rêglable.
+
+3.5.3 Population
+
+Nombre d'habitants de la ville, sa croissance dépend des critères du jeu.
+
+3.5.4 Désastres
+
+Ce sont des événements déclenchés automatiquement ou par le joueur qui détruisent des bâtiments et affectent la population.
+Un désastre est representé par une certaine zone sur la carte, peut se déplacer et dure un certain temps.
+Ce sont par exemple un Monstre, une Inondation, un Tremblement de Terre, un Incendie, une Tornade, une Catastrophe Nucléaire.
+ 
+3.5.5 Infrastructures
+
+Les infrastructures disponibles et leurs caractéristiques sont les suivantes :
+	→ zones : elles sont créées par le joueur mais se remplissent et fonctionnent d'elles mêmes.
+Elles augmentent la criminalité.  Ces zones ont une taille de 3x3 zones de terrain et un coût de 100$.
+		→ résidentielles : elles  permettent d'augmenter la population de la ville et correspondent à un certain niveau de richesse (ex : classes moyennes, aisées...).
+		→ commerciales : elles fournissent du travail à la population (ce qui est un critère de croissance). 
+		→ industrielles : elles fournissent du travail à la population (ce qui est un critère de croissance) mais augmentent la pollution.
+
+	→ postes : ont une zone d'effet en fonction du budget alloué. Ils coutent 500$ et ont un taille de 3x3
+		→ de police : permettent de réduire la criminalité. 
+		→ de pompiers : luttent contre les désastres
+	
+	→ centrales : alimenter les bâtiments en electricité pour qu'ils soient fonctionnels, elles ont une taille de 4x4
+			→ au charbon : polluent beaucoup, coutent 3000$
+			→ nucléaires : sont sujettes à l'explosion et coûtent 5000$, polluent moins
+
+	→ aéroports/ports : augmentent la population et le commerce via le tourisme. Ils ont une taille de respectivement 6x6 et 4x4. Ils permettent également de dépasser un cap de population.
+
+	→ stade : permet d'augmenter la population et de dépasser un cap.
+	
+	→ parcs : augment la population, réduisent la pollution, de manière similaire aux fôréts
+
+	→ routes et chemins de fer : permettent de relier les différentes infrastructures entre elles, génèrent de la pollution, se deteriorent et doivent être entretenues grâce aux investissements décidés dans le budget.
+
+	→ lignes electriques : permettent de relier les infrastructures aux centrales afin de les alimenter en energie et de les rendre fonctionnels.
+
+
+3.5.6 Energie / Alimentation
+
+L'electricité est produite dans les centrales. Elle est nécessaire pour que les infrastrucures (autres que routes et rails) fonctionnent. Il faut donc que ces infrastrucures soient reliées aux centrales via les lignes electriques. Notons que deux infrastructures contigües sont reliées electriquement. Une centrale ne peut alimenter qu'un certain nombre d'infrastructures.
+
+3.5.5 Transports
+
+Les transports (routes et rails) forment un réseau permettant de distiller les services dispensés par les infrastructures appartenant à ce réseau les unes aux autres. Par exemple : les habitants d'une zone résidentielle vont travailler dans une zone commerciale reliée par une route. Le trafic sur ces axes est quantifié, un trafic trop élevé augmente la pollution et l'usure.
+
+3.5.6 pollution / Criminalité
+
+
+4. Contraintes
+
+4.1 Contraintes de coûts
+
+	Ce logiciel n'a pas vocation à être lucratif. Il sera développé de manière Open Source, sans licenses.
+
+4.2 Contraintes de délais
+
+Ce logiciel devra être opérationnel pour la soutenance prévue en Janvier 2014, ce qui correspond à la fin du premier semestre universitaire.
+
+Le déroulement spécifique est vu plus en détail dans la partie suivante.
+
+
+4.3 4.3 Contraintes d'implémentation
+
+
+Ce logiciel doit être développé dans le langage de programmation Scala. Il peut faire appel à des librairies Java compatibles, par exemple JCurses.
+
+ 
+5. Déroulement du projet
+	
+	Ce projet se décompose en plusieurs phases :
+
+	-Spécification, qui donne lieu à ce cahier des charges.
+
+	-Définition de l'architecture sous formes de diagrammes de classe UML ou d'autres diagrammes dont les choix sont justifiés, contenant :
+		-une interprétation du sujet de manière informelle
+		-une définition des concepts de modélisation utilisés
+		-une description de l'architecture (contenant diagrammes et justifications)
+		-une liste des extensions envisagées permises par cette architecture.
+	Un rendu est attendu pour le 28 octobre 2013.
+
+	-Une première ébauche de l'implémentation (skeleton), contenant les abstractions de l'architecture et une ébauche de l'interface utilisateur.
+	Un rendu est attendu pour le 4 novembre 2013.
+
+	-Implémentation et test, débouchant sur un prototype fonctionnel et testé du logiciel.
+	Un rendu est atendu pour le 18 novembre 2013.
+
+Enfin, une soutenance en janvier permettra de présenter la version finale du projet.
+
+
+Fonctionnalités logiciel
+
+→ jouer à un jeu
+	→ Sim City → jeu de gestion dans véritable fin
+
+→ élements du jeu
+
+	→ carte
+	→ sous/budget
+	→ constructions
+		→ batiments
+		→ routes/ connexions
+	→ habitants
+	→ evenements/ catastrophes
+	→ pollution
+	→ criminalité
+	→ trafic routier/frooviaire
+	→ alimentation électrique
+	→ satisfaction 
+
+
+
+→ générer une carte
+	→ terre 
+	→ eau (pas cnstructible)
+	→ forêt
+
+→ changer la vitesse du jeu
+
+→ choisir la difficulté → moins de sous au départ et impots plus faibles
+
+→ construire des infrastructures (chaque chose a un prix)
+	→ plusieurs types de quartiers/bâtiments
+		→ zones (densités de population)
+			→ résidentielles → permet d'augmenter la population de la ville
+				→ niveau de richesse (classes moyennes, aisées.....)
+			→ commerciales → donne du boulot
+			→ industrielles → donne du boulot, polluent
+		→ postes : zone d'effet en fonction du budget
+			→ de police → réduire la criminalité 
+			→ de pompiers → combattre les incendies (qui détruisent les bâtiments)
+		→ centrales → alimenter les bâtiments en electricité pour qu'ils soient fonctionnels
+			→ au charbon → polluent beaucoup
+			→ nucléaires → risque d'explosion
+			→ lignes electriques
+		→ aéroports/ports → augmenter la population et le commerce via le tourisme
+		→ stade → augmenter la population
+	→ parcs → réduisent la pollution
+	→ routes/rails → permettent d'accéder aux zones
+
+→ détruire des infrastructures (payant)
+
+→ définir un budget (tous les ans)
+	→ entretien des infrastructures → routes et rails s'usent et sont détruits
+	→ budget police
+	→ budget pompiers
+	→ impots, mécontentent les habitants
+
+→ déclencher des catastrophes (détruisent les bâtiments, font fuir les gens)
+	→ monstre
+	→ catastrophe nucléaire
+	→ incendie
+	→ ….
+
+→ sauvegarder la carte
+
+Ce qui se fait automatiquement :
+	la croissance de la population, de l'industrie
+	l'usure des infrastructures
+	la criminalité
+	les catastrophes
+	l'évaluation
