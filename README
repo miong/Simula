@@ -38,7 +38,7 @@ Le programme requiere pour compiler d'etre dans l'environnement suivant:
 ====================================================================
 On suppose l'environnement propice et correctement configur'e.
 
-Linux
+UNIX / Linux / OS X
 -----
 [./configure]
 [./make] ou [./make install] ce qui installera le programme
