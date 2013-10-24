@@ -1,33 +1,32 @@
-Projet de POCA 2013-2014
-Clone de SimCity en scala
+====================================================================
+				Simula
+====================================================================
 
-equipe:
+Le projet Simula est issue du cours de POOCA de l'Universit'e Paris Diderot Paris 7.
+Le but est de d'evelopper un jeu de simulation de gestion de ville type Simcity en langage Scala.
 
-Carpentier Sylvain
-Mion Giovanni
-Mbiada Jacques Charles
-Pancarte Kenny
+Equipe
+----
 
-Lien git:
-https://github.com/miong/Simula_project_2013-2014.git
-git@github.com:miong/Simula_project_2013-2014.git
+Carpentier Sylvain <sylvain.carpe@infonie.fr>
+Mion Giovanni <mion.ggb@gmail.com>
+Mbiada Jacques Charles <jcharles.nmbiada@gmail.com>
+Pancarte Kenny <kenny.pancarte@gmail.com>
 
-email:
-
-Mion Giovanni:
-	mion.ggb@gmail.com
-Carpentier Sylvain:
-	sylvain.carpe@infonie.fr
-Pancarte Kenny:
-	kenny.pancarte@gmail.com
-
-Lien jeu micropolis:
-http://sourceforge.net/projects/micropolis.mirror/
+Lien
+---
+- Lien vers le cours
+- https://github.com/miong/Simula_project_2013-2014.git
+- git@github.com:miong/Simula_project_2013-2014.git
+- http://sourceforge.net/projects/micropolis.mirror/
 
 ====================================================================
 			REQUIEREMENT
 ====================================================================
 Le programme requiere pour compiler d'etre dans l'environnement suivant:
+Ce joie se justifie par l'usage des possibilit'es majeurs de Scala dans sa
+derni'ere release.
+
 - l'installation de la jre version 7 minimum
 - l'installation de scala-2.10 minimum ainsi que de son compilateur
 - avoir sur son systeme, sqlite3 ou mongodb (de preference)
@@ -39,7 +38,7 @@ Le programme requiere pour compiler d'etre dans l'environnement suivant:
 On suppose l'environnement propice et correctement configur'e.
 
 UNIX / Linux / OS X
------
+----
 [./configure]
 [./make] ou [./make install] ce qui installera le programme
 apr'es la compilation. 
