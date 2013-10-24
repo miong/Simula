@@ -13,13 +13,6 @@ Mion Giovanni <mion.ggb@gmail.com>
 Mbiada Jacques Charles <jcharles.nmbiada@gmail.com>
 Pancarte Kenny <kenny.pancarte@gmail.com>
 
-Lien
----
-- Lien vers le cours
-- https://github.com/miong/Simula_project_2013-2014.git
-- git@github.com:miong/Simula_project_2013-2014.git
-- http://sourceforge.net/projects/micropolis.mirror/
-
 ====================================================================
 			REQUIEREMENT
 ====================================================================
@@ -46,3 +39,10 @@ Pour l'executer, retez dans le repertoire racine du projet
 puis tappez [./bin/simula] dans le terminal si vous n'avez rien install'e
 Autrement, tapez simplement [simula] si vous avez effectuez l'installation
 (il est possible que vous ayiez a relancer votre emulateur de terminal)
+
+Lien
+---
+- Lien vers le cours
+- https://github.com/miong/Simula_project_2013-2014.git
+- git@github.com:miong/Simula_project_2013-2014.git
+- http://sourceforge.net/projects/micropolis.mirror/
