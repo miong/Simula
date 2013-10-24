@@ -1,6 +1,5 @@
-
-				Simula
-====================================================================
+Simula
+======
 
 Le projet Simula est issue du cours de POOCA de l'Universit'e Paris Diderot Paris 7. \n
 Le but est de d'evelopper un jeu de simulation de gestion de ville type Simcity en langage Scala. \n
@@ -14,7 +13,7 @@ Mbiada Jacques Charles <jcharles.nmbiada@gmail.com>
 Pancarte Kenny <kenny.pancarte@gmail.com>
 
 
-			REQUIEREMENT
+REQUIEREMENT
 ----
 Le programme requiere pour compiler d'etre dans l'environnement suivant:
 Ce joie se justifie par l'usage des possibilit'es majeurs de Scala dans sa
@@ -26,7 +25,7 @@ derni'ere release.
 - accepter la licence qui accompagne ce programme
 
 
-			INSTALLATION
+INSTALLATION
 ---
 On suppose l'environnement propice et correctement configur'e.
 
