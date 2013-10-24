@@ -2,14 +2,14 @@
 				Simula
 ====================================================================
 
-Le projet Simula est issue du cours de POOCA de l'Universit'e Paris Diderot Paris 7.
-Le but est de d'evelopper un jeu de simulation de gestion de ville type Simcity en langage Scala.
+Le projet Simula est issue du cours de POOCA de l'Universit'e Paris Diderot Paris 7. \\
+Le but est de d'evelopper un jeu de simulation de gestion de ville type Simcity en langage Scala. \\
 
 Equipe
 ----
 
-Carpentier Sylvain <sylvain.carpe@infonie.fr>
-Mion Giovanni <mion.ggb@gmail.com>
+Carpentier Sylvain <sylvain.carpe@infonie.fr> \\
+Mion Giovanni <mion.ggb@gmail.com> \\
 Mbiada Jacques Charles <jcharles.nmbiada@gmail.com>
 Pancarte Kenny <kenny.pancarte@gmail.com>
 
