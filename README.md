@@ -8,8 +8,8 @@ Le but est de d'evelopper un jeu de simulation de gestion de ville type Simcity 
 Equipe
 ----
 
-Carpentier Sylvain <sylvain.carpe@infonie.fr> \n
-Mion Giovanni <mion.ggb@gmail.com> \n
+Carpentier Sylvain <sylvain.carpe@infonie.fr> <br>
+Mion Giovanni <mion.ggb@gmail.com> 
 Mbiada Jacques Charles <jcharles.nmbiada@gmail.com>
 Pancarte Kenny <kenny.pancarte@gmail.com>
 
