@@ -1,9 +1,10 @@
 Simula
 ======
-======
+
+************************
 Le projet Simula est issue du cours de POOCA de l'Universit'e Paris Diderot Paris 7.<br />
 Le but est de d'evelopper un jeu de simulation de gestion de ville type Simcity en langage Scala.<br />
-======
+*************************
 
 Equipe
 ----
@@ -32,14 +33,17 @@ On suppose l'environnement propice et correctement configur'e.
 
 ### UNIX / Linux / OS X
 
-[./configure]<br>
-[./make] ou [./make install] ce qui installera le programme<br>
-apr'es la compilation. <br>
-Pour l'executer, retez dans le repertoire racine du projet<br>
-puis tappez [./bin/simula] dans le terminal si vous n'avez rien install'e<br>
-Autrement, tapez simplement [simula] si vous avez effectuez l'installation<br>
-(il est possible que vous ayiez a relancer votre emulateur de terminal)<br>
-### UNIX / Linux / OS X
+Pour des raisons pratiques, nous utiliserons en premier lieu l'outil Make pour la compilation du projet <br />
+Mais nous comptons tres vite passer sous sbt. <br />
+
+[./configure]<br />
+[./make] ou [./make install] ce qui installera le programme<br />
+apr'es la compilation. <br />
+Pour l'executer, retez dans le repertoire racine du projet<br />
+puis tappez [./bin/simula] dans le terminal si vous n'avez rien install'e<br />
+Autrement, tapez simplement [simula] si vous avez effectuez l'installation<br />
+(il est possible que vous ayiez a relancer votre emulateur de terminal)<br />
+### Windows
 
 Liens
 ---
