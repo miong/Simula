@@ -1,18 +1,27 @@
-package Scanner
+/**
+ * *******************************************************
+ * Simula
+ * scanner
+ * Test.scala
+ * (c)Simula on 30 oct. 2013 11:17:58
+ * By Bubul
+ * Update 30 oct. 2013 11:17:58
+ * *******************************************************
+ */
+package scanner
 
-class GeneralScanner extends CriminalityScanner with NetworkScanner with PolutionScanner with PopulationScanner{
+class GeneralScanner extends GeneralScannerInterface with CriminalityScanner with NetworkScanner with PolutionScanner with PopulationScanner{
   
-  private var model : Model = null
-  private var engine : Engine = null
-  
-  def BuildScanner(m:Model,e:Engine):GeneralScanner = {
-	  val gs : GeneralScanner = new GeneralScanner()
+
+}
+
+object GeneralScanner {
+
+  def GeneralScannerBuilder(m:Model,e:Engine):GeneralScannerInterface = {
+	  var gs = new GeneralScanner()
 	  gs.model = m
 	  gs.engine = e
 	  return gs
-	  
-  }
+ }
   
-  
-
 }

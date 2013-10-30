@@ -10,8 +10,13 @@
  */
 package scanner
 
-abstract class Model {
+class GeneralScannerBuilder extends GeneralScannerBuilderInterface {
   
-  def retrieveNumberOfCitizens() : Integer
-  
+  def ScannerBuilder(m:Model,e:Engine): GeneralScannerInterface = {
+		 var gs : GeneralScanner = new GeneralScanner()
+		 gs.model = m
+		 gs.engine = e
+		 return gs
+  }
+
 }

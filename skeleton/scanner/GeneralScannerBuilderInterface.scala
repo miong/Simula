@@ -10,8 +10,8 @@
  */
 package scanner
 
-abstract class Model {
+abstract class GeneralScannerBuilderInterface {
   
-  def retrieveNumberOfCitizens() : Integer
-  
+	def ScannerBuilder(m:Model,e:Engine):GeneralScannerInterface
+	
 }

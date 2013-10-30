@@ -10,8 +10,11 @@
  */
 package scanner
 
-abstract class Model {
+abstract class GeneralScannerInterface{
   
-  def retrieveNumberOfCitizens() : Integer
+  var model : Model = null
+  var engine : Engine = null
   
+  def ScanNumberOfCitizens():Integer
 }
+
