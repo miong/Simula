@@ -48,6 +48,6 @@ Autrement, tapez simplement [simula] si vous avez effectuez l'installation<br />
 Liens
 ---
 - Lien vers le cours
-- https://github.com/miong/Simula_project_2013-2014.git
-- git@github.com:miong/Simula_project_2013-2014.git
+- https://github.com/miong/Simula.git
+- git@github.com:miong/Simula.git
 - http://sourceforge.net/projects/micropolis.mirror/
