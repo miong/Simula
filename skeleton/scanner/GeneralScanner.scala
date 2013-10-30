@@ -1,3 +1,5 @@
+package Scanner
+
 class GeneralScanner extends CriminalityScanner with NetworkScanner with PolutionScanner with PopulationScanner{
   
   private var model : Model = null
