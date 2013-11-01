@@ -2,10 +2,10 @@
  * *******************************************************
  * Simula
  * scanner
- * PolutionScanner.scala
- * (c)Simula on 30 oct. 2013 11:22:34
+ * RetreivedInformationInterface.scala
+ * (c)Simula on 1 nov. 2013 13:20:49
  * By Bubul
- * Update 30 oct. 2013 11:22:34
+ * Update 1 nov. 2013 13:20:49
  * *******************************************************
  */
 package scanner
@@ -14,8 +14,10 @@ package scanner
  * @author Bubul
  *
  */
-trait PolutionScanner {
+abstract class RetreivedInformationInterface {
+	
+	def getNumberOfCitizen():Integer;
   
   
-
+  
 }

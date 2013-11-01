@@ -17,18 +17,20 @@ import org.scalacheck._
 
 class TestGeneralScanner extends FlatSpec with ShouldMatchers {
   
-  "A GeneralScanner" should "retrieve the number of citizens of its model" in {
-    var m : Model = new Model{
+	val m : Model = new Model{
 		def retrieveNumberOfCitizens() : Integer = 0;
     }
-    
-    var e: scanner.Engine = new scanner.Engine{
+    val e: scanner.Engine = new scanner.Engine{
       
     }
-    var gsbuilder = new GeneralScannerBuilder()
-    var gs : GeneralScannerInterface = gsbuilder.ScannerBuilder(m, e)
-    gs.ScanNumberOfCitizens should be (0)
+    val gsbuilder:GeneralScannerBuilderInterface  = new GeneralScannerBuilder()
+    val gs : GeneralScannerInterface = gsbuilder.ScannerBuilder(m, e)
+    val ribuilder:RetreivedInformationBuilderInterface = new RetreivedInformationBuilder(gs)
+    var ri:RetreivedInformationInterface = ribuilder.build()
     
+  "A GeneralScanner" should "retrieve the number of citizens of its model" in {
+    gs.ScanNumberOfCitizens should be (0) 
+    ri.getNumberOfCitizen should be (0)
   }
 
 }
