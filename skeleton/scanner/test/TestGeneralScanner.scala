@@ -20,6 +20,7 @@ class TestGeneralScanner extends FlatSpec with ShouldMatchers {
 	val m : Model = new Model{
 		def retrieveNumberOfCitizens() : Integer = 0
 		def retrievedGlobalPolution() : Integer = 0
+		def retrievedGlobalCriminality : Integer = 0
     }
     val e: scanner.Engine = new scanner.Engine{
       
@@ -39,4 +40,8 @@ class TestGeneralScanner extends FlatSpec with ShouldMatchers {
     	ri.getGlobalPolution() should be (0)
     }
 
+    "It" should "retrieve the global criminality of its model" in{
+    	gs.ScanGlobalCriminality() should be (0)
+    	ri.getGlobalCriminality() should be (0)
+    }
 }
