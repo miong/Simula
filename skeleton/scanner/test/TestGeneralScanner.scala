@@ -18,7 +18,8 @@ import org.scalacheck._
 class TestGeneralScanner extends FlatSpec with ShouldMatchers {
   
 	val m : Model = new Model{
-		def retrieveNumberOfCitizens() : Integer = 0;
+		def retrieveNumberOfCitizens() : Integer = 0
+		def retrievedGlobalPolution() : Integer = 0
     }
     val e: scanner.Engine = new scanner.Engine{
       
@@ -28,9 +29,14 @@ class TestGeneralScanner extends FlatSpec with ShouldMatchers {
     val ribuilder:RetreivedInformationBuilderInterface = new RetreivedInformationBuilder(gs)
     var ri:RetreivedInformationInterface = ribuilder.build()
     
-  "A GeneralScanner" should "retrieve the number of citizens of its model" in {
-    gs.ScanNumberOfCitizens should be (0) 
-    ri.getNumberOfCitizen should be (0)
-  }
+    "A GeneralScanner" should "retrieve the number of citizens of its model" in {
+    	gs.ScanNumberOfCitizens() should be (0) 
+    	ri.getNumberOfCitizen() should be (0)
+    }
+   
+    "It" should "retrieve the global polution of its model" in{
+    	gs.ScanGlobalPolution() should be (0)
+    	ri.getGlobalPolution() should be (0)
+    }
 
 }

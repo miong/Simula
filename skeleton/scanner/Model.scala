@@ -13,5 +13,6 @@ package scanner
 abstract class Model {
   
   def retrieveNumberOfCitizens() : Integer
+  def retrievedGlobalPolution() : Integer
   
 }
