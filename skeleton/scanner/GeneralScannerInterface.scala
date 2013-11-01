@@ -17,5 +17,6 @@ abstract class GeneralScannerInterface{
   
   def ScanNumberOfCitizens():Integer
   def ScanGlobalPolution():Integer
+  def ScanGlobalCriminality():Integer
 }
 

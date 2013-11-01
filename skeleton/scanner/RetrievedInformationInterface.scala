@@ -18,6 +18,7 @@ abstract class RetreivedInformationInterface {
 	
 	def getNumberOfCitizen():Integer;
 	def getGlobalPolution():Integer;
+	def getGlobalCriminality():Integer;
   
   
   

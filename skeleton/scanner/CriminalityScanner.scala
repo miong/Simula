@@ -15,5 +15,9 @@ package scanner
  *
  */
 trait CriminalityScanner {
-
+	var model : Model
+	
+	def ScanGlobalCriminality : Integer = {
+	  return model.retrievedGlobalCriminality();
+	}
 }

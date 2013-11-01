@@ -19,7 +19,8 @@ class RetreivedInformationBuilder(scanner : GeneralScannerInterface) extends Ret
   def build():RetreivedInformation = {
     val nCitizen = scanner.ScanNumberOfCitizens()
     val nGlobalPolution = scanner.ScanGlobalPolution()
+    val nGlobalCriminality = scanner.ScanGlobalCriminality()
     
-    return new RetreivedInformation(nCitizen,nGlobalPolution)
+    return new RetreivedInformation(nCitizen,nGlobalPolution,nGlobalCriminality)
   }
 }

@@ -14,7 +14,7 @@ package scanner
  * @author Bubul
  *
  */
-class RetreivedInformation(val numberOfCitizen:Integer,val globalPolution:Integer) extends RetreivedInformationInterface {
+class RetreivedInformation(val numberOfCitizen:Integer,val globalPolution:Integer,val globalCriminality:Integer) extends RetreivedInformationInterface {
 	
 	def getNumberOfCitizen():Integer = {
 	  return numberOfCitizen
@@ -22,6 +22,10 @@ class RetreivedInformation(val numberOfCitizen:Integer,val globalPolution:Intege
 	
 	def getGlobalPolution():Integer = {
 	  return globalPolution
+	}
+	
+	def getGlobalCriminality:Integer = {
+	  return globalCriminality
 	}
 
 }

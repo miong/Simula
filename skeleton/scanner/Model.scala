@@ -14,5 +14,6 @@ abstract class Model {
   
   def retrieveNumberOfCitizens() : Integer
   def retrievedGlobalPolution() : Integer
+  def retrievedGlobalCriminality() : Integer
   
 }
