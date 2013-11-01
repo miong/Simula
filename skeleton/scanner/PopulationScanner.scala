@@ -15,5 +15,12 @@ package scanner
  *
  */
 trait PopulationScanner {
-
+	
+    var model : Model
+    
+	def ScanNumberOfCitizens():Integer = {
+      
+	  return model.retrieveNumberOfCitizens
+      
+	}
 }
