@@ -16,5 +16,6 @@ abstract class GeneralScannerInterface{
   var engine : Engine = null
   
   def ScanNumberOfCitizens():Integer
+  def ScanGlobalPolution():Integer
 }
 

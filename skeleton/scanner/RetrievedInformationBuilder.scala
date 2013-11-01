@@ -17,8 +17,9 @@ package scanner
 class RetreivedInformationBuilder(scanner : GeneralScannerInterface) extends RetreivedInformationBuilderInterface{
 	
   def build():RetreivedInformation = {
-    val nCitizen = scanner.ScanNumberOfCitizens
+    val nCitizen = scanner.ScanNumberOfCitizens()
+    val nGlobalPolution = scanner.ScanGlobalPolution()
     
-    return new RetreivedInformation(nCitizen)
+    return new RetreivedInformation(nCitizen,nGlobalPolution)
   }
 }

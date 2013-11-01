@@ -15,7 +15,10 @@ package scanner
  *
  */
 trait PolutionScanner {
+  var model : Model
   
-  
+  def ScanGlobalPolution:Integer = {
+	return model.retrievedGlobalPolution()
+  }
 
 }

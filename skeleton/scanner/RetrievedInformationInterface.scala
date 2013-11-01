@@ -17,6 +17,7 @@ package scanner
 abstract class RetreivedInformationInterface {
 	
 	def getNumberOfCitizen():Integer;
+	def getGlobalPolution():Integer;
   
   
   
