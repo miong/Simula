@@ -10,6 +10,6 @@
  */
 package Engine
 
-class ConcreteEffect {
+class ConcreteEffect extends SideEffect {
 
 }
