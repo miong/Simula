@@ -10,6 +10,6 @@
  */
 package Engine
 
-trait SideEffect {
+abstract class SideEffect {
 
 }
