@@ -15,5 +15,9 @@
 package model.city
 
 class Box {
+	var value:Int;
+	var polution:Int;
+	var criminality:Int;
+	var infrastructure:Infrastructure;
 
 }

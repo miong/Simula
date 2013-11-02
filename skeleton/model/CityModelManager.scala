@@ -15,6 +15,12 @@
 
 package model
 
-class CityModelManager {
+import model.city.CityAccess
 
+class CityModelManager {
+	var cityAccess: CityAccess;
+	
+	def retrievedNumberOfCitizens:Int={
+	  return cityAccess.getNumberOfCitizens()
+	}
 }

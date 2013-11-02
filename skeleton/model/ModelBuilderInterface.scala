@@ -15,5 +15,5 @@
 package model
 
 abstract class ModelBuilderInterface {
-
+	def ModelBuilder():ModelBuilderInterface
 }

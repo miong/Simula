@@ -15,5 +15,12 @@
 package model.city
 
 class Size {
-
+	var length: Int;
+	var width: Int;
+	
+	def Size(length:Int,width:Int);
+	
+	def numberOfBoxes():Int={
+	  return length*width;
+	}
 }

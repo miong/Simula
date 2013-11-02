@@ -15,5 +15,7 @@
 package model
 
 class ModelBuilder extends ModelBuilderInterface{
-
+	def ModelBuilder():Model{
+	  
+	}
 }

@@ -14,6 +14,18 @@
  */
 package model
 
-class ModelManager {
+class ModelManager extends Model{
 
+	var cityModelManager: CityModelManager;
+	
+	def retrievedGlobalCriminality():Int={
+		return 0;
+	}
+	def retrievedGlobalPolution():Int={
+		return 0;
+	}
+	def retrieveNumberOfCitizens():Int={
+		return cityModelManager.retrievedNumberOfCitizens;
+	}
+	
 }

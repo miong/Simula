@@ -15,5 +15,5 @@
 package model.city
 
 abstract class CityAccess {
-
+	def getNumberOfCitizens():Int;
 }

@@ -15,5 +15,10 @@
 package model.city
 
 class Infrastructure {
-
+	var size:Size;
+	var location:Location;
+	
+	var polution:Int;
+	var criminality:Int;
+	var population: Population;
 }

@@ -15,5 +15,8 @@
 package model
 
 abstract class Model {
-
+	def retrievedGlobalCriminality():Int;
+	def retrievedGlobalPolution():Int;
+	def retrieveNumberOfCitizens():Int;
+	
 }
