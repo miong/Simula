@@ -11,5 +11,8 @@
 package Engine
 
 class GameControler {
-	
+	var sideEffect : SideEffect=null
+	def appliquerLesReglesDuJeu(m:AbstractModel)={
+	  
+	}
 }

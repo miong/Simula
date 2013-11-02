@@ -10,6 +10,7 @@
  */
 package Engine
 
-trait AbstractView {
-
+abstract class AbstractView {
+	def recupererActionsUtilisateur()
+	def afficherLeJeu(e:AbstractEngine)
 }

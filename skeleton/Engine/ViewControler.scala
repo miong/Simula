@@ -11,5 +11,10 @@
 package Engine
 
 class ViewControler {
-
+	def recupererActionsUtilisateur(v:AbstractView)={
+	  
+	}
+	def envoyerDonneesAViewPourAfficher(v:AbstractView)={
+	  
+	}
 }

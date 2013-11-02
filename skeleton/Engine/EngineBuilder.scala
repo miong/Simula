@@ -10,6 +10,11 @@
  */
 package Engine
 
-class EngineBuilder {
-
+class EngineBuilder extends EngineBuilderInterface {
+	def build(v:AbstractView,m:AbstractModel):AbstractEngine={
+		var engine:ConcreteEngine = new ConcreteEngine()
+		engine.model=m
+		engine.view = v
+		return engine
+	}
 }

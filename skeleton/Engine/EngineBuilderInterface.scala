@@ -10,6 +10,6 @@
  */
 package Engine
 
-trait EngineBuilderInterface {
+abstract class EngineBuilderInterface {
 
 }

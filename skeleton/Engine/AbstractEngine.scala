@@ -10,6 +10,12 @@
  */
 package Engine
 
-trait AbstractEngine {
-
+abstract class AbstractEngine {
+	var model: AbstractModel=null
+	var view: AbstractView=null
+	def recupereActionsUtilisateur(v:AbstractView)
+	def envoyerDonneesAViewPourAfficher(v:AbstractView)
+	def modifierLeModele(m:AbstractModel)
+	def recupererDonneesDuModele(m:AbstractModel)
+	def appliquerLesReglesDuJeu(m:AbstractModel)	
 }

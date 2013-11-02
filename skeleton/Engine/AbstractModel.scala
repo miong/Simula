@@ -10,6 +10,7 @@
  */
 package Engine
 
-trait AbstractModel {
-
+abstract class AbstractModel {
+  def modifierModel(e:AbstractEngine)
+  def recupererInfo(e:AbstractEngine)
 }

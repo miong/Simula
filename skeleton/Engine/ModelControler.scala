@@ -11,5 +11,10 @@
  */package Engine
 
 class ModelControler {
-
+	 def modifierLeModele(m:AbstractModel)={
+	   
+	 }
+	 def recupererDonneesDuModele(m:AbstractModel)={
+	   
+	 }
 }
