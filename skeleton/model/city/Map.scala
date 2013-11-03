@@ -22,7 +22,7 @@ class Map {
 	var polution:Int;
 	var criminality:Int;
 	var population:Population;
-	var tab:ofDim[Box](width,length);
+	var tab;
 	
 	def map(){
 	  size= new Size();
@@ -30,12 +30,13 @@ class Map {
 	  polution=0;
 	  criminality=0;
 	  population=new Population();
-	  tab=new Array[Array[Box]](size.length);
+	  tab=ofDim[Box](width,length);
 	  
 	}
 	
+	/*
 	def getNumberOfCitizens:Int={
 	  return population.getNumberOfCitizens();
 	}
-	
+	*/
 }

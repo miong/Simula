@@ -15,5 +15,5 @@
 package model.time
 
 class Clock {
-
+	val filters:List[TimeFilter];
 }

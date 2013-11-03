@@ -17,7 +17,10 @@ package model
 class ModelManager extends Model{
 
 	var cityModelManager: CityModelManager;
+	var playerModelManager:PlayerModelManager;
+	var TimeModelManager:TimeModelManager;
 	
+	/*
 	def retrievedGlobalCriminality():Int={
 		return 0;
 	}
@@ -27,5 +30,11 @@ class ModelManager extends Model{
 	def retrieveNumberOfCitizens():Int={
 		return cityModelManager.retrievedNumberOfCitizens;
 	}
+	*/
+	def giveCityAccess():CityAccess={
+	  return cityModelManager.giveCityAccess();
+	}
+	def givePlayerAccess():PlayerAccess;
+	def giveTimeAccess():TimeAccess;
 	
 }
