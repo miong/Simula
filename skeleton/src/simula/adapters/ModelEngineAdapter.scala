@@ -2,25 +2,19 @@
  *                        Simula                          *
  **********************************************************
  * simula.ui
- * BuildView.scala
- * (c) Simula. On 31 oct. 2013 12:49:12
+ * simula.adapters
+ * ModelEngineAdapter.scala
+ * (c) Simula. on 3 nov. 2013 03:18:59
  * By JC
- * Update 31 oct. 2013 12:49:12
+ * Update 3 nov. 2013 03:18:59
  *
  *********************************************************/
-package simula.ui
-import InterfaceType._
+package simula.adapters
+
 /**
  * @author JC
  *
  */
-
-trait BuildView {
-def apply(t: InterfaceType): UIInterface = {
-  var r: UIInterface = null
-  
-  
-  r;
-}
+class ModelEngineAdapter  extends ModelInterface with EngineInterface {
 
 }
