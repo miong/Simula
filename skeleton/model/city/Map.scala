@@ -24,13 +24,12 @@ class Map {
 	var population:Population;
 	var tab;
 	
-	def map(){
-	  size= new Size();
+	def map(s:Size){
 	  value=0;
 	  polution=0;
 	  criminality=0;
 	  population=new Population();
-	  tab=ofDim[Box](width,length);
+	  tab=ofDim[Box](s.length,s.width);
 	  
 	}
 	

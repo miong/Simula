@@ -37,4 +37,9 @@ class ModelManager extends Model{
 	def givePlayerAccess():PlayerAccess;
 	def giveTimeAccess():TimeAccess;
 	
+	def ModelManager(){
+	  cityModelManager=new CityModelManager();
+	  playerModelManager=new PlayerModelManager();
+	  TimeModelManager=new TimeModelManager();
+	}
 }

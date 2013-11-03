@@ -17,8 +17,8 @@ package model.city
 class City extends CityAccess{
 	var map:Map;
   
-	def city(){
-	  map=new Map();
+	def city(s:Size){
+	  map=new Map(s);
 	}
 	
 	def getNumberOfCitizens():Int={

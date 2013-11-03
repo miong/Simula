@@ -16,7 +16,6 @@ package model.city
 
 class CityBuilder extends CityBuilderInterface{
 	def CityBuilder():CityAccess={
-	  var city:City=new City();
-	  return city;
+	  return new City(new Size(10,10));
 	}
 }

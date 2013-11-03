@@ -15,7 +15,7 @@
 package model
 
 abstract class Model {
-	/*on oublie ça, ok, à la place je donne accès aux interfaces des elements
+	/*on oublie ça, ok, à la place je donne accès aux interfaces des elements directement
 	def retrievedGlobalCriminality():Int;
 	def retrievedGlobalPolution():Int;
 	def retrieveNumberOfCitizens():Int;

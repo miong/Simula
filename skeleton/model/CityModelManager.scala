@@ -16,6 +16,7 @@
 package model
 
 import model.city.CityAccess
+import model.city.CityBuilderInterface
 
 class CityModelManager {
 	var cityAccess: CityAccess;
@@ -24,6 +25,10 @@ class CityModelManager {
 	  return cityAccess.getNumberOfCitizens()
 	}
 	*/
+	
+	def cityModelManager(){
+	  cityAccess=CityBuilderInterface.CityBuilder();
+	}
 	def giveCityAccess(){
 	  return cityAccess;
 	}
