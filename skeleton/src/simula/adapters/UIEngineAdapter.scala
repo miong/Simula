@@ -1,7 +1,6 @@
 /**********************************************************
  *                        Simula                          *
  **********************************************************
- * simula.ui
  * simula.adapters
  * UIEngineAdapter.scala
  * (c) Simula. on 3 nov. 2013 02:57:52
@@ -18,6 +17,8 @@ import simula.common.SimulaData
  * @author JC
  *
  */
-class UIEngineAdapter extends UIInterface with EngineInterface {
+class UIEngineAdapter(_ui:UIInterface, eng:EngineInterface) extends UIInterface with EngineInterface {
+  var ui = _ui
+  var engine = eng
 
 }

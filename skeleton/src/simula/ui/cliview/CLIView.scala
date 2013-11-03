@@ -1,7 +1,6 @@
 /**********************************************************
  *                        Simula                          *
  **********************************************************
- * simula.ui
  * simula.ui.cliview
  * CLIView.scala
  * (c) Simula. on 30 oct. 2013 11:32:44
@@ -11,14 +10,14 @@
  *********************************************************/
 package simula.ui.cliview
 
-import simula.ui.ViewInterface
+import simula.ui.UIInterface
 import simula.common.SimulaData
 
 /**
  * @author JC
  *
  */
-class CLIView extends ViewInterface {
+class CLIView extends UIInterface {
 
 	def buildView = println("CLIVIEW buildView Called")
 	def redefineView = println("CLIVIEW RedefineView Called")
