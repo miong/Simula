@@ -10,11 +10,14 @@
  */
 package simula.model.scanner.test
 
+import simula.common._
 import simula.model.scanner._
 import simula.model._
 import org.scalatest._
 import org.scalatest.matchers._
 import org.scalacheck._
+import simula.model.scanner.RetreivedInformationBuilderInterface
+import simula.model.scanner.RetreivedInformationBuilder
 
 class TestGeneralScanner extends FlatSpec with ShouldMatchers {
   

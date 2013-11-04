@@ -9,6 +9,7 @@
  * *******************************************************
  */
 package simula.model.scanner
+import simula.common._
 
 /**
  * @author Bubul

@@ -8,7 +8,7 @@
  * Update 1 nov. 2013 13:21:16
  * *******************************************************
  */
-package simula.model.scanner
+package simula.common
 
 /**
  * @author Bubul
