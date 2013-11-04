@@ -13,6 +13,9 @@
  *
  */
 package model
+import model.city.CityAccess
+import model.player.PlayerAccess
+import model.time.TimeAccess
 
 abstract class Model {
 	/*on oublie ça, ok, à la place je donne accès aux interfaces des elements directement

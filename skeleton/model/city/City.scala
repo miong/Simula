@@ -14,14 +14,15 @@
  */
 package model.city
 
-class City extends CityAccess{
-	var map:Map;
+class City(s:Size) extends CityAccess{
+	var map:Map=new Map(s)
   
-	def city(s:Size){
-	  map=new Map(s);
+	def getMapAccess():Map ={
+	  return map;
 	}
 	
+	/*
 	def getNumberOfCitizens():Int={
 	  return map.getNumberOfCitizens;
-	}
+	}*/
 }

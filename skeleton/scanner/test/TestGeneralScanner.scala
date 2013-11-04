@@ -8,25 +8,21 @@
  * Update 30 oct. 2013 11:17:58
  * *******************************************************
  */
-package scanner.test
+package model.scanner.test
 
-import scanner._
+import model.scanner._
+import model._
 import org.scalatest._
 import org.scalatest.matchers._
 import org.scalacheck._
 
 class TestGeneralScanner extends FlatSpec with ShouldMatchers {
   
-	val m : Model = new Model{
-		def retrieveNumberOfCitizens() : Integer = 0
-		def retrievedGlobalPolution() : Integer = 0
-		def retrievedGlobalCriminality : Integer = 0
-    }
-    val e: scanner.Engine = new scanner.Engine{
-      
-    }
+	val mbuilder:ModelBuilderInterface = new ModelBuilder()
+	val m : Model = mbuilder.ModelBuilder
+   
     val gsbuilder:GeneralScannerBuilderInterface  = new GeneralScannerBuilder()
-    val gs : GeneralScannerInterface = gsbuilder.ScannerBuilder(m, e)
+    val gs : GeneralScannerInterface = gsbuilder.ScannerBuilder(m)
     val ribuilder:RetreivedInformationBuilderInterface = new RetreivedInformationBuilder(gs)
     var ri:RetreivedInformationInterface = ribuilder.build()
     

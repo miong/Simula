@@ -8,14 +8,14 @@
  * Update 30 oct. 2013 11:17:58
  * *******************************************************
  */
-package scanner
+package model.scanner
+import model._
 
 class GeneralScannerBuilder extends GeneralScannerBuilderInterface {
   
-  def ScannerBuilder(m:Model,e:Engine): GeneralScannerInterface = {
+  def ScannerBuilder(m:Model): GeneralScannerInterface = {
 		 var gs : GeneralScanner = new GeneralScanner()
 		 gs.model = m
-		 gs.engine = e
 		 return gs
   }
 

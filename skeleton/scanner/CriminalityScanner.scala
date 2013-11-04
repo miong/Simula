@@ -8,16 +8,24 @@
  * Update 30 oct. 2013 11:21:34
  * *******************************************************
  */
-package scanner
+package model.scanner
 
 /**
  * @author Bubul
  *
  */
-trait CriminalityScanner {
+import model._
+import model.city._
+
+trait CriminalityScanner extends InfrastructuresScanner{
 	var model : Model
 	
 	def ScanGlobalCriminality : Integer = {
-	  return model.retrievedGlobalCriminality();
+		var crim:Integer = 0;
+  		var infra = getInfrastructures(model)
+  		for(i:Infrastructure <- infra){
+  			crim += i.population.getNumberOfCitizens
+  		}
+  		return crim;
 	}
 }

@@ -14,11 +14,11 @@
  */
 package model.city
 
-class Infrastructure {
-	var size:Size;
-	var location:Location;
-	
-	var polution:Int;
-	var criminality:Int;
-	var population: Population;
+abstract class Infrastructure {
+	// Default value added !! need a Builder To set them at initialisation !!
+	var size:Size= new Size(0,0);
+	var location:Location=new Location();
+	var polution:Int=0;
+	var criminality:Int=0;
+	var population: Population=new Population();
 }

@@ -8,17 +8,24 @@
  * Update 30 oct. 2013 11:22:34
  * *******************************************************
  */
-package scanner
+package model.scanner
+import model._
+import model.city._
 
 /**
  * @author Bubul
  *
  */
-trait PolutionScanner {
+trait PolutionScanner extends InfrastructuresScanner {
   var model : Model
   
   def ScanGlobalPolution:Integer = {
-	return model.retrievedGlobalPolution()
+	var pol:Integer = 0;
+  	var infra = getInfrastructures(model)
+    for(i:Infrastructure <- infra){
+      pol += i.population.getNumberOfCitizens
+    }
+    return pol;
   }
 
 }

@@ -15,9 +15,9 @@
 package model.city
 
 class Box {
-	var value:Int;
-	var polution:Int;
-	var criminality:Int;
-	var infrastructures:List[Infrastructure];
+	var value:Int=0;
+	var polution:Int=0;
+	var criminality:Int=0;
+	var infrastructures:List[Infrastructure]=Nil;
 
 }

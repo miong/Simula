@@ -8,19 +8,24 @@
  * Update 30 oct. 2013 11:22:19
  * *******************************************************
  */
-package scanner
+package model.scanner
+import model._
+import model.city._
 
 /**
  * @author Bubul
  *
  */
-trait PopulationScanner {
+trait PopulationScanner extends InfrastructuresScanner{
 	
     var model : Model
     
 	def ScanNumberOfCitizens():Integer = {
-      
-	  return model.retrieveNumberOfCitizens
-      
+      var pop:Integer = 0;
+      var infra = this.getInfrastructures(model)
+      for(i:Infrastructure <- infra){
+        pop += i.population.getNumberOfCitizens
+      }
+      return pop;
 	}
 }

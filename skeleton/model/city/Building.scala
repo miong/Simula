@@ -14,7 +14,7 @@
  */
 package model.city
 
-class Building extends Infrastructure
+abstract class Building extends Infrastructure
 {
 
 }

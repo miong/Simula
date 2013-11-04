@@ -16,22 +16,13 @@ package model.city
 
 import Array._;
 
-class Map {
-	var size:Size
-	var value:Int;
-	var polution:Int;
-	var criminality:Int;
-	var population:Population;
-	var tab;
-	
-	def map(s:Size){
-	  value=0;
-	  polution=0;
-	  criminality=0;
-	  population=new Population();
-	  tab=ofDim[Box](s.length,s.width);
-	  
-	}
+class Map(s:Size){
+	var size:Size=s
+	var value:Int=0
+	var polution:Int=0
+	var criminality:Int=0
+	var population:Population = new Population()
+	var tab:Array[Array[Box]] = ofDim[Box](s.length,s.width)
 	
 	/*
 	def getNumberOfCitizens:Int={

@@ -15,7 +15,7 @@
 package model.city
 
 class Population {
-	var numberOfCitizens:Int;
+	var numberOfCitizens:Int=0;
 	
 	def setNumberOfCitizens(newNumberOfCitizens:Int)={
 	  numberOfCitizens=newNumberOfCitizens;

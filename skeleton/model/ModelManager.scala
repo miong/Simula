@@ -13,12 +13,15 @@
  *
  */
 package model
+import model.city.CityAccess
+import model.player.PlayerAccess
+import model.time.TimeAccess
 
 class ModelManager extends Model{
-
-	var cityModelManager: CityModelManager;
-	var playerModelManager:PlayerModelManager;
-	var TimeModelManager:TimeModelManager;
+  
+	var cityModelManager:CityModelManager=new CityModelManager();
+	var playerModelManager:PlayerModelManager=new PlayerModelManager();
+	var timeModelManager:TimeModelManager=new TimeModelManager();
 	
 	/*
 	def retrievedGlobalCriminality():Int={
@@ -34,12 +37,12 @@ class ModelManager extends Model{
 	def giveCityAccess():CityAccess={
 	  return cityModelManager.giveCityAccess();
 	}
-	def givePlayerAccess():PlayerAccess;
-	def giveTimeAccess():TimeAccess;
-	
-	def ModelManager(){
-	  cityModelManager=new CityModelManager();
-	  playerModelManager=new PlayerModelManager();
-	  TimeModelManager=new TimeModelManager();
+	def givePlayerAccess():PlayerAccess={
+	  //return playerModelManager.givePlayerAccess();
+	  return null
+	}
+	def giveTimeAccess():TimeAccess={
+	  //return timeModelManager.giveTimeAccess();
+	  return null
 	}
 }

@@ -15,21 +15,22 @@
 
 package model
 
-import model.city.CityAccess
-import model.city.CityBuilderInterface
+import model.city._
 
-class CityModelManager {
-	var cityAccess: CityAccess;
+class CityModelManager{
+	
+	val defaultCityBuilder:CityBuilderInterface = new CityBuilder()
+	var cityAccess: CityAccess= defaultCityBuilder.CityBuilder();
 	/*
 	def retrievedNumberOfCitizens:Int={
 	  return cityAccess.getNumberOfCitizens()
 	}
 	*/
 	
-	def cityModelManager(){
-	  cityAccess=CityBuilderInterface.CityBuilder();
+	def InitWith(cbi:CityBuilderInterface){
+	  cityAccess=cbi.CityBuilder();
 	}
-	def giveCityAccess(){
+	def giveCityAccess():CityAccess={
 	  return cityAccess;
 	}
 }

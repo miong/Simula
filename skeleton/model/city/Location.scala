@@ -15,6 +15,6 @@
 package model.city
 
 class Location {
-	var x:Int;
-	var y:Int;
+	var x:Int=0;
+	var y:Int=0;
 }

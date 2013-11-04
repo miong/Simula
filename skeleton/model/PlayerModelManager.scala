@@ -13,7 +13,17 @@
  *
  */
 package model
+import model.player._
 
 class PlayerModelManager {
-
+	// default value added !! need to construct The Builder !!!
+	var playerAccess:PlayerAccess=null
+	
+	def InitWith(pbi:PlayerBuilderInterface){
+	  //playerAccess=pbi.PlayerBuilder();
+	}
+	
+	def givePlayeurAccess():PlayerAccess={
+		return playerAccess 
+	}
 }

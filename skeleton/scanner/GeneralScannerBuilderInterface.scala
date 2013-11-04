@@ -8,10 +8,11 @@
  * Update 30 oct. 2013 11:17:58
  * *******************************************************
  */
-package scanner
+package model.scanner
+import model._ 
 
 abstract class GeneralScannerBuilderInterface {
   
-	def ScannerBuilder(m:Model,e:Engine):GeneralScannerInterface
+	def ScannerBuilder(m:Model):GeneralScannerInterface
 	
 }

@@ -8,7 +8,7 @@
  * Update 30 oct. 2013 11:22:02
  * *******************************************************
  */
-package scanner
+package model.scanner
 
 /**
  * @author Bubul
