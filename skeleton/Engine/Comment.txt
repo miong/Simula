@@ -1,2 +1,0 @@
-Attention nom d'interface sur diagramme_moteur Engine(interface) remplacer par AbstractEngine
-car dans diagramme simulaGame c'est ainsi
