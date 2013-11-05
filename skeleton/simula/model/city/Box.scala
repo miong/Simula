@@ -18,6 +18,9 @@ class Box {
 	var value:Int=0;
 	var polution:Int=0;
 	var criminality:Int=0;
-	var infrastructures:List[Infrastructure]=Nil;
-
+	var infrastructures:Set[Infrastructure]=Set();
+	
+	def addInfrastructure(i:Infrastructure){
+	  infrastructures+=i;
+	}
 }

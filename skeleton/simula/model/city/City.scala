@@ -21,6 +21,9 @@ class City(s:Size) extends CityAccess{
 	  return map;
 	}
 	
+	def constructAnArea(l:Location){
+	  map.constructInfrastructure(new Area(l));	  
+	}
 	/*
 	def getNumberOfCitizens():Int={
 	  return map.getNumberOfCitizens;

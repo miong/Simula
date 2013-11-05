@@ -14,6 +14,6 @@
  */
 package simula.model.city
 
-class TransportCenter extends Building{
+class TransportCenter(l:Location) extends Building(l){
 
 }

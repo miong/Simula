@@ -24,6 +24,13 @@ class Map(s:Size){
 	var population:Population = new Population()
 	var tab:Array[Array[Box]] = ofDim[Box](s.length,s.width)
 	
+	def constructInfrastructure(i:Infrastructure){
+	  for(a <- i.location.x to i.location.x+i.size.length){
+	    for(b <- i.location.y to i.location.y+i.size.width){
+	      tab(a)(b).addInfrastructure(i);
+	    }
+	  }
+	}
 	/*
 	def getNumberOfCitizens:Int={
 	  return population.getNumberOfCitizens();

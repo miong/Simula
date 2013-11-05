@@ -14,7 +14,7 @@
  */
 package simula.model.city
 
-class Location {
-	var x:Int=0;
-	var y:Int=0;
+class Location(xx:Int,yy:Int) {
+	var x:Int=xx;
+	var y:Int=yy;
 }

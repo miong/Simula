@@ -14,10 +14,10 @@
  */
 package simula.model.city
 
-abstract class Infrastructure {
+abstract class Infrastructure(l:Location) {
 	// Default value added !! need a Builder To set them at initialisation !!
 	var size:Size= new Size(0,0);
-	var location:Location=new Location();
+	var location:Location=l
 	var polution:Int=0;
 	var criminality:Int=0;
 	var population: Population=new Population();
