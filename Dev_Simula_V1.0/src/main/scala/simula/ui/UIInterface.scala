@@ -8,11 +8,11 @@
  * Update 30 oct. 2013 11:30:05
  *
  *********************************************************/
-package simula.ui
+package main.scala.simula.ui
 
 
-import simula.common._
-import simula.ui.InterfaceType._
+import main.scala.simula.common._
+import main.scala.simula.ui.InterfaceType._
 /**
  * @author JC
  *
@@ -21,8 +21,8 @@ abstract case class UIInterface{
   var engine: AbstractEngine
   var maxSize: Size
   var actualLocation: Location
-  var actualState: RetreivedInformationInterface
+  var actualState: RetrievedInformationInterface
   def redefineView
-  def updateView (d: RetreivedInformationInterface)
+  def updateView (d: RetrievedInformationInterface)
 	
 }

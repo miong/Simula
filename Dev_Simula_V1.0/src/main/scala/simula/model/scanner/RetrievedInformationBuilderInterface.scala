@@ -8,15 +8,15 @@
  * Update 1 nov. 2013 13:34:16
  * *******************************************************
  */
-package simula.model.scanner
-import simula.common._
+package main.scala.simula.model.scanner
+import main.scala.simula.common._
 
 /**
  * @author Bubul
  *
  */
-abstract class RetreivedInformationBuilderInterface {
+abstract class RetrievedInformationBuilderInterface {
 
-  def build():RetreivedInformationInterface
+  def build():RetrievedInformationInterface
   
 }

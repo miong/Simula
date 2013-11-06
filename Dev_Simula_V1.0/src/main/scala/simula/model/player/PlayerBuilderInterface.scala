@@ -8,7 +8,7 @@
  * Update 30 oct. 2013 11:19:05
  * *******************************************************
  */
-package simula.model.player
+package main.scala.simula.model.player
 
 /**
  * @author Scarpe

@@ -8,9 +8,9 @@
  * Update 30 oct. 2013 11:22:19
  * *******************************************************
  */
-package simula.model.scanner
-import simula.model._
-import simula.model.city._
+package main.scala.simula.model.scanner
+import main.scala.simula.model._
+import main.scala.simula.model.city._
 
 /**
  * @author Bubul

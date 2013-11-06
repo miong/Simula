@@ -14,7 +14,9 @@
  */
 package main.scala.simula.model.city
 
-abstract class Infrastructure(l:Location) {
+import main.scala.simula.common.Viewable
+
+abstract class Infrastructure(l:Location) extends Viewable{
 	// Default value added !! need a Builder To set them at initialisation !!
 	var size:Size= new Size(0,0);
 	var location:Location=l

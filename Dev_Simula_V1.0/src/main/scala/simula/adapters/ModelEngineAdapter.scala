@@ -27,10 +27,11 @@ class ModelEngineAdapter(mod:ModelManager, eng:ConcreteEngine)  extends ModelEng
   	override def giveCityAccess():CityAccess=mod.giveCityAccess;
 	override def givePlayerAccess():PlayerAccess=mod.givePlayerAccess;
 	override def giveTimeAccess():TimeAccess=mod.giveTimeAccess;
-	override def recupereActionsUtilisateur(v:AbstractView)=eng.recupereActionsUtilisateur(v)
-	override def envoyerDonneesAViewPourAfficher(v:AbstractView)=eng.envoyerDonneesAViewPourAfficher(v)
-	override def modifierLeModele(m:AbstractModel)=eng.modifierLeModele(m)
-	override def recupererDonneesDuModele(m:AbstractModel)=eng.recupererDonneesDuModele(m)
-	override def appliquerLesReglesDuJeu(m:AbstractModel)=eng.appliquerLesReglesDuJeu(m)
+	override def getDataFromModel():RetrievedInformationInterface=eng.getDataFromModel()
+	override def sendDataToView(data:RetrievedInformationInterface):Boolean=eng.sendDataToView(data)
+	override def getFromModelToView():Boolean=eng.getFromModelToModel
+	override def treatDataFromModel(data:RetrievedInformationInterface):RetrievedInformationInterface=eng.treatDataFromModel(data)
+	override def sendDataToModel(data:RetrievedInformationInterface):Boolean=eng.sendDataToModel(data)
+	override def getFromModelToModel():Boolean=eng.getFromModelToModel
   
 }

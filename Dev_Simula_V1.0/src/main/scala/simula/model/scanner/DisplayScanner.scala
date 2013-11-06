@@ -6,10 +6,10 @@
  * By Bubul
  * Update 4 nov. 2013 15:34:20
  *********************************************************/
-package simula.model.scanner
-import simula.model._
-import simula.model.city._
-import simula.common._
+package main.scala.simula.model.scanner
+import main.scala.simula.model._
+import main.scala.simula.model.city._
+import main.scala.simula.common._
 
 /**
  * @author Bubul

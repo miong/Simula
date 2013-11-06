@@ -8,13 +8,13 @@
  * Update 2 nov. 2013 17:14:47
  * *******************************************************
  */
-package simula.model.city.test
+package test.scala.simula.model.city.test
 
 /**
  * @author Scarpe
  *
  */
-import simula.model.city._;
+import main.scala.simula.model.city._;
 import org.scalatest._
 import org.scalatest.matchers._
 //import org.scalacheck._

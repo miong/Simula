@@ -14,7 +14,9 @@
  */
 package main.scala.simula.model.city
 
-class Box(l:Location) {
+import main.scala.simula.common.Viewable
+
+class Box(l:Location) extends Viewable{
 	var location:Location=l
 	var value:Int=0;
 	var polution:Int=0;

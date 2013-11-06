@@ -12,7 +12,7 @@
  * @author Scarpe
  *
  */
-package simula.model.time
+package main.scala.simula.model.time
 
 class YearFilter extends YearFilterInterface {
   var year:Integer=TimeDefinition.n_year

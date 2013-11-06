@@ -9,7 +9,7 @@
  *
  * *******************************************************
  */
-package simula.ui
+package main.scala.simula.ui
 
 /**
  * @author JC

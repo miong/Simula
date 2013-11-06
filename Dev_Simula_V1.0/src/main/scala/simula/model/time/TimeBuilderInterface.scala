@@ -12,7 +12,7 @@
  * @author Scarpe
  *
  */
-package simula.model.time
+package main.scala.simula.model.time
 
 trait TimeBuilderInterface {
 	def build():Time;

@@ -8,20 +8,20 @@
  * Update 1 nov. 2013 13:30:59
  * *******************************************************
  */
-package simula.model.scanner
-import simula.common._
+package main.scala.simula.model.scanner
+import main.scala.simula.common._
 
 /**
  * @author Bubul
  *
  */
-class RetreivedInformationBuilder(scanner : GeneralScannerInterface) extends RetreivedInformationBuilderInterface{
+class RetrievedInformationBuilder(scanner : GeneralScannerInterface) extends RetrievedInformationBuilderInterface{
 	
-  def build():RetreivedInformation = {
+  def build():RetrievedInformation = {
     val nCitizen = scanner.ScanNumberOfCitizens()
     val nGlobalPolution = scanner.ScanGlobalPolution()
     val nGlobalCriminality = scanner.ScanGlobalCriminality()
     
-    return new RetreivedInformation(nCitizen,nGlobalPolution,nGlobalCriminality)
+    return new RetrievedInformation(nCitizen,nGlobalPolution,nGlobalCriminality)
   }
 }

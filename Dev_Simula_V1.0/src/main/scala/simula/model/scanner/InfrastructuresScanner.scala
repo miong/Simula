@@ -8,14 +8,14 @@
  * Update 3 nov. 2013 18:53:21
  * *******************************************************
  */
-package simula.model.scanner
+package main.scala.simula.model.scanner
 
 /**
  * @author Bubul
  *
  */
-import simula.model.city._
-import simula.model._
+import main.scala.simula.model.city._
+import main.scala.simula.model._
 
 trait InfrastructuresScanner {
 	

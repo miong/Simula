@@ -8,10 +8,10 @@
  * Update 30 oct. 2013 11:32:44
  *
  *********************************************************/
-package simula.ui.cliview
+package main.scala.simula.ui.cliview
 
-import simula.ui.UIInterface
-import simula.common._
+import main.scala.simula.ui.UIInterface
+import main.scala.simula.common._
 
 /**
  * @author JC

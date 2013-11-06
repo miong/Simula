@@ -12,7 +12,7 @@
  * @author Scarpe
  *
  */
-package simula.model.player
+package main.scala.simula.model.player
 
 class PlayerBuilder extends PlayerBuilderInterface{
 

@@ -10,9 +10,9 @@
  *
  * *******************************************************
  */
-package simula.ui
+package main.scala.simula.ui
 
-import simula.common._
+import main.scala.simula.common._
 /**
  * @author JC
  *

@@ -8,13 +8,13 @@
  * Update 5 nov. 2013 23:11:44
  * *******************************************************
  */
-package simula.engine.test
+package test.scala.simula.engine.test
 
-import simula.engine._
-import simula.common._
+import main.scala.simula.engine._
+import main.scala.simula.common._
 import org.scalatest._
 import org.scalacheck._
-//import org.scalatest.matchers._
+import org.scalatest.matchers._
 /**
  * @author ken
  *

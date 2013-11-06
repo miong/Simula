@@ -8,10 +8,10 @@
  * Update 6 nov. 2013 01:02:23
  *
  *********************************************************/
-package simula.ui
+package main.scala.simula.ui
 
-import simula.common._
-import simula.ui.InterfaceType._
+import main.scala.simula.common._
+import main.scala.simula.ui.InterfaceType._
 /**
  * @author JC
  *

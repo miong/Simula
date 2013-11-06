@@ -21,13 +21,13 @@ class UIEngineAdapter(_ui: UIInterface, eng:ConcreteEngine) extends UIEngineAdap
   var ui = _ui
   var engine = eng
   
-  override def buildView=_ui.buildView
   override def redefineView=_ui.redefineView
-  override def updateView (d: RetreivedInformation)=_ui.updateView(d)
-  override def recupereActionsUtilisateur(v:AbstractView)=eng.recupereActionsUtilisateur(v)
-  override def envoyerDonneesAViewPourAfficher(v:AbstractView)=eng.envoyerDonneesAViewPourAfficher(v)
-  override def modifierLeModele(m:AbstractModel)=eng.modifierLeModele(m)
-  override def recupererDonneesDuModele(m:AbstractModel)=eng.recupererDonneesDuModele(m)
-  override def appliquerLesReglesDuJeu(m:AbstractModel)=eng.appliquerLesReglesDuJeu(m)
+  override def updateView (d: RetrievedInformation)=_ui.updateView(d)
+  override def getDataFromModel():RetrievedInformationInterface=eng.getDataFromModel()
+  override def sendDataToView(data:RetrievedInformationInterface):Boolean=eng.sendDataToView(data)
+  override def getFromModelToView():Boolean=eng.getFromModelToModel
+  override def treatDataFromModel(data:RetrievedInformationInterface):RetrievedInformationInterface=eng.treatDataFromModel(data)
+  override def sendDataToModel(data:RetrievedInformationInterface):Boolean=eng.sendDataToModel(data)
+  override def getFromModelToModel():Boolean=eng.getFromModelToModel
 
 }

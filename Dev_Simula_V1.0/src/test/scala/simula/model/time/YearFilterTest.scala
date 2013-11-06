@@ -8,7 +8,7 @@
  * Update 6 nov. 2013 10:18:01
  * *******************************************************
  */
-package simula.model.time.test
+package test.scala.simula.model.time.test
 
 /**
  * @author Bubul
@@ -20,7 +20,7 @@ import org.scalatest.matchers._
 import org.scalatest.mock.EasyMockSugar
 import org.easymock.EasyMock._
 import org.easymock.EasyMock
-import simula.model.time._
+import main.scala.simula.model.time._
 
 
 class YearFilterTest extends FlatSpec with EasyMockSugar with ShouldMatchers{

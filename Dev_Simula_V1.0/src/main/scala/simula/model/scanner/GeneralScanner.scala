@@ -8,9 +8,10 @@
  * Update 30 oct. 2013 11:17:58
  * *******************************************************
  */
-package simula.model.scanner
-import simula.model.city._
-import simula.model._
+package main.scala.simula.model.scanner
+
+import main.scala.simula.model.city._
+import main.scala.simula.model._
 
 class GeneralScanner extends GeneralScannerInterface with CriminalityScanner with NetworkScanner with PolutionScanner with PopulationScanner{
 

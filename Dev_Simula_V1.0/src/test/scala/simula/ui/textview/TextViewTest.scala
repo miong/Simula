@@ -10,7 +10,7 @@
  *
  * *******************************************************
  */
-package simula.ui.textview
+package test.scala.simula.ui.textview
 
 import org.scalatest._
 import org.scalatest.matchers._
@@ -21,13 +21,13 @@ import org.scalacheck._
  *
  */
 class TextViewTest extends FlatSpec with ShouldMatchers  with BeforeAndAfterEach {
-  import simula.ui._
+  import main.scala.simula.ui._
   
     private var tv:UIInterface = _
      // Set up the temp file needed by the test
     override def beforeEach() {
-      import simula.ui._
-      import simula.ui.InterfaceType._
+      import main.scala.simula.ui._
+      import main.scala.simula.ui.InterfaceType._
       tv = (new ViewBuilder()).buildView(null, null, null)
    }
 

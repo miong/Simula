@@ -10,11 +10,11 @@
  *
  * *******************************************************
  */
-package simula.ui.textview
+package main.scala.simula.ui.textview
 
-import simula.ui._
-import simula.common._
-import simula.ui.InterfaceType._
+import main.scala.simula.ui._
+import main.scala.simula.common._
+import main.scala.simula.ui.InterfaceType._
 /**
  * @author JC
  *

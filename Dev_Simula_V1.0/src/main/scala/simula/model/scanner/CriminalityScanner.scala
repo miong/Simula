@@ -8,14 +8,14 @@
  * Update 30 oct. 2013 11:21:34
  * *******************************************************
  */
-package simula.model.scanner
+package main.scala.simula.model.scanner
 
 /**
  * @author Bubul
  *
  */
-import simula.model._
-import simula.model.city._
+import main.scala.simula.model._
+import main.scala.simula.model.city._
 
 trait CriminalityScanner extends InfrastructuresScanner{
 	var model : ModelInterface

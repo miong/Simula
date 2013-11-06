@@ -8,7 +8,7 @@
  * Update 6 nov. 2013 09:59:59
  * *******************************************************
  */
-package simula.model.time
+package main.scala.simula.model.time
 
 /**
  * @author Bubul
