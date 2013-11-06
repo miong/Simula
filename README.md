@@ -33,21 +33,18 @@ On suppose l'environnement propice et correctement configur'e.
 
 ### UNIX / Linux / OS X
 
-Pour des raisons pratiques, nous utiliserons en premier lieu l'outil Make pour la compilation du projet <br />
-Mais nous comptons tres vite passer sous sbt. <br />
+Pour des raisons pratiques, nous utiliserons en premier lieu l'outil sbt pour gerer les dépendences pour la compilation et l'excution. <br />
 
-[./configure]<br />
-[./make] ou [./make install] ce qui installera le programme<br />
+[> sbt]<br />
+[> compile] (ou [make install] qui viendra plus tard, ce qui installera le programme) <br />
 apr'es la compilation. <br />
-Pour l'executer, retez dans le repertoire racine du projet<br />
-puis tappez [./bin/simula] dans le terminal si vous n'avez rien install'e<br />
-Autrement, tapez simplement [simula] si vous avez effectuez l'installation<br />
-(il est possible que vous ayiez a relancer votre emulateur de terminal)<br />
+Pour l'executer, retez dans sbt et fait [> run]<br />
+(il est possible que vous ayiez a relancer votre emulateur de terminal après installation des requierements)<br />
 ### Windows
 
 Liens
 ---
-- Lien vers le cours
+- http://didascalie.informatique.univ-paris-diderot.fr/poca/
 - https://github.com/miong/Simula.git
 - git@github.com:miong/Simula.git
 - http://sourceforge.net/projects/micropolis.mirror/
