@@ -44,7 +44,7 @@ Pour l'executer, retez dans sbt et fait [> run]<br />
 
 Liens
 ---
-- Lien vers le cours
+- http://didascalie.informatique.univ-paris-diderot.fr/poca/
 - https://github.com/miong/Simula.git
 - git@github.com:miong/Simula.git
 - http://sourceforge.net/projects/micropolis.mirror/
