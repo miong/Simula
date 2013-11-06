@@ -1,0 +1,6 @@
+[0m[[0minfo[0m] [0m[32mModelEngineAdapterTest:[0m[0m
+[0m[[0minfo[0m] [0m[32mAn Model Engine  [0m[0m
+[0m[[0minfo[0m] [0m[31m- should have a ModelInterface and an EngineInterface *** FAILED ***[0m[0m
+[0m[[0minfo[0m] [0m[31m  org.scalatest.exceptions.TestFailedException was thrown. (ModelEngineAdapterTest.scala:36)[0m[0m
+[0m[[0minfo[0m] [0m[31m- should Simula Data object *** FAILED ***[0m[0m
+[0m[[0minfo[0m] [0m[31m  org.scalatest.exceptions.TestFailedException was thrown. (ModelEngineAdapterTest.scala:40)[0m[0m

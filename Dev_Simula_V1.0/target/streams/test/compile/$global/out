@@ -1,0 +1,33 @@
+[0m[[0mdebug[0m] [0m[0m
+[0m[[0mdebug[0m] [0mInitial source changes: [0m
+[0m[[0mdebug[0m] [0m	removed:Set()[0m
+[0m[[0mdebug[0m] [0m	added: Set()[0m
+[0m[[0mdebug[0m] [0m	modified: Set()[0m
+[0m[[0mdebug[0m] [0mRemoved products: Set()[0m
+[0m[[0mdebug[0m] [0mModified external sources: Set(simula.model.time.YearListener)[0m
+[0m[[0mdebug[0m] [0mModified binary dependencies: Set()[0m
+[0m[[0mdebug[0m] [0mInitial directly invalidated sources: Set()[0m
+[0m[[0mdebug[0m] [0m[0m
+[0m[[0mdebug[0m] [0mSources indirectly invalidated by:[0m
+[0m[[0mdebug[0m] [0m	product: Set()[0m
+[0m[[0mdebug[0m] [0m	binary dep: Set()[0m
+[0m[[0mdebug[0m] [0m	external source: Set(C:\Users\Bubul\Desktop\EIDD\Projet\2013-2014\POCA\local-sbt\src\test\scala\time\YearFilterTest.scala)[0m
+[0m[[0mdebug[0m] [0mAll initially invalidated sources: Set(C:\Users\Bubul\Desktop\EIDD\Projet\2013-2014\POCA\local-sbt\src\test\scala\time\YearFilterTest.scala)[0m
+[0m[[0minfo[0m] [0mCompiling 1 Scala source to C:\Users\Bubul\Desktop\EIDD\Projet\2013-2014\POCA\local-sbt\target\scala-2.10\test-classes...[0m
+[0m[[0mdebug[0m] [0mGetting compiler-interface from component compiler for Scala 2.10.2[0m
+[0m[[0mdebug[0m] [0mGetting compiler-interface from component compiler for Scala 2.10.2[0m
+[0m[[0mdebug[0m] [0mRunning cached compiler 5f67dda6, interfacing (CompilerInterface) with Scala compiler version 2.10.2[0m
+[0m[[0mdebug[0m] [0mCalling Scala compiler with arguments  (CompilerInterface):[0m
+[0m[[0mdebug[0m] [0m	-bootclasspath[0m
+[0m[[0mdebug[0m] [0m	C:\Program Files\Java\jre7\lib\resources.jar;C:\Program Files\Java\jre7\lib\rt.jar;C:\Program Files\Java\jre7\lib\sunrsasign.jar;C:\Program Files\Java\jre7\lib\jsse.jar;C:\Program Files\Java\jre7\lib\jce.jar;C:\Program Files\Java\jre7\lib\charsets.jar;C:\Program Files\Java\jre7\lib\jfr.jar;C:\Program Files\Java\jre7\classes;C:\Users\Bubul\.sbt\boot\scala-2.10.2\lib\scala-library.jar[0m
+[0m[[0mdebug[0m] [0m	-classpath[0m
+[0m[[0mdebug[0m] [0m	C:\Users\Bubul\Desktop\EIDD\Projet\2013-2014\POCA\local-sbt\target\scala-2.10\test-classes;C:\Users\Bubul\Desktop\EIDD\Projet\2013-2014\POCA\local-sbt\target\scala-2.10\classes;C:\Users\Bubul\Desktop\EIDD\Projet\2013-2014\POCA\local-sbt\lib\easymock-3.2-javadoc.jar;C:\Users\Bubul\Desktop\EIDD\Projet\2013-2014\POCA\local-sbt\lib\easymock-3.2.jar;C:\Users\Bubul\Desktop\EIDD\Projet\2013-2014\POCA\local-sbt\lib\ScalaCheck-1.5.jar;C:\Users\Bubul\Desktop\EIDD\Projet\2013-2014\POCA\local-sbt\lib\scalatest_2.10-1.9.2.jar[0m
+[0m[[33mwarn[0m] [0mthere were 2 deprecation warning(s); re-run with -deprecation for details[0m
+[0m[[33mwarn[0m] [0mone warning found[0m
+[0m[[0mdebug[0m] [0mScala compilation took 3.710159594 s[0m
+[0m[[0mdebug[0m] [0mInvalidated by transitive public inheritance: Set()[0m
+[0m[[0mdebug[0m] [0mInvalidated by direct dependency: Set()[0m
+[0m[[0mdebug[0m] [0mNew invalidations:[0m
+[0m[[0mdebug[0m] [0m	Set()[0m
+[0m[[0mdebug[0m] [0mPreviously invalidated, but (transitively) depend on new invalidations:[0m
+[0m[[0mdebug[0m] [0m	Set()[0m

@@ -1,0 +1,6 @@
+[0m[[0minfo[0m] [0m[32mUIEngineAdapterTest:[0m[0m
+[0m[[0minfo[0m] [0m[32mAn UI Engine  [0m[0m
+[0m[[0minfo[0m] [0m[31m- should have a UIInterface and an EngineInterface *** FAILED ***[0m[0m
+[0m[[0minfo[0m] [0m[31m  org.scalatest.exceptions.TestFailedException was thrown. (UIEngineAdapterTest.scala:38)[0m[0m
+[0m[[0minfo[0m] [0m[31m- should Simula Data object *** FAILED ***[0m[0m
+[0m[[0minfo[0m] [0m[31m  org.scalatest.exceptions.TestFailedException was thrown. (UIEngineAdapterTest.scala:42)[0m[0m
