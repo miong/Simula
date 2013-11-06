@@ -14,10 +14,7 @@ package simula.common
  * @author Bubul
  *
  */
-class RetreivedInformation(val numberOfCitizen: Integer, 
-							val globalPolution: Integer,
-							val globalCriminality:Integer) 
-							extends RetreivedInformationInterface {
+class RetrievedInformation(val numberOfCitizen:Integer,val globalPolution:Integer,val globalCriminality:Integer) extends RetrievedInformationInterface {
 	
 	def getNumberOfCitizen():Integer = {
 	  return numberOfCitizen
