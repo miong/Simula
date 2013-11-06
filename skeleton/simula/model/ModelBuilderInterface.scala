@@ -14,6 +14,6 @@
  */
 package simula.model
 
-abstract class ModelBuilderInterface {
+trait ModelBuilderInterface {
 	def ModelBuilder():ModelInterface
 }

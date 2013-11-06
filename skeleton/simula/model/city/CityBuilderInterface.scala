@@ -14,6 +14,6 @@
  */
 package simula.model.city
 
-abstract class CityBuilderInterface {
+trait CityBuilderInterface {
 	def buildCity():CityAccess;
 }

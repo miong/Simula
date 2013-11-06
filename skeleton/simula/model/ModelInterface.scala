@@ -17,7 +17,7 @@ import simula.model.city.CityAccess
 import simula.model.player.PlayerAccess
 import simula.model.time.TimeAccess
 
-abstract class ModelInterface {
+trait ModelInterface {
 	/*on oublie ça, ok, à la place je donne accès aux interfaces des elements directement
 	def retrievedGlobalCriminality():Int;
 	def retrievedGlobalPolution():Int;

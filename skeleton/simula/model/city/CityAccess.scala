@@ -14,7 +14,7 @@
  */
 package simula.model.city
 
-abstract class CityAccess {
+trait CityAccess {
 	/*
   	def getNumberOfCitizens():Int;
   	*/
