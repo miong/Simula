@@ -14,6 +14,26 @@
  */
 package simula.model.time
 
-class TimeManager {
+class TimeManager extends TimeAccess{
+  
+  var time:Time=null
+  var builder:TimeBuilderInterface=new TimeBuilder()
+  
+  def buildTimeManager():Unit = {
+    if(time!=null){
+      time = builder.build();
+    }
+  }
+  def registerMonthListener(ml:MonthListener):Unit = {
+    time.registerMonthListener(ml)
+  }
+  
+  def registerYearListener(yl:YearListener):Unit = {
+    time.registerYearListener(yl)
+  }
+  
+  def startTime():Unit = {
+    time.startTime();
+  }
 
 }

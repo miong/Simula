@@ -15,5 +15,5 @@
 package simula.model.time
 
 trait YearListener {
-
+	def evenOnYear():Unit;
 }

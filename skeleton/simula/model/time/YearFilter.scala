@@ -14,6 +14,26 @@
  */
 package simula.model.time
 
-class YearFilter extends TimeFilter {
+class YearFilter extends YearFilterInterface {
+  var year:Integer=TimeDefinition.n_year
+  var cpt:Integer=0;
+  var filters:List[YearListener]=Nil;
+  
+  def receiveTop():Unit = {
+     cpt=cpt+1;
+     if(cpt==year){
+       cpt=0;
+       sendYear();
+     }
+  }
+  
+  def register(yl:YearListener):Unit = {
+	  filters= yl::filters;
+	}
+
+  def sendYear():Unit = {
+    for(yl <- filters)
+    	yl.evenOnYear();
+  }
 
 }

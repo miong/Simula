@@ -14,6 +14,27 @@
  */
 package simula.model.time
 
-class MonthFilter extends TimeFilter{
+class MonthFilter extends MonthFilterInterface{
+  
+  var month:Integer=TimeDefinition.n_month
+  var cpt:Integer=0;
+  var filters:List[MonthListener]=Nil;
+  
+  def receiveTop():Unit = {
+     cpt=cpt+1;
+     if(cpt==month){
+       cpt=0;
+       sendMonth();
+     }
+  }
+  
+  def register(ml:MonthListener):Unit = {
+	  filters= ml::filters;
+	}
 
+  def sendMonth():Unit = {
+    for(ml <- filters)
+    	ml.evenOnMonth();
+  }
+  
 }

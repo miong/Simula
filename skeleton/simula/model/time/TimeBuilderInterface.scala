@@ -14,6 +14,6 @@
  */
 package simula.model.time
 
-abstract class TimeBuilderInterface {
-
+trait TimeBuilderInterface {
+	def build():Time;
 }

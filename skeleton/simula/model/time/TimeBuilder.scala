@@ -14,6 +14,10 @@
  */
 package simula.model.time
 
-class TimeBuilder {
+class TimeBuilder extends TimeBuilderInterface{
+  
+  def build():Time = {
+    return new Time(new Clock(),new MonthFilter(),new YearFilter());
+  }
 
 }

@@ -14,6 +14,8 @@
  */
 package simula.model.time
 
-abstract class TimeFilter {
+trait TimeFilter {
 
+  def receiveTop():Unit;
+  
 }

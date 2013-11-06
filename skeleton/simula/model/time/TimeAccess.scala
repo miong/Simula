@@ -14,6 +14,11 @@
  */
 package simula.model.time
 
-abstract class TimeAccess {
-
+trait TimeAccess {
+	
+	def buildTimeManager():Unit;
+	def registerMonthListener(ml:MonthListener):Unit;
+	def registerYearListener(ml:YearListener):Unit;
+	def startTime():Unit;
+  
 }

@@ -15,5 +15,7 @@
 package simula.model.time
 
 trait MonthListener {
-
+	
+  def evenOnMonth():Unit;
+  
 }
