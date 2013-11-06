@@ -14,6 +14,6 @@ package simula.model.player
  * @author Scarpe
  *
  */
-abstract class PlayerBuilderInterface {
+trait PlayerBuilderInterface {
 
 }

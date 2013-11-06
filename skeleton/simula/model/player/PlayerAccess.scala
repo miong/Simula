@@ -14,6 +14,6 @@
  */
 package simula.model.player
 
-abstract class PlayerAccess {
+trait PlayerAccess {
 
 }
