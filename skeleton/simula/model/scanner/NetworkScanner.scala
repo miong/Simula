@@ -17,3 +17,4 @@ package simula.model.scanner
 trait NetworkScanner {
 
 }
+
