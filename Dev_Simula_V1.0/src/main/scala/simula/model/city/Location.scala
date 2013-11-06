@@ -12,7 +12,7 @@
  * @author Scarpe
  *
  */
-package simula.model.city
+package main.scala.simula.model.city
 
 class Location(xx:Int,yy:Int) {
 	var x:Int=xx;

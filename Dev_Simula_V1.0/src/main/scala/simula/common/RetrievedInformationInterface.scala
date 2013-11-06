@@ -8,7 +8,7 @@
  * Update 1 nov. 2013 13:20:49
  * *******************************************************
  */
-package simula.common
+package main.scala.simula.common
 
 /**
  * @author Bubul

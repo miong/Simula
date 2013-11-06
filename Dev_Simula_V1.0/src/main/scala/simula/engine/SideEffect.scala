@@ -8,7 +8,7 @@
  * Update 30 oct. 2013 11:30:30
  * *******************************************************
  */
-package simula.engine
+package main.scala.simula.engine
 
 abstract class SideEffect {
 

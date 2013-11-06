@@ -12,7 +12,7 @@
  * @author Scarpe
  *
  */
-package simula.common
+package main.scala.simula.common
 
 class Location(_x:Int = 0, _y:Int = 0) {
 	var x:Int = _x;

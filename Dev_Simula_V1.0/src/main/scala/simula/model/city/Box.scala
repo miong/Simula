@@ -12,7 +12,7 @@
  * @author Scarpe
  *
  */
-package simula.model.city
+package main.scala.simula.model.city
 
 class Box(l:Location) {
 	var location:Location=l

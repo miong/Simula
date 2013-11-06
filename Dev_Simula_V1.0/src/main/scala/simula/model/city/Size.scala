@@ -12,7 +12,7 @@
  * @author Scarpe
  *
  */
-package simula.model.city
+package main.scala.simula.model.city
 
 class Size(l:Int,w:Int){
 	var length: Int=l

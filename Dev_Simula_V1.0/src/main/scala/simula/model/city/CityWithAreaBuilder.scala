@@ -13,7 +13,7 @@
  *
  */
 
-package simula.model.city
+package main.scala.simula.model.city
 
 
 class CityWithAreaBuilder extends CityBuilderInterface{

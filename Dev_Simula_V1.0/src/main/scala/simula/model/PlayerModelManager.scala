@@ -12,8 +12,8 @@
  * @author Scarpe
  *
  */
-package simula.model
-import simula.model.player._
+package main.scala.simula.model
+import main.scala.simula.model.player._
 
 class PlayerModelManager {
 	// default value added !! need to construct The Builder !!!

@@ -12,7 +12,7 @@
  * @author Scarpe
  *
  */
-package simula.model
+package main.scala.simula.model
 
 class NetworkModelManager {
 

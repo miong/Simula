@@ -8,8 +8,8 @@
  * Update 30 oct. 2013 11:30:30
  * *******************************************************
  */
-package simula.engine
-import simula.common._
+package main.scala.simula.engine
+import main.scala.simula.common._
 
 class GameControler {
 	var sideEffect : SideEffect=null

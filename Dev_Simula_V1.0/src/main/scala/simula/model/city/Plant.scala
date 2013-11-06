@@ -12,7 +12,7 @@
  * @author Scarpe
  *
  */
-package simula.model.city
+package main.scala.simula.model.city
 
 class Plant(l:Location) extends Building(l) {
 

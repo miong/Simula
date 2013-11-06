@@ -10,7 +10,7 @@
  *
  * *******************************************************
  */
-package simula.common
+package main.scala.simula.common
 
 /**
  * @author JC

@@ -12,7 +12,7 @@
  * @author Scarpe
  *
  */
-package simula.model.city
+package main.scala.simula.model.city
 
 abstract class Infrastructure(l:Location) {
 	// Default value added !! need a Builder To set them at initialisation !!

@@ -8,11 +8,11 @@
  * Update 3 nov. 2013 02:57:52
  *
  ********************************************************/
-package simula.adapters
+package main.scala.simula.adapters
 
-import simula.ui._
-import simula.common._
-import simula.engine._
+import main.scala.simula.ui._
+import main.scala.simula.common._
+import main.scala.simula.engine._
 /**
  * @author JC
  * ConcreteEngine should be EngineInterface

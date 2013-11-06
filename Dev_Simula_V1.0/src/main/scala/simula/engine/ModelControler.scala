@@ -10,8 +10,8 @@
  * *******************************************************
  */
 
-package simula.engine
-import simula.common._
+package main.scala.simula.engine
+import main.scala.simula.common._
  
  
 class ModelControler {

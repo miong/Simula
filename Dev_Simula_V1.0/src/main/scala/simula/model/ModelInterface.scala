@@ -12,10 +12,10 @@
  * @author Scarpe
  *
  */
-package simula.model
-import simula.model.city.CityAccess
-import simula.model.player.PlayerAccess
-import simula.model.time.TimeAccess
+package main.scala.simula.model
+import main.scala.simula.model.city.CityAccess
+import main.scala.simula.model.player.PlayerAccess
+import main.scala.simula.model.time.TimeAccess
 
 trait ModelInterface {
 	/*on oublie ça, ok, à la place je donne accès aux interfaces des elements directement

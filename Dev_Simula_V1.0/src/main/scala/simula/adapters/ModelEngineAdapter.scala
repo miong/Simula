@@ -8,14 +8,14 @@
  * Update 3 nov. 2013 03:18:59
  *
  *********************************************************/
-package simula.adapters
+package main.scala.simula.adapters
 
-import simula.model._
-import simula.model.city._
-import simula.model.player._
-import simula.model.time._
-import simula.engine._
-import simula.common._
+import main.scala.simula.model._
+import main.scala.simula.model.city._
+import main.scala.simula.model.player._
+import main.scala.simula.model.time._
+import main.scala.simula.engine._
+import main.scala.simula.common._
 /**
  * @author JC
  *

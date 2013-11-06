@@ -15,9 +15,9 @@
 
 
 
-package simula.model
+package main.scala.simula.model
 
-import simula.model.city._
+import main.scala.simula.model.city._
 
 class CityModelManager{
 	

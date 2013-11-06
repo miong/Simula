@@ -12,7 +12,7 @@
  * @author Scarpe
  *
  */
-package simula.common
+package main.scala.simula.common
 
 class Size(l:Int,w:Int){
 	var length: Int=l
