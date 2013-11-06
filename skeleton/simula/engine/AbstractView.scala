@@ -9,8 +9,9 @@
  * *******************************************************
  */
 package simula.engine
+import simula.common._
+
 
 abstract class AbstractView {
-	def recupererActionsUtilisateur()
-	def afficherLeJeu(e:AbstractEngine)
+	def ack(data:RetrievedInformationInterface):Boolean
 }

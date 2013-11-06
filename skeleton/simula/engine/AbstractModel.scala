@@ -9,8 +9,9 @@
  * *******************************************************
  */
 package simula.engine
+import simula.common._
 
 abstract class AbstractModel {
-  def modifierModel(e:AbstractEngine)
-  def recupererInfo(e:AbstractEngine)
+	def getData():RetrievedInformationInterface
+	def ack(data:RetrievedInformationInterface):Boolean
 }

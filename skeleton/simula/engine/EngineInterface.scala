@@ -9,16 +9,23 @@
  * *******************************************************
  */
 package simula.engine
+import simula.common._
 
 abstract class AbstractEngine extends EngineInterface{
-	var model: AbstractModel=null
-	var view: AbstractView=null
+	var modelControler: ModelControler=null
+	var viewControler: ViewControler=null
+	var model:AbstractModel=null
+	var view:AbstractView=null
+	var gameControler:GameControler=null
+	
 }
 
 trait EngineInterface{
-	def recupereActionsUtilisateur(v:AbstractView)
-	def envoyerDonneesAViewPourAfficher(v:AbstractView)
-	def modifierLeModele(m:AbstractModel)
-	def recupererDonneesDuModele(m:AbstractModel)
-	def appliquerLesReglesDuJeu(m:AbstractModel)
+	def getDataFromModel():RetrievedInformationInterface
+	def sendDataToView(data:RetrievedInformationInterface):Boolean
+	def getFromModelToView():Boolean
+	def treatDataFromModel(data:RetrievedInformationInterface):RetrievedInformationInterface
+	def sendDataToModel(data:RetrievedInformationInterface):Boolean
+	def getFromModelToModel():Boolean
+	
 }

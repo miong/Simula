@@ -8,13 +8,18 @@
  * By ken
  * Update 30 oct. 2013 11:30:30
  * *******************************************************
- */package simula.engine
+ */
 
+package simula.engine
+import simula.common._
+ 
+ 
 class ModelControler {
-	 def modifierLeModele(m:AbstractModel)={
-	   
+  
+	 def getDataFromModel(m:AbstractModel):RetrievedInformationInterface={
+	   return m.getData()
 	 }
-	 def recupererDonneesDuModele(m:AbstractModel)={
-	   
+	 def sendDataToModel(data:RetrievedInformationInterface,m:AbstractModel):Boolean={
+	   return m.ack(data)
 	 }
 }
