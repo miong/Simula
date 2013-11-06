@@ -12,8 +12,15 @@
  * @author Scarpe
  *
  */
+
 package simula.model.city
 
-class TransportCenter(l:Location) extends Building(l){
 
+class CityWithAreaBuilder extends CityBuilderInterface{
+	def buildCity():CityAccess={
+	  var c:CityAccess= new City(new Size(10,10));
+	  c.constructAnArea(new Location(0,0));
+	  return c;
+	}
 }
+

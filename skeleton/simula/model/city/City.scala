@@ -14,8 +14,6 @@
  */
 package simula.model.city
 
-import simula.common.Size
-
 class City(s:Size) extends CityAccess{
 	var map:Map=new Map(s)
   
@@ -23,6 +21,9 @@ class City(s:Size) extends CityAccess{
 	  return map;
 	}
 	
+	def constructAnArea(l:Location){
+	  map.constructInfrastructure(new Area(l));	  
+	}
 	/*
 	def getNumberOfCitizens():Int={
 	  return map.getNumberOfCitizens;

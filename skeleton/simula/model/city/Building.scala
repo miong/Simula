@@ -14,7 +14,6 @@
  */
 package simula.model.city
 
-abstract class Building extends Infrastructure
-{
-
+abstract class Building(l:Location) extends Infrastructure(l){
+  
 }

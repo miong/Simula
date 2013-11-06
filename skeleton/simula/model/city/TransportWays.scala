@@ -14,6 +14,6 @@
  */
 package simula.model.city
 
-class TransportWays extends Network {
+class TransportWays(l:Location) extends Network(l) {
 
 }

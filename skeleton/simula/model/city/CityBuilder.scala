@@ -14,9 +14,8 @@
  */
 package simula.model.city
 
-import simula.common._
 class CityBuilder extends CityBuilderInterface{
-	def CityBuilder():CityAccess={
+	def buildCity():CityAccess={
 	  return new City(new Size(10,10));
 	}
 }

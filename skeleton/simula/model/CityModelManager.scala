@@ -13,14 +13,16 @@
  *
  */
 
+
+
 package simula.model
 
 import simula.model.city._
 
 class CityModelManager{
 	
-	val defaultCityBuilder:CityBuilderInterface = new CityBuilder()
-	var cityAccess: CityAccess= defaultCityBuilder.CityBuilder();
+	var defaultCityBuilder:CityBuilderInterface = new CityBuilder()
+	var cityAccess: CityAccess= defaultCityBuilder.buildCity();
 	/*
 	def retrievedNumberOfCitizens:Int={
 	  return cityAccess.getNumberOfCitizens()
@@ -28,7 +30,7 @@ class CityModelManager{
 	*/
 	
 	def InitWith(cbi:CityBuilderInterface){
-	  cityAccess=cbi.CityBuilder();
+	  cityAccess=cbi.buildCity();
 	}
 	def giveCityAccess():CityAccess={
 	  return cityAccess;

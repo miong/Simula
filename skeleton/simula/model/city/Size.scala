@@ -14,6 +14,15 @@
  */
 package simula.model.city
 
-class TransportCenter(l:Location) extends Building(l){
-
+class Size(l:Int,w:Int){
+	var length: Int=l
+	var width: Int=w
+	
+	/*
+	def Size(length:Int,width:Int);
+	*/
+	
+	def numberOfBoxes():Int={
+	  return length*width;
+	}
 }

@@ -18,6 +18,6 @@ abstract class CityAccess {
 	/*
   	def getNumberOfCitizens():Int;
   	*/
-	
+	def constructAnArea(l:Location);
 	def getMapAccess():Map;
 }

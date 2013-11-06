@@ -15,5 +15,5 @@
 package simula.model.city
 
 abstract class CityBuilderInterface {
-	def CityBuilder():CityAccess;
+	def buildCity():CityAccess;
 }

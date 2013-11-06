@@ -14,6 +14,6 @@
  */
 package simula.model.city
 
-class Station extends Building {
+class Station(l:Location) extends Building(l) {
 
 }
