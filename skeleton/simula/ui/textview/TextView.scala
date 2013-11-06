@@ -19,12 +19,12 @@ import simula.ui.InterfaceType._
  * @author JC
  *
  */
-class TextView(ri: RetreivedInformationInterface,
+class TextView(ri: RetrievedInformationInterface,
 				ae: AbstractEngine, 
 				size: Size, loc: Location) extends UIInterface {
 	maxSize = size
 	actualLocation = loc
 	engine = ae
 	def redefineView = println("CLIVIEW RedefineView Called")
-	def updateView (d: RetreivedInformationInterface) = println("CLIVIEW UpdateView Called")
+	def updateView (d: RetrievedInformationInterface) = println("CLIVIEW UpdateView Called")
 }

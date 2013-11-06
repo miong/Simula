@@ -21,6 +21,6 @@ class CLIView extends UIInterface {
 
 	def buildView = println("CLIVIEW buildView Called")
 	def redefineView = println("CLIVIEW RedefineView Called")
-	def updateView (d: RetreivedInformationInterface) = println("CLIVIEW UpdateView Called")
+	def updateView (d: RetrievedInformationInterface) = println("CLIVIEW UpdateView Called")
 
 }

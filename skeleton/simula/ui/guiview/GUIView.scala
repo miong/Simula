@@ -21,6 +21,6 @@ class GUIView extends UIInterface{
 
 	def buildView = println("GUIVIEW buildView Called")
 	def redefineView = println("GUIVIEW RedefineView Called")
-	def updateView (d: RetreivedInformationInterface) = println("GUIVIEW UpdateView Called")
+	def updateView (d: RetrievedInformationInterface) = println("GUIVIEW UpdateView Called")
 
 }
