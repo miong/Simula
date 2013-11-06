@@ -14,6 +14,6 @@
  */
 package simula.model.city
 
-class ElectricGrid(l:Location) extends Network(l) {
+class ElectricGrid extends Network {
 
 }

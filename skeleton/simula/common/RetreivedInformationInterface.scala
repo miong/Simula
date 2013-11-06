@@ -8,18 +8,16 @@
  * Update 1 nov. 2013 13:20:49
  * *******************************************************
  */
-package simula.model.scanner
+package simula.common
 
 /**
  * @author Bubul
- *
+ * 
  */
 abstract class RetreivedInformationInterface {
 	
 	def getNumberOfCitizen():Integer;
 	def getGlobalPolution():Integer;
 	def getGlobalCriminality():Integer;
-  
-  
-  
+
 }

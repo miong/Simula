@@ -10,16 +10,19 @@
  *********************************************************/
 package simula.ui
 
-import simula.common.SimulaData
 
-
+import simula.common._
+import simula.ui.InterfaceType._
 /**
  * @author JC
  *
  */
-abstract case class UIInterface extends BuildView{
-	def buildView
-	def redefineView
-	def updateView (d: SimulaData)
+abstract case class UIInterface{
+  var engine: AbstractEngine
+  var maxSize: Size
+  var actualLocation: Location
+  var actualState: RetreivedInformationInterface
+  def redefineView
+  def updateView (d: RetreivedInformationInterface)
 	
 }

@@ -9,9 +9,12 @@
  * *******************************************************
  */
 package simula.engine
-import simula.common._
+
 class ViewControler {
-	def sendDataToView(data:RetrievedInformationInterface,view:AbstractView):Boolean={
-	  return view.ack(data)
+	def recupererActionsUtilisateur(v:AbstractView)={
+	  
+	}
+	def envoyerDonneesAViewPourAfficher(v:AbstractView)={
+	  
 	}
 }

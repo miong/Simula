@@ -12,17 +12,9 @@
  * @author Scarpe
  *
  */
-package simula.model.city
+package simula.common
 
-class Size(l:Int,w:Int){
-	var length: Int=l
-	var width: Int=w
-	
-	/*
-	def Size(length:Int,width:Int);
-	*/
-	
-	def numberOfBoxes():Int={
-	  return length*width;
-	}
+class Location(_x:Int = 0, _y:Int = 0) {
+	var x:Int = _x;
+	var y:Int = _y;
 }

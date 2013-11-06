@@ -10,20 +10,20 @@
  ********************************************************/
 package simula.adapters
 
-import simula.ui.cliview._
-import simula.common.SimulaData
+import simula.ui._
+import simula.common._
 import simula.engine._
 /**
  * @author JC
- *
+ * ConcreteEngine should be EngineInterface
  */
-class UIEngineAdapter(_ui:CLIView, eng:ConcreteEngine) extends UIEngineAdapterInterface {
+class UIEngineAdapter(_ui: UIInterface, eng:ConcreteEngine) extends UIEngineAdapterInterface {
   var ui = _ui
   var engine = eng
   
   override def buildView=_ui.buildView
   override def redefineView=_ui.redefineView
-  override def updateView (d: SimulaData)=_ui.updateView(d)
+  override def updateView (d: RetreivedInformation)=_ui.updateView(d)
   override def recupereActionsUtilisateur(v:AbstractView)=eng.recupereActionsUtilisateur(v)
   override def envoyerDonneesAViewPourAfficher(v:AbstractView)=eng.envoyerDonneesAViewPourAfficher(v)
   override def modifierLeModele(m:AbstractModel)=eng.modifierLeModele(m)

@@ -9,25 +9,29 @@
  * *******************************************************
  */
 package simula.engine
-import simula.common._
 
-class ConcreteEngine extends AbstractEngine with EngineInterface {
-	def getDataFromModel():RetrievedInformationInterface ={
-	  return modelControler.getDataFromModel(model)
+class ConcreteEngine(_ui: AbstractView, _mod: AbstractModel) extends EngineInterface {
+	var viewControler: ViewControler	= null 
+	var gameControler: GameControler	= null
+	var modelControler:ModelControler	= null
+
+	var model: AbstractModel 			= _mod
+	var view:  AbstractView  			= _ui
+	
+	def recupereActionsUtilisateur(v:AbstractView) = {
+		viewControler.recupererActionsUtilisateur(v)
 	}
-	def sendDataToView(data:RetrievedInformationInterface):Boolean={
-	  return viewControler.sendDataToView(data,view)
+	def envoyerDonneesAViewPourAfficher(v:AbstractView) = {
+	  	viewControler.envoyerDonneesAViewPourAfficher(v: AbstractView)
 	}
-	def getFromModelToView():Boolean={
-	  return sendDataToView(getDataFromModel())
+
+	def modifierLeModele(m: AbstractModel) = {
+	  	modelControler.modifierLeModele(m: AbstractModel)
 	}
-	def treatDataFromModel(data:RetrievedInformationInterface):RetrievedInformationInterface={
-	  return gameControler.treatDataFromModel(data)
-	} 
-	def sendDataToModel(data:RetrievedInformationInterface):Boolean={
-	  return modelControler.sendDataToModel(data,model)
+	def recupererDonneesDuModele(m: AbstractModel)={
+	  	modelControler.recupererDonneesDuModele(m: AbstractModel)
 	}
-	def getFromModelToModel():Boolean={
-	  return sendDataToModel(treatDataFromModel(getDataFromModel()))
+	def appliquerLesReglesDuJeu(m: AbstractModel) = {
+	  	gameControler.appliquerLesReglesDuJeu(m: AbstractModel)
 	}
 }

@@ -9,12 +9,13 @@
  *
  *********************************************************/
 package simula.adapters
+
 import simula.model._
 import simula.model.city._
 import simula.model.player._
 import simula.model.time._
 import simula.engine._
-
+import simula.common._
 /**
  * @author JC
  *

@@ -14,6 +14,6 @@
  */
 package simula.model.city
 
-class Network(l:Location) extends Infrastructure(l) {
+class Network extends Infrastructure {
 
 }

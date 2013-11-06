@@ -2,30 +2,21 @@
  * *******************************************************
  * SimulaGame
  * Engine
- * ll.scala
+ * Engine.scala
  * (c)SimulaGame on 30 oct. 2013 11:30:30
  * By ken
  * Update 30 oct. 2013 11:30:30
- * *******************************************************
- */
+ * 
+ * Ce trait permet de definir l'interface d'un engine
+ * Peut etre etendu par un adpater par exemple
+ *********************************************************/
 package simula.engine
-import simula.common._
-
-abstract class AbstractEngine extends EngineInterface{
-	var modelControler: ModelControler=null
-	var viewControler: ViewControler=null
-	var model:AbstractModel=null
-	var view:AbstractView=null
-	var gameControler:GameControler=null
-	
-}
 
 trait EngineInterface{
-	def getDataFromModel():RetrievedInformationInterface
-	def sendDataToView(data:RetrievedInformationInterface):Boolean
-	def getFromModelToView():Boolean
-	def treatDataFromModel(data:RetrievedInformationInterface):RetrievedInformationInterface
-	def sendDataToModel(data:RetrievedInformationInterface):Boolean
-	def getFromModelToModel():Boolean
-	
+  // Ces methodes sont implemente dans l'engine et accessible de l'exterieur
+	def recupereActionsUtilisateur(v:AbstractView)
+	def envoyerDonneesAViewPourAfficher(v:AbstractView)
+	def modifierLeModele(m:AbstractModel)
+	def recupererDonneesDuModele(m:AbstractModel)
+	def appliquerLesReglesDuJeu(m:AbstractModel)
 }

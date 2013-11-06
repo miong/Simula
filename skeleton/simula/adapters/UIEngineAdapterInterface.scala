@@ -10,13 +10,13 @@
  ********************************************************/
 package simula.adapters
 
-import simula.ui.UIInterface
-import simula.common.SimulaData
+import simula.ui._
+import simula.common._
 import simula.engine._
 /**
  * @author JC
- *
+ * No need de cette interface
  */
-abstract class UIEngineAdapterInterface extends UIInterface with EngineInterface {
+abstract class UIEngineAdapterInterface extends AbstractEngine with AbstractView {
 
 }

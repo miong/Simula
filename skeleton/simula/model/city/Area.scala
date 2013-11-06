@@ -14,6 +14,6 @@
  */
 package simula.model.city
 
-class Area(l:Location) extends Building(l) {
-	size=new Size(3,3);
+class Area extends Building {
+
 }

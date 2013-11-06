@@ -9,12 +9,10 @@
  * *******************************************************
  */
 package simula.engine
-import simula.common._
 
 class GameControler {
 	var sideEffect : SideEffect=null
-	
-	def treatDataFromModel(data:RetrievedInformationInterface):RetrievedInformationInterface={
-	  return data
+	def appliquerLesReglesDuJeu(m:AbstractModel)={
+	  
 	}
 }
