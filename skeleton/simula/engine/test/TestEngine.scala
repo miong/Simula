@@ -48,7 +48,7 @@ class TestEngine extends FlatSpec with ShouldMatchers {
 	var data :RetrievedInformationInterface = new RetrievedInformation(10,10,10)
 	
 	var engineBuilder: EngineBuilderInterface = new EngineBuilder()
-	var engine:AbstractEngine= engineBuilder.build(view, model)
+	var engine:EngineInterface= engineBuilder.build( model,view)
 	
 	
 	"An Engine" should "retrieve data from Model" in {

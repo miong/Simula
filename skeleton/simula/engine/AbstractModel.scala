@@ -11,7 +11,7 @@
 package simula.engine
 import simula.common._
 
-abstract class AbstractModel {
+trait AbstractModel {
 	def getData():RetrievedInformationInterface
 	def ack(data:RetrievedInformationInterface):Boolean
 }

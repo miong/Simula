@@ -11,5 +11,5 @@
 package simula.engine
 
 abstract class EngineBuilderInterface {
-	def build(v:AbstractView,m:AbstractModel):AbstractEngine
+	def build(model:AbstractModel,view:AbstractView):EngineInterface
 }

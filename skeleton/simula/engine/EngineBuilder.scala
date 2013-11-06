@@ -11,10 +11,10 @@
 package simula.engine
 
 class EngineBuilder extends EngineBuilderInterface {
-	def build(v:AbstractView,m:AbstractModel):AbstractEngine={
-		var engine:ConcreteEngine = new ConcreteEngine()
-		engine.model=m
-		engine.view = v
+	def build(model:AbstractModel,view:AbstractView):EngineInterface={
+		var engine:ConcreteEngine = new ConcreteEngine(model,view)
+		engine.model=model
+		engine.view = view
 		return engine
 	}
 }

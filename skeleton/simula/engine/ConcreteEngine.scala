@@ -11,7 +11,14 @@
 package simula.engine
 import simula.common._
 
-class ConcreteEngine extends AbstractEngine with EngineInterface {
+class ConcreteEngine (_model:AbstractModel,_view:AbstractView) extends EngineInterface {
+	
+	var modelControler:ModelControler
+	var viewControler:ViewControler
+	var gameControler:GameControler
+	var model:AbstractModel		=_model
+	var view:AbstractView		=_view
+	
 	def getDataFromModel():RetrievedInformationInterface ={
 	  return modelControler.getDataFromModel(model)
 	}
