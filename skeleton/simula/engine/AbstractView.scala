@@ -9,9 +9,9 @@
  * *******************************************************
  */
 package simula.engine
-
 import simula.common._
-trait AbstractView {
-  
-	def updatedData(): RetreivedInformationInterface
+
+
+abstract class AbstractView {
+	def ack(data:RetrievedInformationInterface):Boolean
 }
