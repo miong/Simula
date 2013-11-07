@@ -21,7 +21,7 @@
 [0m[[0minfo[0m] [0mCompiling 93 Scala sources to C:\Users\ken\Documents\Travail\EIDD\3A\POCA\git\poca_project_2013-2014\Dev_Simula_V1.0\target\scala-2.10\classes...[0m
 [0m[[0mdebug[0m] [0mGetting compiler-interface from component compiler for Scala 2.10.2[0m
 [0m[[0mdebug[0m] [0mGetting compiler-interface from component compiler for Scala 2.10.2[0m
-[0m[[0mdebug[0m] [0mRunning cached compiler 1968d64c, interfacing (CompilerInterface) with Scala compiler version 2.10.2[0m
+[0m[[0mdebug[0m] [0mRunning cached compiler 735ca68, interfacing (CompilerInterface) with Scala compiler version 2.10.2[0m
 [0m[[0mdebug[0m] [0mCalling Scala compiler with arguments  (CompilerInterface):[0m
 [0m[[0mdebug[0m] [0m	-bootclasspath[0m
 [0m[[0mdebug[0m] [0m	C:\Program Files\Java\jre7\lib\resources.jar;C:\Program Files\Java\jre7\lib\rt.jar;C:\Program Files\Java\jre7\lib\sunrsasign.jar;C:\Program Files\Java\jre7\lib\jsse.jar;C:\Program Files\Java\jre7\lib\jce.jar;C:\Program Files\Java\jre7\lib\charsets.jar;C:\Program Files\Java\jre7\lib\jfr.jar;C:\Program Files\Java\jre7\classes;C:\Users\ken\.sbt\boot\scala-2.10.2\lib\scala-library.jar[0m

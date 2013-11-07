@@ -15,5 +15,7 @@
 package main.scala.simula.model.city
 
 class ElectricGrid(l:Location) extends Network(l) {
-
+	def view:String={
+	  return "ElectricGrid"
+	}
 }

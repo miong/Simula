@@ -15,5 +15,7 @@
 package main.scala.simula.model.city
 
 class Plant(l:Location) extends Building(l) {
-
+	def view:String={
+	  return "Plant"
+	}
 }

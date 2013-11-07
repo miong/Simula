@@ -15,5 +15,7 @@
 package main.scala.simula.model.city
 
 class TransportWays(l:Location) extends Network(l) {
-
+	def view:String={
+	  return "TransportWays"
+	}
 }
