@@ -1,6 +1,6 @@
 /**
  * *******************************************************
- * SimulaGame
+ * Simula
  * Engine
  * ConcreteEngine.scala
  * (c)SimulaGame on 30 oct. 2013 11:30:30
@@ -14,9 +14,9 @@ import main.scala.simula.common._
 
 class ConcreteEngine (_model:AbstractModel, _view:AbstractView) extends EngineInterface {
 	
-	var modelControler:	ModelControler
-	var viewControler:	ViewControler
-	var gameControler:	GameControler
+	var modelControler:	ModelControler = _
+	var viewControler:	ViewControler  = _
+	var gameControler:	GameControler  = _
 	var model: 			AbstractModel		= _model
 	var view:			AbstractView		= _view
 	
