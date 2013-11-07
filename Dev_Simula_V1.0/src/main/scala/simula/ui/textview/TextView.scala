@@ -22,9 +22,11 @@ import main.scala.simula.ui.InterfaceType._
 class TextView(ri: RetrievedInformationInterface,
 				ae: AbstractEngine, 
 				size: Size, loc: Location) extends UIInterface {
-	maxSize = size
-	actualLocation = loc
-	engine = ae
+	var maxSize = size
+	var actualLocation = loc
+	var engine = ae
+	var actualState = ri
+	
 	def redefineView = println("CLIVIEW RedefineView Called")
 	def updateView (d: RetrievedInformationInterface) = println("CLIVIEW UpdateView Called")
 }
