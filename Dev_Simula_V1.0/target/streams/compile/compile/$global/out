@@ -21,48 +21,12 @@
 [0m[[0minfo[0m] [0mCompiling 93 Scala sources to C:\Users\ken\Documents\Travail\EIDD\3A\POCA\git\poca_project_2013-2014\Dev_Simula_V1.0\target\scala-2.10\classes...[0m
 [0m[[0mdebug[0m] [0mGetting compiler-interface from component compiler for Scala 2.10.2[0m
 [0m[[0mdebug[0m] [0mGetting compiler-interface from component compiler for Scala 2.10.2[0m
-[0m[[0mdebug[0m] [0mRunning cached compiler 735ca68, interfacing (CompilerInterface) with Scala compiler version 2.10.2[0m
+[0m[[0mdebug[0m] [0mRunning cached compiler 8fe234b, interfacing (CompilerInterface) with Scala compiler version 2.10.2[0m
 [0m[[0mdebug[0m] [0mCalling Scala compiler with arguments  (CompilerInterface):[0m
 [0m[[0mdebug[0m] [0m	-bootclasspath[0m
 [0m[[0mdebug[0m] [0m	C:\Program Files\Java\jre7\lib\resources.jar;C:\Program Files\Java\jre7\lib\rt.jar;C:\Program Files\Java\jre7\lib\sunrsasign.jar;C:\Program Files\Java\jre7\lib\jsse.jar;C:\Program Files\Java\jre7\lib\jce.jar;C:\Program Files\Java\jre7\lib\charsets.jar;C:\Program Files\Java\jre7\lib\jfr.jar;C:\Program Files\Java\jre7\classes;C:\Users\ken\.sbt\boot\scala-2.10.2\lib\scala-library.jar[0m
 [0m[[0mdebug[0m] [0m	-classpath[0m
 [0m[[0mdebug[0m] [0m	C:\Users\ken\Documents\Travail\EIDD\3A\POCA\git\poca_project_2013-2014\Dev_Simula_V1.0\target\scala-2.10\classes;C:\Users\ken\Documents\Travail\EIDD\3A\POCA\git\poca_project_2013-2014\Dev_Simula_V1.0\lib\easymock-3.2-javadoc.jar;C:\Users\ken\Documents\Travail\EIDD\3A\POCA\git\poca_project_2013-2014\Dev_Simula_V1.0\lib\easymock-3.2.jar;C:\Users\ken\Documents\Travail\EIDD\3A\POCA\git\poca_project_2013-2014\Dev_Simula_V1.0\lib\ScalaCheck-1.5.jar;C:\Users\ken\Documents\Travail\EIDD\3A\POCA\git\poca_project_2013-2014\Dev_Simula_V1.0\lib\scalatest_2.10-1.9.2.jar[0m
-[0m[[31merror[0m] [0mC:\Users\ken\Documents\Travail\EIDD\3A\POCA\git\poca_project_2013-2014\Dev_Simula_V1.0\src\main\scala\simula\adapters\UIEngineAdapter.scala:20: class UIEngineAdapter needs to be abstract, since:[0m
-[0m[[31merror[0m] [0mit has 2 unimplemented members.[0m
-[0m[[31merror[0m] [0m/** As seen from class UIEngineAdapter, the missing signatures are as follows.[0m
-[0m[[31merror[0m] [0m *  For convenience, these are usable as stub implementations.[0m
-[0m[[31merror[0m] [0m */[0m
-[0m[[31merror[0m] [0m  // Members declared in main.scala.simula.ui.AbstractEngine[0m
-[0m[[31merror[0m] [0m  def updatedEvent(e: main.scala.simula.common.EventInterface): Unit = ???[0m
-[0m[[31merror[0m] [0m  [0m
-[0m[[31merror[0m] [0m  // Members declared in main.scala.simula.engine.AbstractView[0m
-[0m[[31merror[0m] [0m  def ack(data: main.scala.simula.common.RetrievedInformationInterface): Boolean = ???[0m
-[0m[[31merror[0m] [0mclass UIEngineAdapter(_ui: UIInterface, eng:ConcreteEngine) extends UIEngineAdapterInterface {[0m
-[0m[[31merror[0m] [0m      ^[0m
-[0m[[31merror[0m] [0mC:\Users\ken\Documents\Travail\EIDD\3A\POCA\git\poca_project_2013-2014\Dev_Simula_V1.0\src\main\scala\simula\adapters\UIEngineAdapter.scala:24: method redefineView overrides nothing[0m
-[0m[[31merror[0m] [0m  override def redefineView=_ui.redefineView[0m
-[0m[[31merror[0m] [0m               ^[0m
-[0m[[31merror[0m] [0mC:\Users\ken\Documents\Travail\EIDD\3A\POCA\git\poca_project_2013-2014\Dev_Simula_V1.0\src\main\scala\simula\adapters\UIEngineAdapter.scala:25: method updateView overrides nothing[0m
-[0m[[31merror[0m] [0m  override def updateView (d: RetrievedInformation)=_ui.updateView(d)[0m
-[0m[[31merror[0m] [0m               ^[0m
-[0m[[31merror[0m] [0mC:\Users\ken\Documents\Travail\EIDD\3A\POCA\git\poca_project_2013-2014\Dev_Simula_V1.0\src\main\scala\simula\adapters\UIEngineAdapter.scala:26: method getDataFromModel overrides nothing[0m
-[0m[[31merror[0m] [0m  override def getDataFromModel():RetrievedInformationInterface=eng.getDataFromModel()[0m
-[0m[[31merror[0m] [0m               ^[0m
-[0m[[31merror[0m] [0mC:\Users\ken\Documents\Travail\EIDD\3A\POCA\git\poca_project_2013-2014\Dev_Simula_V1.0\src\main\scala\simula\adapters\UIEngineAdapter.scala:27: method sendDataToView overrides nothing[0m
-[0m[[31merror[0m] [0m  override def sendDataToView(data:RetrievedInformationInterface):Boolean=eng.sendDataToView(data)[0m
-[0m[[31merror[0m] [0m               ^[0m
-[0m[[31merror[0m] [0mC:\Users\ken\Documents\Travail\EIDD\3A\POCA\git\poca_project_2013-2014\Dev_Simula_V1.0\src\main\scala\simula\adapters\UIEngineAdapter.scala:28: method getFromModelToView overrides nothing[0m
-[0m[[31merror[0m] [0m  override def getFromModelToView():Boolean=eng.getFromModelToModel[0m
-[0m[[31merror[0m] [0m               ^[0m
-[0m[[31merror[0m] [0mC:\Users\ken\Documents\Travail\EIDD\3A\POCA\git\poca_project_2013-2014\Dev_Simula_V1.0\src\main\scala\simula\adapters\UIEngineAdapter.scala:29: method treatDataFromModel overrides nothing[0m
-[0m[[31merror[0m] [0m  override def treatDataFromModel(data:RetrievedInformationInterface):RetrievedInformationInterface=eng.treatDataFromModel(data)[0m
-[0m[[31merror[0m] [0m               ^[0m
-[0m[[31merror[0m] [0mC:\Users\ken\Documents\Travail\EIDD\3A\POCA\git\poca_project_2013-2014\Dev_Simula_V1.0\src\main\scala\simula\adapters\UIEngineAdapter.scala:30: method sendDataToModel overrides nothing[0m
-[0m[[31merror[0m] [0m  override def sendDataToModel(data:RetrievedInformationInterface):Boolean=eng.sendDataToModel(data)[0m
-[0m[[31merror[0m] [0m               ^[0m
-[0m[[31merror[0m] [0mC:\Users\ken\Documents\Travail\EIDD\3A\POCA\git\poca_project_2013-2014\Dev_Simula_V1.0\src\main\scala\simula\adapters\UIEngineAdapter.scala:31: method getFromModelToModel overrides nothing[0m
-[0m[[31merror[0m] [0m  override def getFromModelToModel():Boolean=eng.getFromModelToModel[0m
-[0m[[31merror[0m] [0m               ^[0m
 [0m[[31merror[0m] [0mC:\Users\ken\Documents\Travail\EIDD\3A\POCA\git\poca_project_2013-2014\Dev_Simula_V1.0\src\main\scala\simula\engine\ConcreteEngine.scala:14: class ConcreteEngine needs to be abstract, since:[0m
 [0m[[31merror[0m] [0mit has 3 unimplemented members.[0m
 [0m[[31merror[0m] [0m/** As seen from class ConcreteEngine, the missing signatures are as follows.[0m
@@ -73,24 +37,6 @@
 [0m[[31merror[0m] [0m  def viewControler_=(x$1: main.scala.simula.engine.ViewControler): Unit = ???[0m
 [0m[[31merror[0m] [0mclass ConcreteEngine (_model:AbstractModel,_view:AbstractView) extends EngineInterface {[0m
 [0m[[31merror[0m] [0m      ^[0m
-[0m[[31merror[0m] [0mC:\Users\ken\Documents\Travail\EIDD\3A\POCA\git\poca_project_2013-2014\Dev_Simula_V1.0\src\main\scala\simula\model\city\ElectricGrid.scala:17: class ElectricGrid needs to be abstract, since method view in class Infrastructure of type => String is not defined[0m
-[0m[[31merror[0m] [0mclass ElectricGrid(l:Location) extends Network(l) {[0m
-[0m[[31merror[0m] [0m      ^[0m
-[0m[[31merror[0m] [0mC:\Users\ken\Documents\Travail\EIDD\3A\POCA\git\poca_project_2013-2014\Dev_Simula_V1.0\src\main\scala\simula\model\city\Network.scala:17: class Network needs to be abstract, since method view in class Infrastructure of type => String is not defined[0m
-[0m[[31merror[0m] [0mclass Network(l:Location) extends Infrastructure(l) {[0m
-[0m[[31merror[0m] [0m      ^[0m
-[0m[[31merror[0m] [0mC:\Users\ken\Documents\Travail\EIDD\3A\POCA\git\poca_project_2013-2014\Dev_Simula_V1.0\src\main\scala\simula\model\city\Plant.scala:17: class Plant needs to be abstract, since method view in class Infrastructure of type => String is not defined[0m
-[0m[[31merror[0m] [0mclass Plant(l:Location) extends Building(l) {[0m
-[0m[[31merror[0m] [0m      ^[0m
-[0m[[31merror[0m] [0mC:\Users\ken\Documents\Travail\EIDD\3A\POCA\git\poca_project_2013-2014\Dev_Simula_V1.0\src\main\scala\simula\model\city\Station.scala:17: class Station needs to be abstract, since method view in class Infrastructure of type => String is not defined[0m
-[0m[[31merror[0m] [0mclass Station(l:Location) extends Building(l) {[0m
-[0m[[31merror[0m] [0m      ^[0m
-[0m[[31merror[0m] [0mC:\Users\ken\Documents\Travail\EIDD\3A\POCA\git\poca_project_2013-2014\Dev_Simula_V1.0\src\main\scala\simula\model\city\TransportCenter.scala:17: class TransportCenter needs to be abstract, since method view in class Infrastructure of type => String is not defined[0m
-[0m[[31merror[0m] [0mclass TransportCenter(l:Location) extends Building(l){[0m
-[0m[[31merror[0m] [0m      ^[0m
-[0m[[31merror[0m] [0mC:\Users\ken\Documents\Travail\EIDD\3A\POCA\git\poca_project_2013-2014\Dev_Simula_V1.0\src\main\scala\simula\model\city\TransportWays.scala:17: class TransportWays needs to be abstract, since method view in class Infrastructure of type => String is not defined[0m
-[0m[[31merror[0m] [0mclass TransportWays(l:Location) extends Network(l) {[0m
-[0m[[31merror[0m] [0m      ^[0m
-[0m[[31merror[0m] [0m16 errors found[0m
+[0m[[31merror[0m] [0mone error found[0m
 [0m[[0mdebug[0m] [0mCompilation failed (CompilerInterface)[0m
 [0m[[31merror[0m] [0m(compile:[31mcompile[0m) Compilation failed[0m
