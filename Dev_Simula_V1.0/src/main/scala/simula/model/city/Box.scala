@@ -26,4 +26,7 @@ class Box(l:Location) extends Viewable{
 	def addInfrastructure(i:Infrastructure){
 	  infrastructures+=i;
 	}
+	def view:String={
+	  return "box +x:"+location.x+" y:"+location.y
+	}
 }

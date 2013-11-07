@@ -43,4 +43,7 @@ class Map(s:Size) extends Viewable{
 	  return population.getNumberOfCitizens();
 	}
 	*/
+	def view:String={
+	  return "Map lenght:"+s.length+" width"+s.width
+	}
 }
