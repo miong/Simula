@@ -17,7 +17,5 @@ package main.scala.simula.common
  *
  */
 trait Viewable {
-	def view:String={
-	  return "Viewable"
-	}
+	def view:String
 }

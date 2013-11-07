@@ -23,4 +23,5 @@ abstract class Infrastructure(l:Location) extends Viewable{
 	var polution:Int=0;
 	var criminality:Int=0;
 	var population: Population=new Population();
+	def view:String
 }

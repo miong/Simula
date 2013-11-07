@@ -21,7 +21,7 @@
 [0m[[0minfo[0m] [0mCompiling 93 Scala sources to C:\Users\ken\Documents\Travail\EIDD\3A\POCA\git\poca_project_2013-2014\Dev_Simula_V1.0\target\scala-2.10\classes...[0m
 [0m[[0mdebug[0m] [0mGetting compiler-interface from component compiler for Scala 2.10.2[0m
 [0m[[0mdebug[0m] [0mGetting compiler-interface from component compiler for Scala 2.10.2[0m
-[0m[[0mdebug[0m] [0mRunning cached compiler 2eb3c989, interfacing (CompilerInterface) with Scala compiler version 2.10.2[0m
+[0m[[0mdebug[0m] [0mRunning cached compiler 1968d64c, interfacing (CompilerInterface) with Scala compiler version 2.10.2[0m
 [0m[[0mdebug[0m] [0mCalling Scala compiler with arguments  (CompilerInterface):[0m
 [0m[[0mdebug[0m] [0m	-bootclasspath[0m
 [0m[[0mdebug[0m] [0m	C:\Program Files\Java\jre7\lib\resources.jar;C:\Program Files\Java\jre7\lib\rt.jar;C:\Program Files\Java\jre7\lib\sunrsasign.jar;C:\Program Files\Java\jre7\lib\jsse.jar;C:\Program Files\Java\jre7\lib\jce.jar;C:\Program Files\Java\jre7\lib\charsets.jar;C:\Program Files\Java\jre7\lib\jfr.jar;C:\Program Files\Java\jre7\classes;C:\Users\ken\.sbt\boot\scala-2.10.2\lib\scala-library.jar[0m
@@ -73,66 +73,24 @@
 [0m[[31merror[0m] [0m  def viewControler_=(x$1: main.scala.simula.engine.ViewControler): Unit = ???[0m
 [0m[[31merror[0m] [0mclass ConcreteEngine (_model:AbstractModel,_view:AbstractView) extends EngineInterface {[0m
 [0m[[31merror[0m] [0m      ^[0m
-[0m[[31merror[0m] [0mC:\Users\ken\Documents\Travail\EIDD\3A\POCA\git\poca_project_2013-2014\Dev_Simula_V1.0\src\main\scala\simula\model\city\Area.scala:17: class Area needs to be abstract, since method view in trait Viewable of type => Unit is not defined[0m
-[0m[[31merror[0m] [0mclass Area(l:Location) extends Building(l) {[0m
-[0m[[31merror[0m] [0m      ^[0m
-[0m[[31merror[0m] [0mC:\Users\ken\Documents\Travail\EIDD\3A\POCA\git\poca_project_2013-2014\Dev_Simula_V1.0\src\main\scala\simula\model\city\Box.scala:19: class Box needs to be abstract, since method view in trait Viewable of type => Unit is not defined[0m
-[0m[[31merror[0m] [0mclass Box(l:Location) extends Viewable{[0m
-[0m[[31merror[0m] [0m      ^[0m
-[0m[[31merror[0m] [0mC:\Users\ken\Documents\Travail\EIDD\3A\POCA\git\poca_project_2013-2014\Dev_Simula_V1.0\src\main\scala\simula\model\city\ElectricGrid.scala:17: class ElectricGrid needs to be abstract, since method view in trait Viewable of type => Unit is not defined[0m
+[0m[[31merror[0m] [0mC:\Users\ken\Documents\Travail\EIDD\3A\POCA\git\poca_project_2013-2014\Dev_Simula_V1.0\src\main\scala\simula\model\city\ElectricGrid.scala:17: class ElectricGrid needs to be abstract, since method view in class Infrastructure of type => String is not defined[0m
 [0m[[31merror[0m] [0mclass ElectricGrid(l:Location) extends Network(l) {[0m
 [0m[[31merror[0m] [0m      ^[0m
-[0m[[31merror[0m] [0mC:\Users\ken\Documents\Travail\EIDD\3A\POCA\git\poca_project_2013-2014\Dev_Simula_V1.0\src\main\scala\simula\model\city\Map.scala:21: class Map needs to be abstract, since method view in trait Viewable of type => Unit is not defined[0m
-[0m[[31merror[0m] [0mclass Map(s:Size) extends Viewable{[0m
-[0m[[31merror[0m] [0m      ^[0m
-[0m[[31merror[0m] [0mC:\Users\ken\Documents\Travail\EIDD\3A\POCA\git\poca_project_2013-2014\Dev_Simula_V1.0\src\main\scala\simula\model\city\Network.scala:17: class Network needs to be abstract, since method view in trait Viewable of type => Unit is not defined[0m
+[0m[[31merror[0m] [0mC:\Users\ken\Documents\Travail\EIDD\3A\POCA\git\poca_project_2013-2014\Dev_Simula_V1.0\src\main\scala\simula\model\city\Network.scala:17: class Network needs to be abstract, since method view in class Infrastructure of type => String is not defined[0m
 [0m[[31merror[0m] [0mclass Network(l:Location) extends Infrastructure(l) {[0m
 [0m[[31merror[0m] [0m      ^[0m
-[0m[[31merror[0m] [0mC:\Users\ken\Documents\Travail\EIDD\3A\POCA\git\poca_project_2013-2014\Dev_Simula_V1.0\src\main\scala\simula\model\city\Plant.scala:17: class Plant needs to be abstract, since method view in trait Viewable of type => Unit is not defined[0m
+[0m[[31merror[0m] [0mC:\Users\ken\Documents\Travail\EIDD\3A\POCA\git\poca_project_2013-2014\Dev_Simula_V1.0\src\main\scala\simula\model\city\Plant.scala:17: class Plant needs to be abstract, since method view in class Infrastructure of type => String is not defined[0m
 [0m[[31merror[0m] [0mclass Plant(l:Location) extends Building(l) {[0m
 [0m[[31merror[0m] [0m      ^[0m
-[0m[[31merror[0m] [0mC:\Users\ken\Documents\Travail\EIDD\3A\POCA\git\poca_project_2013-2014\Dev_Simula_V1.0\src\main\scala\simula\model\city\Station.scala:17: class Station needs to be abstract, since method view in trait Viewable of type => Unit is not defined[0m
+[0m[[31merror[0m] [0mC:\Users\ken\Documents\Travail\EIDD\3A\POCA\git\poca_project_2013-2014\Dev_Simula_V1.0\src\main\scala\simula\model\city\Station.scala:17: class Station needs to be abstract, since method view in class Infrastructure of type => String is not defined[0m
 [0m[[31merror[0m] [0mclass Station(l:Location) extends Building(l) {[0m
 [0m[[31merror[0m] [0m      ^[0m
-[0m[[31merror[0m] [0mC:\Users\ken\Documents\Travail\EIDD\3A\POCA\git\poca_project_2013-2014\Dev_Simula_V1.0\src\main\scala\simula\model\city\TransportCenter.scala:17: class TransportCenter needs to be abstract, since method view in trait Viewable of type => Unit is not defined[0m
+[0m[[31merror[0m] [0mC:\Users\ken\Documents\Travail\EIDD\3A\POCA\git\poca_project_2013-2014\Dev_Simula_V1.0\src\main\scala\simula\model\city\TransportCenter.scala:17: class TransportCenter needs to be abstract, since method view in class Infrastructure of type => String is not defined[0m
 [0m[[31merror[0m] [0mclass TransportCenter(l:Location) extends Building(l){[0m
 [0m[[31merror[0m] [0m      ^[0m
-[0m[[31merror[0m] [0mC:\Users\ken\Documents\Travail\EIDD\3A\POCA\git\poca_project_2013-2014\Dev_Simula_V1.0\src\main\scala\simula\model\city\TransportWays.scala:17: class TransportWays needs to be abstract, since method view in trait Viewable of type => Unit is not defined[0m
+[0m[[31merror[0m] [0mC:\Users\ken\Documents\Travail\EIDD\3A\POCA\git\poca_project_2013-2014\Dev_Simula_V1.0\src\main\scala\simula\model\city\TransportWays.scala:17: class TransportWays needs to be abstract, since method view in class Infrastructure of type => String is not defined[0m
 [0m[[31merror[0m] [0mclass TransportWays(l:Location) extends Network(l) {[0m
 [0m[[31merror[0m] [0m      ^[0m
-[0m[[31merror[0m] [0mC:\Users\ken\Documents\Travail\EIDD\3A\POCA\git\poca_project_2013-2014\Dev_Simula_V1.0\src\main\scala\simula\ui\cliview\CLIView.scala:20: class CLIView needs to be abstract, since:[0m
-[0m[[31merror[0m] [0mit has 4 unimplemented members.[0m
-[0m[[31merror[0m] [0m/** As seen from class CLIView, the missing signatures are as follows.[0m
-[0m[[31merror[0m] [0m *  For convenience, these are usable as stub implementations.[0m
-[0m[[31merror[0m] [0m */[0m
-[0m[[31merror[0m] [0m  def actualLocation_=(x$1: main.scala.simula.common.Location): Unit = ???[0m
-[0m[[31merror[0m] [0m  def actualState_=(x$1: main.scala.simula.common.RetrievedInformationInterface): Unit = ???[0m
-[0m[[31merror[0m] [0m  def engine_=(x$1: main.scala.simula.ui.AbstractEngine): Unit = ???[0m
-[0m[[31merror[0m] [0m  def maxSize_=(x$1: main.scala.simula.common.Size): Unit = ???[0m
-[0m[[31merror[0m] [0mclass CLIView extends UIInterface {[0m
-[0m[[31merror[0m] [0m      ^[0m
-[0m[[31merror[0m] [0mC:\Users\ken\Documents\Travail\EIDD\3A\POCA\git\poca_project_2013-2014\Dev_Simula_V1.0\src\main\scala\simula\ui\guiview\GUIView.scala:20: class GUIView needs to be abstract, since:[0m
-[0m[[31merror[0m] [0mit has 4 unimplemented members.[0m
-[0m[[31merror[0m] [0m/** As seen from class GUIView, the missing signatures are as follows.[0m
-[0m[[31merror[0m] [0m *  For convenience, these are usable as stub implementations.[0m
-[0m[[31merror[0m] [0m */[0m
-[0m[[31merror[0m] [0m  def actualLocation_=(x$1: main.scala.simula.common.Location): Unit = ???[0m
-[0m[[31merror[0m] [0m  def actualState_=(x$1: main.scala.simula.common.RetrievedInformationInterface): Unit = ???[0m
-[0m[[31merror[0m] [0m  def engine_=(x$1: main.scala.simula.ui.AbstractEngine): Unit = ???[0m
-[0m[[31merror[0m] [0m  def maxSize_=(x$1: main.scala.simula.common.Size): Unit = ???[0m
-[0m[[31merror[0m] [0mclass GUIView extends UIInterface{[0m
-[0m[[31merror[0m] [0m      ^[0m
-[0m[[31merror[0m] [0mC:\Users\ken\Documents\Travail\EIDD\3A\POCA\git\poca_project_2013-2014\Dev_Simula_V1.0\src\main\scala\simula\ui\textview\TextView.scala:22: class TextView needs to be abstract, since:[0m
-[0m[[31merror[0m] [0mit has 4 unimplemented members.[0m
-[0m[[31merror[0m] [0m/** As seen from class TextView, the missing signatures are as follows.[0m
-[0m[[31merror[0m] [0m *  For convenience, these are usable as stub implementations.[0m
-[0m[[31merror[0m] [0m */[0m
-[0m[[31merror[0m] [0m  def actualLocation_=(x$1: main.scala.simula.common.Location): Unit = ???[0m
-[0m[[31merror[0m] [0m  def actualState_=(x$1: main.scala.simula.common.RetrievedInformationInterface): Unit = ???[0m
-[0m[[31merror[0m] [0m  def engine_=(x$1: main.scala.simula.ui.AbstractEngine): Unit = ???[0m
-[0m[[31merror[0m] [0m  def maxSize_=(x$1: main.scala.simula.common.Size): Unit = ???[0m
-[0m[[31merror[0m] [0mclass TextView(ri: RetrievedInformationInterface,[0m
-[0m[[31merror[0m] [0m      ^[0m
-[0m[[31merror[0m] [0m22 errors found[0m
+[0m[[31merror[0m] [0m16 errors found[0m
 [0m[[0mdebug[0m] [0mCompilation failed (CompilerInterface)[0m
 [0m[[31merror[0m] [0m(compile:[31mcompile[0m) Compilation failed[0m
