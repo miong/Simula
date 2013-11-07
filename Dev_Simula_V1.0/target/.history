@@ -99,3 +99,8 @@ test
 compile
 test
 compile
+exit
+compile
+reload
+compile
+clean

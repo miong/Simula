@@ -1,7 +1,0 @@
-[0m[[0minfo[0m] [0m[32mClockTest:[0m[0m
-[0m[[0minfo[0m] [0m[32mA Clock [0m[0m
-[0m[[0minfo[0m] [0m[32m- should register a TimeFilter when requested[0m[0m
-[0m[[0minfo[0m] [0m[32mIt [0m[0m
-[0m[[0minfo[0m] [0m[32m- should send a Top to its filters after a run[0m[0m
-[0m[[0minfo[0m] [0m[32mIt [0m[0m
-[0m[[0minfo[0m] [0m[32m- should send a Top each Clock.topTime to its filters after a run[0m[0m

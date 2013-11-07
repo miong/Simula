@@ -1,7 +1,0 @@
-[0m[[0minfo[0m] [0m[32mTestGeneralScanner:[0m[0m
-[0m[[0minfo[0m] [0m[32mA GeneralScanner [0m[0m
-[0m[[0minfo[0m] [0m[32m- should retrieve the number of citizens of its model[0m[0m
-[0m[[0minfo[0m] [0m[32mIt [0m[0m
-[0m[[0minfo[0m] [0m[32m- should retrieve the global polution of its model[0m[0m
-[0m[[0minfo[0m] [0m[32mIt [0m[0m
-[0m[[0minfo[0m] [0m[32m- should retrieve the global criminality of its model[0m[0m

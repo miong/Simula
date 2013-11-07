@@ -1,7 +1,0 @@
-[0m[[0minfo[0m] [0m[32mMonthFilterTest:[0m[0m
-[0m[[0minfo[0m] [0m[32mA MonthFilter [0m[0m
-[0m[[0minfo[0m] [0m[32m- should register a MonthListener when requested[0m[0m
-[0m[[0minfo[0m] [0m[32mIt [0m[0m
-[0m[[0minfo[0m] [0m[32m- should receive the clock's top have until TimeDefinition.n_month tops[0m[0m
-[0m[[0minfo[0m] [0m[32mIt [0m[0m
-[0m[[0minfo[0m] [0m[32m- should send a Month when reach TimeDefinition.n_month tops and reset it's state[0m[0m

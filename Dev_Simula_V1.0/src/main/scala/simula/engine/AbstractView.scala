@@ -13,5 +13,7 @@ import main.scala.simula.common._
 
 
 trait AbstractView {
+  
 	def ack(data:RetrievedInformationInterface):Boolean
+
 }

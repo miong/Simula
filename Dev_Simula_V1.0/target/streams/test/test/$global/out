@@ -1,9 +1,0 @@
-[0m[[0mdebug[0m] [0mRunning TaskDef(simula.model.time.test.YearFilterTest, sbt.SubclassFingerprintWrapper@40698fb7, false, [SuiteSelector])[0m
-[0m[[0mdebug[0m] [0mRunning TaskDef(simula.model.time.test.ClockTest, sbt.SubclassFingerprintWrapper@40698fb7, false, [SuiteSelector])[0m
-[0m[[0mdebug[0m] [0mRunning TaskDef(simula.model.time.test.MonthFilterTest, sbt.SubclassFingerprintWrapper@40698fb7, false, [SuiteSelector])[0m
-[0m[[0mdebug[0m] [0mSummary for ScalaTest not available.[0m
-[0m[[0minfo[0m] [0mPassed: Total 9, Failed 0, Errors 0, Passed 9[0m
-[0m[[0mdebug[0m] [0mPassed tests:[0m
-[0m[[0mdebug[0m] [0m	simula.model.time.test.ClockTest[0m
-[0m[[0mdebug[0m] [0m	simula.model.time.test.MonthFilterTest[0m
-[0m[[0mdebug[0m] [0m	simula.model.time.test.YearFilterTest[0m
