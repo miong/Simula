@@ -28,5 +28,10 @@ class TextView(ri: RetrievedInformationInterface,
 	var actualState = ri
 	
 	def redefineView = println("CLIVIEW RedefineView Called")
-	def updateView (d: RetrievedInformationInterface) = println("CLIVIEW UpdateView Called")
+	def updateView (d: RetrievedInformationInterface) = println("Nombre d'habitants:"
+	    +actualState.getNumberOfCitizen()
+	    +" | Taux de criminalite:"
+	    +actualState.getGlobalCriminality()
+	    +" | Taux de pollution:"
+	    +actualState.getGlobalPolution())
 }
