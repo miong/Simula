@@ -16,9 +16,12 @@ package main.scala.simula.common
  */
 class RetrievedInformation(val numberOfCitizen:Integer,val globalPolution:Integer,val globalCriminality:Integer) extends RetrievedInformationInterface {
 	
-	def getNumberOfCitizen():Integer = {
-	  return numberOfCitizen
-	}
+  var viewables: Viewable = _
+  
+  def getViewables = viewables
+  def getNumberOfCitizen():Integer = {
+    return numberOfCitizen
+  }
 	
 	def getGlobalPolution():Integer = {
 	  return globalPolution

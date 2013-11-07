@@ -18,9 +18,9 @@ import main.scala.simula.common._
 
 trait DisplayScanner {
   
-  var model:ModelInterface
+  var model: ModelInterface
   
-  def ScanViewableObjcets():Set[Viewable] = {
+  def scanViewableObjcets():Set[Viewable] = {
      var rval = Set[Viewable]()
      val map:Array[Array[Box]] = model.giveCityAccess.getMapAccess.tab
      rval += model.giveCityAccess.getMapAccess

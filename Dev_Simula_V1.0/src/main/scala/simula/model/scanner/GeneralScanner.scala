@@ -13,7 +13,12 @@ package main.scala.simula.model.scanner
 import main.scala.simula.model.city._
 import main.scala.simula.model._
 
-class GeneralScanner extends GeneralScannerInterface with CriminalityScanner with NetworkScanner with PolutionScanner with PopulationScanner{
+class GeneralScanner extends GeneralScannerInterface 
+							with DisplayScanner
+							with CriminalityScanner 
+							with NetworkScanner 
+							with PolutionScanner 
+							with PopulationScanner{
 
 
 }

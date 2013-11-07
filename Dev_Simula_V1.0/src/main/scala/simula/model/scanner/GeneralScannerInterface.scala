@@ -9,14 +9,17 @@
  * *******************************************************
  */
 package main.scala.simula.model.scanner
-import main.scala.simula.model._
 
-trait GeneralScannerInterface{
+import main.scala.simula.model._
+import main.scala.simula.common._
+
+trait GeneralScannerInterface {
   
   var model : ModelInterface = null
   
   def ScanNumberOfCitizens():Integer
   def ScanGlobalPolution():Integer
   def ScanGlobalCriminality():Integer
+  def scanViewablesObject(): Viewable
 }
 
