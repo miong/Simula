@@ -215,7 +215,7 @@ pip-log.txt
 .mr.developer.cfg
 
 #SBT
-target
+target/
 build.sbt
 *.history
 project/
