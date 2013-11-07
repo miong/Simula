@@ -14,11 +14,11 @@ import main.scala.simula.common._
 
 class ConcreteEngine (_model:AbstractModel, _view:AbstractView) extends EngineInterface {
 	
-	var modelControler:	ModelControler = _
-	var viewControler:	ViewControler  = _
-	var gameControler:	GameControler  = _
-	var model: 			AbstractModel		= _model
-	var view:			AbstractView		= _view
+	var modelControler:	ModelControler	= _
+	var viewControler:	ViewControler	= _
+	var gameControler:	GameControler	= _
+	var model: 			AbstractModel	= _model
+	var view:			AbstractView	= _view
 	
 	def getDataFromModel(): RetrievedInformationInterface = {
 	  return modelControler.getDataFromModel(model)
@@ -44,5 +44,4 @@ class ConcreteEngine (_model:AbstractModel, _view:AbstractView) extends EngineIn
 	  return sendDataToModel(treatDataFromModel(getDataFromModel()))
 	}
 	
-
 }

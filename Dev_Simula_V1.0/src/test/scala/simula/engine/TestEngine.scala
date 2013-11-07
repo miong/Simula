@@ -37,13 +37,9 @@ class ConcreteView extends AbstractView{
 
 class TestEngine extends FlatSpec with ShouldMatchers {
   
-	var model: ConcreteModel  {
-	  
-	}
+	var model: ConcreteModel = new ConcreteModel()
 	
-	var view:AbstractView {
-	  
-	}
+	var view:AbstractView = new ConcreteView()
 	
 	var data :RetrievedInformationInterface = new RetrievedInformation(10,10,10)
 	

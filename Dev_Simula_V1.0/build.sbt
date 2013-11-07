@@ -1,1 +1,0 @@
-scalaSource in Compile <<= (sourceDirectory in Compile)(_ / "src/main/scala/simula/common" / "src/main/scala/simula/engine")
