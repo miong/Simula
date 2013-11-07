@@ -17,7 +17,13 @@ import main.scala.simula.common._
  * @author JC
  *
  */
-class GUIView extends UIInterface{
+class GUIView(ri: RetrievedInformationInterface,
+				ae: AbstractEngine, 
+				size: Size, loc: Location) extends UIInterface{
+	 var engine = ae
+	 var maxSize = size
+	 var actualLocation= loc
+	 var actualState = ri
 
 	def buildView = println("GUIVIEW buildView Called")
 	def redefineView = println("GUIVIEW RedefineView Called")
