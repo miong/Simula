@@ -19,6 +19,14 @@ class ConcreteEngine(_model: AbstractModel, _view: AbstractView) extends EngineI
   var model: AbstractModel = _model
   var view: AbstractView = _view
 
+  def newEvent(e: EventInterface): RetrievedInformationInterface = {
+    getDataFromModel() // Autre methode apres traitement de l'evenement
+  }
+
+  def permiteOperations() : List[Pair[String, Unit => Unit]] = {
+      null
+  }
+
   def getDataFromModel(): RetrievedInformationInterface = {
     return modelControler.getDataFromModel(model)
   }
