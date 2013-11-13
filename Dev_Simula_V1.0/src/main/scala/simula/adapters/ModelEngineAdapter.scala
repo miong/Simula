@@ -15,7 +15,6 @@ package main.scala.simula.adapters
 import main.scala.simula.model._
 import main.scala.simula.model.city._
 import main.scala.simula.model.player._
-import main.scala.simula.model.time._
 import main.scala.simula.engine._
 import main.scala.simula.common._
 /**

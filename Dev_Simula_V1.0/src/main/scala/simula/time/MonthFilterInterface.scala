@@ -8,7 +8,9 @@
  * Update 5 nov. 2013 18:59:01
  * *******************************************************
  */
-package main.scala.simula.model.time
+package main.scala.simula.time
+
+import main.scala.simula.common.MonthListener
 
 /**
  * @author Bubul

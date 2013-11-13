@@ -12,7 +12,11 @@
  * @author Scarpe
  *
  */
-package main.scala.simula.model.time
+package main.scala.simula.time
+
+import main.scala.simula.common.MonthListener
+
+import main.scala.simula.common.YearListener
 
 class TimeManager extends TimeAccess {
 

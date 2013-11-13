@@ -12,7 +12,9 @@
  * @author Scarpe
  *
  */
-package main.scala.simula.model.time
+package main.scala.simula.time
+
+import main.scala.simula.common.MonthListener
 
 class MonthFilter extends MonthFilterInterface {
 
