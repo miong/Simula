@@ -31,7 +31,7 @@ abstract class Infrastructure(l: Location) extends Viewable {
   def getLocation(): Location={
     return location
   }
-  def priority(): Int={
+  def priority(): Integer={
     return 2
   }
 }

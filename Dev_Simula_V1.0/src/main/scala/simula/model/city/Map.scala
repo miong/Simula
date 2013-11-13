@@ -53,7 +53,7 @@ class Map(s: Size) extends Viewable {
   def getLocation(): Location={
     return new Location(0,0)
   }
-  def priority(): Int={
-    return 2
+  def priority(): Integer={
+    return 0
   }
 }
