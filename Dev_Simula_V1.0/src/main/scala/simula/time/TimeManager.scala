@@ -24,7 +24,7 @@ class TimeManager extends TimeAccess {
   var builder: TimeBuilderInterface = new TimeBuilder()
 
   def buildTimeManager(): Unit = {
-    if (time != null) {
+    if (time == null) {
       time = builder.build();
     }
   }
