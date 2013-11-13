@@ -14,6 +14,8 @@
  */
 package main.scala.simula.model.city
 
+import main.scala.simula.common._
+
 class Area(l: Location) extends Building(l) {
   size = new Size(3, 3);
   def view: String = {

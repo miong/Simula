@@ -15,7 +15,7 @@
 package main.scala.simula.model.city
 
 import Array._;
-import main.scala.simula.common.Viewable
+import main.scala.simula.common._
 
 class Map(s: Size) extends Viewable {
   var size: Size = s

@@ -14,6 +14,8 @@
  */
 package main.scala.simula.model.city
 
+import main.scala.simula.common._
+
 class ElectricGrid(l: Location) extends Network(l) {
   override def view: String = {
     return "ElectricGrid"

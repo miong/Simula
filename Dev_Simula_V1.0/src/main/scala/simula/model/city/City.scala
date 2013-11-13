@@ -14,6 +14,8 @@
  */
 package main.scala.simula.model.city
 
+import main.scala.simula.common._
+
 class City(s: Size) extends CityAccess {
   var map: Map = new Map(s)
 

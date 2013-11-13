@@ -14,6 +14,8 @@
  */
 package main.scala.simula.model.city
 
+import main.scala.simula.common._
+
 class TransportCenter(l: Location) extends Building(l) {
   def view: String = {
     return "TransportCenter"

@@ -14,6 +14,8 @@
  */
 package main.scala.simula.model.city
 
+import main.scala.simula.common._
+
 abstract class Building(l: Location) extends Infrastructure(l) {
 
 }

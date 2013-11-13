@@ -14,6 +14,8 @@
  */
 package main.scala.simula.model.city
 
+import main.scala.simula.common._
+
 trait CityAccess {
   /*
   	def getNumberOfCitizens():Int;

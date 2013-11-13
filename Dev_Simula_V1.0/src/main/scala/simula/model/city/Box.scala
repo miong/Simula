@@ -14,7 +14,7 @@
  */
 package main.scala.simula.model.city
 
-import main.scala.simula.common.Viewable
+import main.scala.simula.common._
 
 class Box(l: Location) extends Viewable {
   var location: Location = l

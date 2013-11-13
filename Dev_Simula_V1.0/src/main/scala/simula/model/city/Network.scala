@@ -14,6 +14,8 @@
  */
 package main.scala.simula.model.city
 
+import main.scala.simula.common._
+
 class Network(l: Location) extends Infrastructure(l) {
   def view: String = {
     return "Network"
