@@ -19,4 +19,5 @@ abstract class RetrievedInformationInterface {
   def getNumberOfCitizen(): Integer;
   def getGlobalPolution(): Integer;
   def getGlobalCriminality(): Integer;
+  def getViewables(): Set[Viewable];
 }

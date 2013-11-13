@@ -38,17 +38,62 @@ class TextView(ri: RetrievedInformationInterface,
       + " | Taux de pollution:"
       + actualState.getGlobalPolution())
       
-     //RetrievedInformationInterface.getViewable --> un tableau de Viewable
-     var viewables:Set[Viewable] =d.getViewable();
-     //Construire un tableau de char de la bonne dimension
-    var s:Size=new Size(10,10) //retrouver la vraie taille: un des viewables est une map
-    var tab = ofDim[Char](s.length, s.width)
-    for (a <- 0 until s.length) {
-    	for (b <- 0 until s.width) {
-    		tab(a)(b) = new Box(new Location(a, b))
-    	}
-    }
-     //le remplir aux bons endroits avec des carctères en fonction des view: String des Viewables 
+    //RetrievedInformationInterface.getViewable --> un tableau de Viewable
+    var viewables:Set[Viewable] =d.getViewables();
+    
+    //Construire un tableau de char de la bonne dimension
+    //var map:Viewable=viewables.find(v:Viewable => v.priority()==0)
+    //var mapSize:Size=map.getSize()
+    /*FAKE*/var mapSize=new Size(10,10)
+  
+    var tab = ofDim[Char](mapSize.length, mapSize.width)
+    /*FAKE*/for (i <- 0 to mapSize.length) {
+         for ( j <- 0 to mapSize.width) {
+            tab(i)(j) = 'B';
+         }
+     }
+    
+     //le remplir aux bons endroits avec des caractères en fonction des view: String des Viewables 
+    //TODO: prendre en compte la priorité
+     /*FAKE*/for (i <- 0 to mapSize.length) {
+         for ( j <- 0 to mapSize.width) {
+            tab(i)(j) = 'B';
+         }
+     }
+    //viewables.foreach(v:Viewable => {tab(v.getLocation().x)(v.getLocation().y)=findChar(v.view())})
+    
      //l'afficher
+    for (a <- 0 until tab.length) {
+    	for (b <- 0 until tab.width) {
+    		print(tab(a)(b))
+    		print(" ")
+    	}
+    	print("\n")
+    }
+    
   }
+  def findChar(str: String): Char={
+    (str.split(" "))(0) match{
+     	
+    	case "Network" =>
+     	  	return 'N'
+     	case "ElectricGrid" =>
+     	  	return 'E'
+     	case "TransportWays" =>
+     	  	return 'W'
+     	  	
+     	case "Plant" =>
+     	  	return 'P'
+     	case "Station" =>
+     	  	return 'S'
+     	case "TransportCenter" =>
+     	  	return 'T'
+    	case "Area" =>
+    		return 'A'
+    	case "box" =>
+    		return 'B'
+    	
+    }
+  }
+  
 }
