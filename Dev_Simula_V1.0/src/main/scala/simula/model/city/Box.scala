@@ -31,13 +31,13 @@ class Box(l: Location) extends Viewable {
   }
   
   
-  def getSize(): Size{
+ def getSize(): Size={
     return new Size(1,1)
   }
-  def getLocation(): return Location{
+  def getLocation(): Location={
     return location
   }
-  def priority(){
-    return 1
+  def priority(): Int={
+    return 2
   }
 }

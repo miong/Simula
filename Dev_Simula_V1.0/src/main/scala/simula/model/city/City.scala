@@ -30,4 +30,5 @@ class City(s: Size) extends CityAccess {
 	def getNumberOfCitizens():Int={
 	  return map.getNumberOfCitizens;
 	}*/
+  
 }

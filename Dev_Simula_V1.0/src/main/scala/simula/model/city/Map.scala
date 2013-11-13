@@ -47,13 +47,13 @@ class Map(s: Size) extends Viewable {
   }
   
   
-    def getSize(): Size{
+ def getSize(): Size={
     return size
   }
-  def getLocation(): return Location{
-    return location
+  def getLocation(): Location={
+    return new Location(0,0)
   }
-  def priority(){
+  def priority(): Int={
     return 2
   }
 }

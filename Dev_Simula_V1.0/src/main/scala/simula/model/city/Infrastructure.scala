@@ -25,13 +25,13 @@ abstract class Infrastructure(l: Location) extends Viewable {
   var population: Population = new Population();
   def view: String
   
-  def getSize(): Size{
+  def getSize(): Size={
     return size
   }
-  def getLocation(): return Location{
+  def getLocation(): Location={
     return location
   }
-  def priority(){
+  def priority(): Int={
     return 2
   }
 }
