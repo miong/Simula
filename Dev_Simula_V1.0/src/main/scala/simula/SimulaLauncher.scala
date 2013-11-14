@@ -19,6 +19,7 @@ import main.scala.simula.engine._
 import main.scala.simula.model._
 import main.scala.simula.ui._
 import main.scala.simula.adapters._
+import main.scala.simula.time._
 import main.scala.simula.ui.InterfaceType._
 
 object SimulaLauncher {
@@ -53,7 +54,7 @@ object SimulaLauncher {
     val viewBuilder: ViewBuilderInterface = new ViewBuilder()
     val engineBuilder: EngineBuilderInterface = new EngineBuilder()
     val modelBuilder: ModelBuilderInterface = new ModelBuilder()
-
+    
     val uiEngineAdapter: UIEngineAdapterInterface = new UIEngineAdapter()
     val modelEngineAdapter: ModelEngineAdapterInterface = new ModelEngineAdapter()
 
@@ -61,6 +62,10 @@ object SimulaLauncher {
     val ui: UIInterface = viewBuilder.buildView(TEXT, uiEngineAdapter, mod.giveInformations())
     val eng: EngineInterface = engineBuilder.build(modelEngineAdapter, uiEngineAdapter)
 
+    val timeManager: TimeManager = new TimeManager()
+    timeManager.buildTimeManager()
+    
+    timeManager.startTime();
   }
 
 }

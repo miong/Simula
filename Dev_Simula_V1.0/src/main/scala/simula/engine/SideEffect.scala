@@ -36,6 +36,6 @@ abstract class SideEffect(var location: Location, var size: Size, var ri: Retrie
    * params
    * return RetrievedInformationInterface which represente the new state of town
    * with the appropriate side effect applicated. Example FiremanEffect and FireEffect can be binded
-   */ 
+   */
   def bindWith(se: SideEffect): RetrievedInformationInterface
 }

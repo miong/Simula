@@ -18,7 +18,7 @@ import main.scala.simula.common._
  * @author JC
  *
  */
-class FiremanEffect(location: Location, size: Size, ri: RetrievedInformationInterface) 
+class FiremanEffect(location: Location, size: Size, ri: RetrievedInformationInterface)
   extends SideEffect(location, size, ri) {
 
   def apply(): RetrievedInformationInterface = ri

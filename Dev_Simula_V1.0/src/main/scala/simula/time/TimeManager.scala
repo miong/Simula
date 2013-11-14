@@ -12,7 +12,11 @@
  * @author Scarpe
  *
  */
-package main.scala.simula.model.time
+package main.scala.simula.time
+
+import main.scala.simula.common.MonthListener
+
+import main.scala.simula.common.YearListener
 
 class TimeManager extends TimeAccess {
 
@@ -20,7 +24,7 @@ class TimeManager extends TimeAccess {
   var builder: TimeBuilderInterface = new TimeBuilder()
 
   def buildTimeManager(): Unit = {
-    if (time != null) {
+    if (time == null) {
       time = builder.build();
     }
   }

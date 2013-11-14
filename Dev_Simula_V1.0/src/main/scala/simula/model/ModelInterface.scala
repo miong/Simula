@@ -15,14 +15,12 @@
 package main.scala.simula.model
 import main.scala.simula.model.city.CityAccess
 import main.scala.simula.model.player.PlayerAccess
-import main.scala.simula.model.time.TimeAccess
 import main.scala.simula.common.RetrievedInformationInterface
 
 trait ModelInterface {
 
   def giveCityAccess(): CityAccess;
   def givePlayerAccess(): PlayerAccess;
-  def giveTimeAccess(): TimeAccess;
   def giveInformations(): RetrievedInformationInterface;
 
 }

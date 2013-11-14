@@ -12,10 +12,8 @@
  * @author Scarpe
  *
  */
-package main.scala.simula.model.time
+package main.scala.simula.time
 
-trait MonthListener {
-
-  def evenOnMonth(): Unit;
-
+trait TimeBuilderInterface {
+  def build(): Time;
 }

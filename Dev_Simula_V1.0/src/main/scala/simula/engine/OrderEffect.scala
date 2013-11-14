@@ -18,9 +18,9 @@ import main.scala.simula.common._
  * @author JC
  *
  */
-class OrderEffect(location: Location, size: Size, ri: RetrievedInformationInterface) 
-extends SideEffect(location, size, ri) {
-  
+class OrderEffect(location: Location, size: Size, ri: RetrievedInformationInterface)
+  extends SideEffect(location, size, ri) {
+
   def apply(): RetrievedInformationInterface = ri
   def bindWith(se: SideEffect): RetrievedInformationInterface = ri
 

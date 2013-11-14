@@ -28,14 +28,14 @@ class GameControler {
    * params data: RetrievedInformationInterface
    * return RetrievedInformationInterface
    */
-  def treatDataFromUI(data: RetrievedInformationInterface ): RetrievedInformationInterface = {
+  def treatDataFromUI(data: RetrievedInformationInterface): RetrievedInformationInterface = {
     data
   }
 
   /**
    * Complete operation to return a new state based on actual state which come from the model.
    * That could be used by the UI or any following operations
-   * params data: RetrievedInformationInterface 
+   * params data: RetrievedInformationInterface
    * return RetrievedInformationInterface
    */
 

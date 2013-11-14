@@ -15,8 +15,8 @@ package main.scala.simula.common
  *
  */
 abstract class RetrievedInformationInterface {
-  def getViewables(): Set[Viewable]
   def getNumberOfCitizen(): Integer;
   def getGlobalPolution(): Integer;
   def getGlobalCriminality(): Integer;
+  def getViewables(): Set[Viewable];
 }

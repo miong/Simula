@@ -12,7 +12,7 @@
  * @author Scarpe
  *
  */
-package main.scala.simula.model.time
+package main.scala.simula.time
 
 class TimeBuilder extends TimeBuilderInterface {
 

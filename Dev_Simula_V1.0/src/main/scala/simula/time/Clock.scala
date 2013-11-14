@@ -13,7 +13,7 @@
  *
  */
 
-package main.scala.simula.model.time {
+package main.scala.simula.time {
 
   class Clock extends Thread with ClockInterface {
     var filters: List[TimeFilter] = Nil;
