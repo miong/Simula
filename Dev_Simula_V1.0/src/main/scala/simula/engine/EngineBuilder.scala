@@ -12,9 +12,5 @@ package main.scala.simula.engine
 
 class EngineBuilder extends EngineBuilderInterface {
 
-  def build(model: AbstractModel, view: AbstractView): EngineInterface = {
-    var engine: ConcreteEngine = new ConcreteEngine(model, view)
-
-    return engine
-  }
+  def build(model: AbstractModel, view: AbstractView): EngineInterface = new Engine(model, view)
 }

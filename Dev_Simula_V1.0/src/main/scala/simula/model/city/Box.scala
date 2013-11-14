@@ -29,15 +29,14 @@ class Box(l: Location) extends Viewable {
   def view: String = {
     return "box +x:" + location.x + " y:" + location.y
   }
-  
-  
- def getSize(): Size={
-    return new Size(1,1)
+
+  def getSize(): Size = {
+    return new Size(1, 1)
   }
-  def getLocation(): Location={
+  def getLocation(): Location = {
     return location
   }
-  def priority(): Integer={
+  def priority(): Integer = {
     return 2
   }
 }

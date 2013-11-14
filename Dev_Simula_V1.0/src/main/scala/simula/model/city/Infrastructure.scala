@@ -24,14 +24,14 @@ abstract class Infrastructure(l: Location) extends Viewable {
   var criminality: Int = 0;
   var population: Population = new Population();
   def view: String
-  
-  def getSize(): Size={
+
+  def getSize(): Size = {
     return size
   }
-  def getLocation(): Location={
+  def getLocation(): Location = {
     return location
   }
-  def priority(): Integer={
+  def priority(): Integer = {
     return 2
   }
 }

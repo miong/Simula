@@ -45,15 +45,14 @@ class Map(s: Size) extends Viewable {
   def view: String = {
     return "Map lenght:" + s.length + " width" + s.width
   }
-  
-  
- def getSize(): Size={
+
+  def getSize(): Size = {
     return size
   }
-  def getLocation(): Location={
-    return new Location(0,0)
+  def getLocation(): Location = {
+    return new Location(0, 0)
   }
-  def priority(): Integer={
+  def priority(): Integer = {
     return 0
   }
 }

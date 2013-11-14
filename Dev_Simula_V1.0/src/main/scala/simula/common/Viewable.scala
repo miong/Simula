@@ -20,5 +20,5 @@ trait Viewable {
   def view: String
   def getLocation: Location;
   def getSize: Size
-  def priority:Integer
+  def priority: Integer
 }

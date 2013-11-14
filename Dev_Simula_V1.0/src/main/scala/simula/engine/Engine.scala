@@ -2,29 +2,34 @@
  * *******************************************************
  * Simula
  * Engine
- * ConcreteEngine.scala
- * (c)SimulaGame on 30 oct. 2013 11:30:30
+ * Engine.scala
+ * (c) Simula. on 30 oct. 2013 11:30:30
  * By ken
  * Update 30 oct. 2013 11:30:30
- *********************************************************/
+ * *******************************************************
+ */
 package main.scala.simula.engine
 
 import main.scala.simula.common._
 
-class ConcreteEngine(_model: AbstractModel, _view: AbstractView) extends EngineInterface {
+class Engine(_model: AbstractModel, _view: AbstractView) extends EngineInterface {
 
   var modelControler: ModelControler = _
   var viewControler: ViewControler = _
   var gameControler: GameControler = _
   var model: AbstractModel = _model
   var view: AbstractView = _view
+  var persisri: RetrievedInformationInterface = _
 
   def newEvent(e: EventInterface): RetrievedInformationInterface = {
+    //    match e {
+    //      case 
+    //    }
     getDataFromModel() // Autre methode apres traitement de l'evenement
   }
 
-  def permiteOperations() : List[Pair[String, Unit => Unit]] = {
-      null
+  def permiteOperations(): List[Pair[String, Unit => Unit]] = {
+    null
   }
 
   def getDataFromModel(): RetrievedInformationInterface = {

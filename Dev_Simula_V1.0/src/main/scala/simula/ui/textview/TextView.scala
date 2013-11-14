@@ -36,11 +36,11 @@ class TextView(ri: RetrievedInformationInterface,
       + actualState.getGlobalCriminality()
       + " | Taux de pollution:"
       + actualState.getGlobalPolution())
-      
-     //RetrievedInformationInterface.getViewable --> un tableau de Viewable
-     //viewables:Set[Viewable] =d.getViewable();
-     //Construire un tableau de char de la bonne dimension
-     //le remplir aux bons endroits avec des carctères en fonction des view: String des Viewables 
-     //l'afficher
+
+    //RetrievedInformationInterface.getViewable --> un tableau de Viewable
+    //viewables:Set[Viewable] =d.getViewable();
+    //Construire un tableau de char de la bonne dimension
+    //le remplir aux bons endroits avec des carctères en fonction des view: String des Viewables 
+    //l'afficher
   }
 }
