@@ -19,7 +19,9 @@ import main.scala.simula.common._
 abstract class Infrastructure(l: Location) extends Viewable {
   // Default value added !! need a Builder To set them at initialisation !!
   var size: Size = new Size(0, 0);
-  var location: Location = l
+  var topCornerlocation: Location = l
+  //Ajout pour coller avec diagramme de classe
+  var price:Mesure;
   var polution: Int = 0;
   var criminality: Int = 0;
   var population: Population = new Population();

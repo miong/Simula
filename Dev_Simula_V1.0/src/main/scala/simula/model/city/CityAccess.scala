@@ -22,4 +22,7 @@ trait CityAccess {
   	*/
   def constructAnArea(l: Location);
   def getMapAccess(): Map;
+//----------ajout pour coller au diag de classe
+  def getBoxAt(l:Location):Box
+  def constructInfrastructureAt(InfrastructureType: EnumType,l:Location)
 }

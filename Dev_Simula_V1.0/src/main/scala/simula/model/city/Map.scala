@@ -19,6 +19,8 @@ import main.scala.simula.common._
 
 class Map(s: Size) extends Viewable {
   var size: Size = s
+  //Ajout pour coller avec diagramme de classe
+  var mesure : Mesure ;
   var value: Int = 0
   var polution: Int = 0
   var criminality: Int = 0
@@ -55,4 +57,20 @@ class Map(s: Size) extends Viewable {
   def priority(): Integer = {
     return 0
   }
+  
+  
+//Ajout pour coller avec diagramme de classe
+  def positionAnInfrastructure(i:Infrastructure)={
+    for (a <- i.location.x until i.location.x + i.size.length) {
+      for (b <- i.location.y until i.location.y + i.size.width) {
+        tab(a)(b).addInfrastructure(i);
+      }
+    }
+  }
+  
+  def getBoxAt(l: Location):Box ={
+    return tab(l.x)(l.y)
+  }
+  
+  
 }

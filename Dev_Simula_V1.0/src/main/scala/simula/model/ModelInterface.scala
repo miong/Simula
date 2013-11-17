@@ -16,11 +16,13 @@ package main.scala.simula.model
 import main.scala.simula.model.city.CityAccess
 import main.scala.simula.model.player.PlayerAccess
 import main.scala.simula.common.RetrievedInformationInterface
-
+import main.scala.simula.common.Location
+import main.scala.simula.model.city.EnumType._
 trait ModelInterface {
 
   def giveCityAccess(): CityAccess;
   def givePlayerAccess(): PlayerAccess;
   def giveInformations(): RetrievedInformationInterface;
-
+  def constructInfrastructureAt(InfrastructureType: EnumType, location : Location)
+  
 }

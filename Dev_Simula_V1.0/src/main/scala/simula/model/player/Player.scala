@@ -15,5 +15,7 @@
 package main.scala.simula.model.player
 
 class Player extends PlayerAccess {
-
+	def getMoneyAmount()={
+	  
+	}
 }
