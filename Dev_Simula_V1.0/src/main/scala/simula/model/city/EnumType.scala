@@ -15,5 +15,6 @@ package main.scala.simula.model.city
  *
  */
 object EnumType extends Enumeration{
-	val HOUSE, HOSPITAL, ROAD, AIRPORT, ELECTRICLINE = Value
+	type EnumType = Value
+	val AREA = Value
 }

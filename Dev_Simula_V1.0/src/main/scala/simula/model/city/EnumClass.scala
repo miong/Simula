@@ -14,6 +14,7 @@ package main.scala.simula.model.city
  * @author ken
  *
  */
-object EnumClasse extends Enumeration{
+object EnumClass extends Enumeration{
+	type EnumClass = Value
 	val RICH,POOR,MEDIUM = Value
 }

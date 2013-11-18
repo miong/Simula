@@ -16,7 +16,8 @@ package main.scala.simula.model
 import main.scala.simula.model.city.CityAccess
 import main.scala.simula.model.player.PlayerAccess
 import main.scala.simula.model.scanner._
-import main.scala.simula.common.RetrievedInformationInterface
+import main.scala.simula.common._
+import main.scala.simula.model.city.EnumType._
 
 class ModelManager extends ModelInterface {
 
@@ -30,6 +31,11 @@ class ModelManager extends ModelInterface {
     return infoBuilder.build()
   }
 
+  
+  def constructInfrastructureAt(InfrastructureType: EnumType, location : Location){
+    cityModelManager.giveCityAccess.constructInfrastructureAt(InfrastructureType, location)
+  }
+  
   def giveCityAccess(): CityAccess = {
     return cityModelManager.giveCityAccess();
   }

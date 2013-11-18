@@ -15,18 +15,18 @@
 package main.scala.simula.model.city
 
 import main.scala.simula.common._
-import main.scala.simula.model.city.EnumBase
+import main.scala.simula.model.city.EnumBase._
 
-class Box(l: Location) extends Viewable {
+class Box(l: Location, boxBaseType : EnumBase) extends Viewable {
   var location: Location = l
   //Ajout pour coller avec diagramme de classe
-  var mesure:Mesure;
-  var value: Int = 0;
-  var polution: Int = 0;
-  var criminality: Int = 0;
+  var value: EconomicEvaluation = new EconomicEvaluation
+  var population:Population = new Population;
+  var polution:Polution = new Polution;
+  var criminality:Criminality = new Criminality;
   var infrastructures: Set[Infrastructure] = Set();
   //ajout pour coller au diagramme de classe
-  var baseType : EnumBase;
+  var baseType : EnumBase = boxBaseType;
 
   def addInfrastructure(i: Infrastructure) {
     infrastructures += i;

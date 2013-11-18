@@ -24,7 +24,7 @@ trait PopulationScanner extends InfrastructuresScanner {
     var pop: Integer = 0;
     var infra = this.getInfrastructures(model)
     for (i: Infrastructure <- infra) {
-      pop += i.population.getNumberOfCitizens
+      pop += i.population.getValue.toInt
     }
     return pop;
   }

@@ -16,14 +16,14 @@ package main.scala.simula.model.city
 
 import main.scala.simula.common._
 
-abstract class Infrastructure(l: Location) extends Viewable {
+abstract class Infrastructure(var l: Location) extends Viewable {
   // Default value added !! need a Builder To set them at initialisation !!
   var size: Size = new Size(0, 0);
-  var topCornerlocation: Location = l
+  var topCornerLocation: Location = l
   //Ajout pour coller avec diagramme de classe
-  var price:Mesure;
-  var polution: Int = 0;
-  var criminality: Int = 0;
+  var price:Price = new Price;
+  var polution = new Polution;
+  var criminality = new Criminality;
   var population: Population = new Population();
   def view: String
 
@@ -31,7 +31,7 @@ abstract class Infrastructure(l: Location) extends Viewable {
     return size
   }
   def getLocation(): Location = {
-    return location
+    return topCornerLocation
   }
   def priority(): Integer = {
     return 2

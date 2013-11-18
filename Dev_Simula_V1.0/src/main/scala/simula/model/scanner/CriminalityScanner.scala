@@ -24,7 +24,7 @@ trait CriminalityScanner extends InfrastructuresScanner {
     var crim: Integer = 0;
     var infra = getInfrastructures(model)
     for (i: Infrastructure <- infra) {
-      crim += i.population.getNumberOfCitizens
+      crim += i.criminality.getValue.toInt
     }
     return crim;
   }

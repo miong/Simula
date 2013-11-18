@@ -23,7 +23,7 @@ trait PolutionScanner extends InfrastructuresScanner {
     var pol: Integer = 0;
     var infra = getInfrastructures(model)
     for (i: Infrastructure <- infra) {
-      pol += i.population.getNumberOfCitizens
+      pol += i.polution.getValue.toInt
     }
     return pol;
   }

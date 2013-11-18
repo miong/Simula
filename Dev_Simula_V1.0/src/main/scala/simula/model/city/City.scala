@@ -15,12 +15,22 @@
 package main.scala.simula.model.city
 
 import main.scala.simula.common._
+import main.scala.simula.model.city.EnumType._
 
 class City(s: Size) extends CityAccess {
   var map: Map = new Map(s)
-
-  def getMapAccess(): Map = {
+  val infraBuilder = new InfrastructureBuilder()
+  /*def getMapAccess(): Map = {
     return map;
+  }*/
+  
+  def mapSize = map.getSize();
+  
+  def getBoxAt(l:Location):Box = map.getBoxAt(l);
+  
+  def constructInfrastructureAt(InfrastructureType: EnumType,l:Location) = {
+    val i:Infrastructure = infraBuilder.build(InfrastructureType, l)
+    map.constructInfrastructure(i)
   }
 
   def constructAnArea(l: Location) {

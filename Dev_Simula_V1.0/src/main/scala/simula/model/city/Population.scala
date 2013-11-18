@@ -14,16 +14,25 @@
  */
 package main.scala.simula.model.city
 
-import main.scala.simula.model.city.EnumClasse
+import main.scala.simula.model.city.EnumClass._
 
 class Population extends Mesure {
-  var satisfaction: Integer
-  var rank: EnumClasse
+  var satisfaction: Integer = 0
+  var rank: EnumClass = EnumClass.POOR
  
-  def setNumberOfCitizens(newNumberOfCitizens: Int) = {
-    numberOfCitizens = newNumberOfCitizens;
+  def getSatisfaction():Integer = {
+    return satisfaction
   }
-  def getNumberOfCitizens(): Int = {
-    return numberOfCitizens;
+  
+  def setSatisfaction(sat:Integer) = {
+    satisfaction = sat
+  }
+  
+  def getRank():EnumClass = {
+    return rank
+  }
+  
+  def setRank(r:EnumClass) = {
+    rank = r
   }
 }

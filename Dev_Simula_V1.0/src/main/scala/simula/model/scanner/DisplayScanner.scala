@@ -18,20 +18,19 @@ import main.scala.simula.common._
  *
  */
 
-trait DisplayScanner {
+trait DisplayScanner extends InfrastructuresScanner{
 
   var model: ModelInterface
 
   def scanViewableObjects(): Set[Viewable] = {
     var rval = Set[Viewable]()
-    val map: Array[Array[Box]] = model.giveCityAccess.getMapAccess.tab
-    rval += model.giveCityAccess.getMapAccess
-    for (ab: Array[Box] <- map; b: Box <- ab) {
-      rval += b
-      for (i: Infrastructure <- b.infrastructures) {
-        rval += i
-      }
+    val infra = getInfrastructures(model)
+    for (i: Infrastructure <- infra) {
+    	rval += i
     }
+    val s = model.giveCityAccess.mapSize
+    for(i <- 0 to s.length; j <- 0 to s.width)
+    		rval += model.giveCityAccess.getBoxAt(new Location(i,j))
     return rval
   }
 

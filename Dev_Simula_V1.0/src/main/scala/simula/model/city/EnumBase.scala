@@ -15,5 +15,7 @@ package main.scala.simula.model.city
  *
  */
 object EnumBase extends Enumeration{
+	type EnumBase = Value
 	val WATER,EARTH,TREE = Value
+	val size = 3
 }
