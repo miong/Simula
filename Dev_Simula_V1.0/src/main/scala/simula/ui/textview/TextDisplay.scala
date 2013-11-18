@@ -32,26 +32,22 @@ trait TextDisplay extends DisplayInterface{
     var viewables:Set[Viewable] =d.getViewables();
     
     //construire un tableau de char de la bonne dimension
-    // /!\ gerer les erreurs /!\
+    // /!\ gerer les erreurs si on n'obtient pas la map /!\
     var map:Viewable=viewables.find({ v:Viewable => v.priority==0 }).get
     var mapSize:Size=map.getSize
   
-    var tab = ofDim[Char](mapSize.length, mapSize.width)
-    for (i <- 0 to mapSize.length) {
-         for ( j <- 0 to mapSize.width) {
-            tab(i)(j) = ' ';
-         }
-     }
+    var tab = ofDim[Viewable](mapSize.length, mapSize.width)
     
     //remplir le tableau avec les bons caractères
     //TODO: prendre en compte la priorité
-    viewables.foreach(v => { tab( v.getLocation.x )( v.getLocation.y )=findChar(v.view) })
+    viewables.foreach(v => { if ( tab( v.getLocation.x )( v.getLocation.y ).priority<v.priority )
+    							{tab( v.getLocation.x )( v.getLocation.y )=v }})
     
     
     //l'afficher
     for (a <- 0 until mapSize.length) {
     	for (b <- 0 until mapSize.width) {
-    		print(tab(a)(b))
+    		print(writeChar( tab(a)(b).view ))
     		print(" ")
     	}
     	print("\n")
@@ -59,7 +55,7 @@ trait TextDisplay extends DisplayInterface{
   }
   
   
-   def findChar(str: String): Char={
+   def writeChar(str: String): Char={
      //TODO: prendre en compte la priorité d'affichage
     (str.split(" "))(0) match{
      	
@@ -80,6 +76,9 @@ trait TextDisplay extends DisplayInterface{
     		return 'A'
     	case "box" =>
     		return 'B'
+    		
+    	case _ =>
+    		return 'U'
     	
     }
   }
