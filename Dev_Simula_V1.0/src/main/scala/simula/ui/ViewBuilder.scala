@@ -13,6 +13,8 @@
 package main.scala.simula.ui
 
 import main.scala.simula.ui.textview.TextView
+import main.scala.simula.ui.cliview.CLIView
+import main.scala.simula.ui.guiview.GUIView
 import main.scala.simula.ui.InterfaceType._
 import main.scala.simula.common._
 /**
@@ -20,11 +22,23 @@ import main.scala.simula.common._
  *
  */
 class ViewBuilder extends ViewBuilderInterface {
+  
   def buildView(it: InterfaceType,
     ae: AbstractEngine,
     ri: RetrievedInformationInterface): UIInterface = {
-    val view = new TextView(ri, ae, new Size(10, 10), new Location(0, 0))
-    view
+    
+    it match{
+      //QUESTION: la taille de la map est fournie comment à la construction? C'est l'Engine qui la donne?
+      
+      case TEXT =>
+        return new TextView(ri, ae, new Size(10, 10), new Location(0, 0))
+        
+      case CLI =>
+      	return new CLIView(ri, ae, new Size(10, 10), new Location(0, 0))
+      	
+      case GUI =>
+      	return new GUIView(ri, ae, new Size(10, 10), new Location(0, 0))
+    }
   }
 
 }

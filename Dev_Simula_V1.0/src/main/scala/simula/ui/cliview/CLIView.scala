@@ -22,7 +22,7 @@ import main.scala.simula.ui.AbstractEngine
  */
 class CLIView(ri: RetrievedInformationInterface,
   ae: AbstractEngine,
-  size: Size, loc: Location) extends UIInterface {
+  size: Size, loc: Location) extends UIInterface with CLIDisplay with CLIUserListener{
   var engine = ae
   var maxSize = size
   var actualLocation = loc
