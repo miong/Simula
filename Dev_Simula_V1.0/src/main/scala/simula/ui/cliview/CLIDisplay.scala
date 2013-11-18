@@ -17,5 +17,7 @@ import main.scala.simula.ui._
  *
  */
 trait CLIDisplay extends DisplayInterface{
-
+	def updateDisplay(d:RetrievedInformationInterface,actualState:RetrievedInformationInterface){
+	  print("TO DO")
+	}
 }
