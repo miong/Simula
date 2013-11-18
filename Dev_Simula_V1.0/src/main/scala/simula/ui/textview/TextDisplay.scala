@@ -28,31 +28,27 @@ trait TextDisplay extends DisplayInterface{
       + " | Taux de pollution:"
       + actualState.getGlobalPolution())
       
-    //RetrievedInformationInterface.getViewable --> un tableau de Viewable
+    //obtenir les objets à représenter
     var viewables:Set[Viewable] =d.getViewables();
     
-    //Construire un tableau de char de la bonne dimension
-    //var map:Viewable=viewables.find(v:Viewable => v.priority()==0)
-    //var mapSize:Size=map.getSize()
-    /*FAKE*/var mapSize=new Size(10,10)
+    //construire un tableau de char de la bonne dimension
+    // /!\ gerer les erreurs /!\
+    var map:Viewable=viewables.find({ v:Viewable => v.priority==0 }).get
+    var mapSize:Size=map.getSize
   
     var tab = ofDim[Char](mapSize.length, mapSize.width)
-    /*FAKE*/for (i <- 0 to mapSize.length) {
+    for (i <- 0 to mapSize.length) {
          for ( j <- 0 to mapSize.width) {
-            tab(i)(j) = 'B';
+            tab(i)(j) = ' ';
          }
      }
     
-     //le remplir aux bons endroits avec des caractères en fonction des view: String des Viewables 
+    //remplir le tableau avec les bons caractères
     //TODO: prendre en compte la priorité
-     /*FAKE*/for (i <- 0 to mapSize.length) {
-         for ( j <- 0 to mapSize.width) {
-            tab(i)(j) = 'B';
-         }
-     }
-    //viewables.foreach(v:Viewable => {tab(v.getLocation().x)(v.getLocation().y)=findChar(v.view())})
+    viewables.foreach(v => { tab( v.getLocation.x )( v.getLocation.y )=findChar(v.view) })
     
-     //l'afficher
+    
+    //l'afficher
     for (a <- 0 until mapSize.length) {
     	for (b <- 0 until mapSize.width) {
     		print(tab(a)(b))
@@ -64,6 +60,7 @@ trait TextDisplay extends DisplayInterface{
   
   
    def findChar(str: String): Char={
+     //TODO: prendre en compte la priorité d'affichage
     (str.split(" "))(0) match{
      	
     	case "Network" =>
@@ -86,4 +83,6 @@ trait TextDisplay extends DisplayInterface{
     	
     }
   }
+   
+
 }
