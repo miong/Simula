@@ -38,16 +38,15 @@ trait TextDisplay extends DisplayInterface{
   
     var tab = ofDim[Viewable](mapSize.length, mapSize.width)
     
-    //remplir le tableau avec les bons caractères
-    //TODO: prendre en compte la priorité
-    viewables.foreach(v => { if ( tab( v.getLocation.x )( v.getLocation.y ).priority<v.priority )
+    //remplir le tableau
+    viewables.foreach(v => { if (v!=null && tab( v.getLocation.x )( v.getLocation.y ).priority<v.priority )
     							{tab( v.getLocation.x )( v.getLocation.y )=v }})
     
     
     //l'afficher
     for (a <- 0 until mapSize.length) {
     	for (b <- 0 until mapSize.width) {
-    		print(writeChar( tab(a)(b).view ))
+    		print(writeChar( (tab(a)(b))))
     		print(" ")
     	}
     	print("\n")
@@ -55,32 +54,35 @@ trait TextDisplay extends DisplayInterface{
   }
   
   
-   def writeChar(str: String): Char={
-     //TODO: prendre en compte la priorité d'affichage
-    (str.split(" "))(0) match{
+   def writeChar(v:Viewable): Char={
+     if (v != null){
+       var str:String=v.view
+       (str.split(" "))(0) match{
      	
-    	case "Network" =>
-     	  	return 'N'
-     	case "ElectricGrid" =>
-     	  	return 'E'
-     	case "TransportWays" =>
-     	  	return 'W'
+    		case "Network" =>
+    			return 'N'
+    		case "ElectricGrid" =>
+    			return 'E'
+    		case "TransportWays" =>
+    			return 'W'
      	  	
-     	case "Plant" =>
-     	  	return 'P'
-     	case "Station" =>
-     	  	return 'S'
-     	case "TransportCenter" =>
-     	  	return 'T'
-    	case "Area" =>
-    		return 'A'
-    	case "box" =>
-    		return 'B'
-    		
-    	case _ =>
-    		return 'U'
+    		case "Plant" =>
+    			return 'P'
+    		case "Station" =>
+    			return 'S'
+    		case "TransportCenter" =>
+    			return 'T'
+    		case "Area" =>
+    			return 'A'
+    		case "box" =>
+    			return 'B'
+    					
+    		case _ =>
+    			return 'U'
+     	}
     	
-    }
+     }
+     return 'U'
   }
    
 
