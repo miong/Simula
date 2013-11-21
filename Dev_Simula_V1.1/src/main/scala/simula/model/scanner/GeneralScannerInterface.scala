@@ -17,10 +17,10 @@ trait GeneralScannerInterface {
 
   var model: ModelInterface = null
 
-  def ScanNumberOfCitizens(): Integer
-  def ScanGlobalPolution(): Integer
-  def ScanGlobalCriminality(): Integer
-  def scanViewableObjects(): Set[Viewable]
+  def ScanNumberOfCitizens(loc:Location,siz:Size): Integer
+  def ScanGlobalPolution(loc:Location,siz:Size): Integer
+  def ScanGlobalCriminality(loc:Location,siz:Size): Integer
+  def scanViewableObjects(loc:Location,siz:Size): Set[Viewable]
 
 }
 

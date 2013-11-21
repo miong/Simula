@@ -11,6 +11,7 @@
 package main.scala.simula.model.scanner
 import main.scala.simula.model._
 import main.scala.simula.model.city._
+import main.scala.simula.common._
 
 /**
  * @author Bubul
@@ -19,9 +20,9 @@ import main.scala.simula.model.city._
 trait PolutionScanner extends InfrastructuresScanner {
   var model: ModelInterface
 
-  def ScanGlobalPolution: Integer = {
+  def ScanGlobalPolution(loc:Location,siz:Size): Integer = {
     var pol: Integer = 0;
-    var infra = getInfrastructures(model)
+    var infra = getInfrastructures(model,loc,siz)
     for (i: Infrastructure <- infra) {
       pol += i.polution.getValue.toInt
     }

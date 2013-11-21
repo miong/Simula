@@ -14,7 +14,7 @@ package main.scala.simula.common
  * @author Bubul
  *
  */
-class RetrievedInformation(val numberOfCitizen: Integer, val globalPolution: Integer, val globalCriminality: Integer, val viewable: Set[Viewable]) extends RetrievedInformationInterface {
+class RetrievedInformation(val numberOfCitizen: Integer, val globalPolution: Integer, val globalCriminality: Integer, val viewable: Set[Viewable],val loc:Location,val siz:Size) extends RetrievedInformationInterface {
 
   def getViewables(): Set[Viewable] = {
     return viewable
@@ -30,6 +30,13 @@ class RetrievedInformation(val numberOfCitizen: Integer, val globalPolution: Int
 
   def getGlobalCriminality: Integer = {
     return globalCriminality
+  }
+  
+  def getLocationOfInfos():Location = {
+    return loc
+  }
+  def getSizeOfInfos():Size = {
+    return siz
   }
 
 }

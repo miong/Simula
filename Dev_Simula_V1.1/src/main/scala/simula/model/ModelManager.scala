@@ -28,9 +28,12 @@ class ModelManager extends ModelInterface {
   var infoBuilder: RetrievedInformationBuilderInterface = new RetrievedInformationBuilder(generalScanner)
 
   def giveInformations(): RetrievedInformationInterface = {
-    return infoBuilder.build()
+    return infoBuilder.build(new Location(0,0),cityModelManager.giveCityAccess.mapSize)
   }
-
+  
+  def giveInformations(loc:Location,siz:Size): RetrievedInformationInterface = {
+    return infoBuilder.build(loc,siz)
+  }
   
   def constructInfrastructureAt(InfrastructureType: EnumType, location : Location){
     cityModelManager.giveCityAccess.constructInfrastructureAt(InfrastructureType, location)

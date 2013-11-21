@@ -16,13 +16,14 @@ package main.scala.simula.model.scanner
  */
 import main.scala.simula.model._
 import main.scala.simula.model.city._
+import main.scala.simula.common._
 
 trait CriminalityScanner extends InfrastructuresScanner {
   var model: ModelInterface
 
-  def ScanGlobalCriminality: Integer = {
+  def ScanGlobalCriminality(loc:Location,siz:Size): Integer = {
     var crim: Integer = 0;
-    var infra = getInfrastructures(model)
+    var infra = getInfrastructures(model,loc,siz)
     for (i: Infrastructure <- infra) {
       crim += i.criminality.getValue.toInt
     }

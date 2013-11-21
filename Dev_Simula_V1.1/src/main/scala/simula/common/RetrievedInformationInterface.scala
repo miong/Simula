@@ -19,4 +19,6 @@ abstract class RetrievedInformationInterface {
   def getGlobalPolution(): Integer;
   def getGlobalCriminality(): Integer;
   def getViewables(): Set[Viewable];
+  def getLocationOfInfos():Location;
+  def getSizeOfInfos():Size;
 }

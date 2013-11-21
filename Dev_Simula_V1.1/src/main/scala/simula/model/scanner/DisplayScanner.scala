@@ -22,9 +22,9 @@ trait DisplayScanner extends InfrastructuresScanner{
 
   var model: ModelInterface
 
-  def scanViewableObjects(): Set[Viewable] = {
+  def scanViewableObjects(loc:Location,siz:Size): Set[Viewable] = {
     var rval: Set[Viewable] = Set.empty[Viewable]
-    val infra = getInfrastructures(model)
+    val infra = getInfrastructures(model,loc,siz)
     for (i: Infrastructure <- infra) {
     	rval += i
     }
