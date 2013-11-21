@@ -41,65 +41,74 @@ trait TextDisplay extends DisplayInterface{
     for(i <- 0 until mapSize.length; j <- 0 until mapSize.width)
       tab(i)(j) = null
     
-    viewables.foreach(v => { if (tab( v.getLocation.x )( v.getLocation.y )==null || tab( v.getLocation.x )( v.getLocation.y ).priority<v.priority )
-    							{tab( v.getLocation.x )( v.getLocation.y )=v }})
+    viewables.foreach(v => {
+    	if (tab( v.getLocation.x )( v.getLocation.y )==null || tab( v.getLocation.x )( v.getLocation.y ).priority<v.priority )
+    	{
+    		//tab( v.getLocation.x )( v.getLocation.y )=v;
+    		for(a <- 0 until v.getSize.length ; b <- 0 until v.getSize.width){
+    			tab(v.getLocation.x+a)(v.getLocation.y+b)=v
+    		}
+    	}
+    })
     
-							
-    for (a <- 0 until mapSize.length) {
-    	for (b <- 0 until mapSize.width) {
-    	  var str: String=tab(a)(b).view
-    	  (str.split((" "))(0) match{
-    	   case "Plant" =>
-    			if (tab(a)(b).getLocation.x > -1  && tab(a)(b).getLocation.y > -1){
-    	    		for (i<-1 until 3){
-    	    		  tab (a+i)(b)=new Plant(new Location(-1,-1))
-    	    		  tab (a)(b+i)=new Plant(new Location(-1,-1))
-    	    		}
-    	    		for (i<-1 until 3){
-    	    		  for (j<-1 until 3){
-    	    		    tab(a+i)(b+j)=new Plant(new Location(-1,-1))
-    	    		  }
-    	    		}
-    	  		}
-    		case "Station" =>
-    			if (tab(a)(b).getLocation.x > -1  && tab(a)(b).getLocation.y > -1){
-    	    		for (i<-1 until 3){
-    	    		  tab (a+i)(b)=new Station(new Location(-1,-1))
-    	    		  tab (a)(b+i)=new Station (new Location(-1,-1))
-    	    		}
-    	    		for (i<-1 until 3){
-    	    		  for (j<-1 until 3){
-    	    		    tab(a+i)(b+j)=new Station(new Location(-1,-1))
-    	    		  }
-    	    		}
-    	  		}
-    		case "TransportCenter" =>
-    			if (tab(a)(b).getLocation.x > -1  && tab(a)(b).getLocation.y > -1){
-    	    		for (i<-1 until 7){
-    	    		  tab (a+i)(b)=new TransportCenter (new Location(-1,-1))
-    	    		  tab (a)(b+i)=new TransportCenter (new Location(-1,-1))
-    	    		}
-    	    		for (i<-1 until 7){
-    	    		  for (j<-1 until 7){
-    	    		    tab(a+i)(b+j)=new TransportCenter (new Location(-1,-1))
-    	    		  }
-    	    		}
-    	  		}
-    		case "Area" =>
-    			if (tab(a)(b).getLocation.x > -1  && tab(a)(b).getLocation.y > -1){
-    	    		for (i<-1 until 3){
-    	    		  tab (a+i)(b)=new Area(new Location(-1,-1))
-    	    		  tab (a)(b+i)=new Area (new Location(-1,-1))
-    	    		}
-    	    		for (i<-1 until 3){
-    	    		  for (j<-1 until 3){
-    	    		    tab(a+i)(b+j)=new Area (new Location(-1,-1))
-    	    		  }
-    	    		}
-    	  		}
-    	  }
-    	)}
-    }							
+// POUR KENNY : NE SERAIT'IL PAS JUDICIEUX D'UTILISE LA SIZE DE L'OBJET ?? 
+// JE NE SAVAIS PAS QUE C'ETAIT A LA VUE DE DECLARER LA TAILLE DES OBJETS...
+// DE PLUS J'AI ESSAYER DE RUN -> ERREUR POUR UN MATCH AVEC EARTH... TA ESSAYER DE RUN ???    							
+//    for (a <- 0 until mapSize.length) {
+//    	for (b <- 0 until mapSize.width) {
+//    	  var str: String=tab(a)(b).view
+//    	  (str.split((" "))(0) match{
+//    	   case "Plant" =>
+//    			if (tab(a)(b).getLocation.x > -1  && tab(a)(b).getLocation.y > -1){
+//    	    		for (i<-1 until 3){
+//    	    		  tab (a+i)(b)=new Plant(new Location(-1,-1))
+//    	    		  tab (a)(b+i)=new Plant(new Location(-1,-1))
+//    	    		}
+//    	    		for (i<-1 until 3){
+//    	    		  for (j<-1 until 3){
+//    	    		    tab(a+i)(b+j)=new Plant(new Location(-1,-1))
+//    	    		  }
+//    	    		}
+//    	  		}
+//    		case "Station" =>
+//    			if (tab(a)(b).getLocation.x > -1  && tab(a)(b).getLocation.y > -1){
+//    	    		for (i<-1 until 3){
+//    	    		  tab (a+i)(b)=new Station(new Location(-1,-1))
+//    	    		  tab (a)(b+i)=new Station (new Location(-1,-1))
+//    	    		}
+//    	    		for (i<-1 until 3){
+//    	    		  for (j<-1 until 3){
+//    	    		    tab(a+i)(b+j)=new Station(new Location(-1,-1))
+//    	    		  }
+//    	    		}
+//    	  		}
+//    		case "TransportCenter" =>
+//    			if (tab(a)(b).getLocation.x > -1  && tab(a)(b).getLocation.y > -1){
+//    	    		for (i<-1 until 7){
+//    	    		  tab (a+i)(b)=new TransportCenter (new Location(-1,-1))
+//    	    		  tab (a)(b+i)=new TransportCenter (new Location(-1,-1))
+//    	    		}
+//    	    		for (i<-1 until 7){
+//    	    		  for (j<-1 until 7){
+//    	    		    tab(a+i)(b+j)=new TransportCenter (new Location(-1,-1))
+//    	    		  }
+//    	    		}
+//    	  		}
+//    		case "Area" =>
+//    			if (tab(a)(b).getLocation.x > -1  && tab(a)(b).getLocation.y > -1){
+//    	    		for (i<-1 until 3){
+//    	    		  tab (a+i)(b)=new Area(new Location(-1,-1))
+//    	    		  tab (a)(b+i)=new Area (new Location(-1,-1))
+//    	    		}
+//    	    		for (i<-1 until 3){
+//    	    		  for (j<-1 until 3){
+//    	    		    tab(a+i)(b+j)=new Area (new Location(-1,-1))
+//    	    		  }
+//    	    		}
+//    	  		}
+//    	  }
+//    	)}
+//    }							
     
 
     println("\n")

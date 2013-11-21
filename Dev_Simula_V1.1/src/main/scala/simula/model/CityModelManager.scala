@@ -19,7 +19,7 @@ import main.scala.simula.model.city._
 
 class CityModelManager {
 
-  var defaultCityBuilder: CityBuilderInterface = new CityBuilder()
+  var defaultCityBuilder: CityBuilderInterface = new CityWithAreaBuilder()
   var cityAccess: CityAccess = defaultCityBuilder.buildCity();
   /*
 	def retrievedNumberOfCitizens:Int={
