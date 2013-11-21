@@ -11,8 +11,12 @@
 package main.scala.simula.ui.textview
 
 import main.scala.simula.common._
-import Array._;
+import Array._
 import main.scala.simula.ui._
+import main.scala.simula.model.city.Plant
+import main.scala.simula.model.city.Station
+import main.scala.simula.model.city.TransportCenter
+import main.scala.simula.model.city.Area
 /**
  * @author Scarpe
  *
@@ -20,7 +24,7 @@ import main.scala.simula.ui._
 trait TextDisplay extends DisplayInterface{
   
   def updateDisplay(d:RetrievedInformationInterface,actualState:RetrievedInformationInterface){
-    //var vl = ri.getViewables
+   
     println("Nombre d'habitants:"
       + actualState.getNumberOfCitizen()
       + " | Taux de criminalite:"
@@ -28,10 +32,8 @@ trait TextDisplay extends DisplayInterface{
       + " | Taux de pollution:"
       + actualState.getGlobalPolution())
       
-    //obtenir les objets à représenter
+
     var viewables:Set[Viewable] =d.getViewables();
-    //construire un tableau de char de la bonne dimension
-    // /!\ gerer les erreurs si on n'obtient pas la map /!\
     var map:Viewable=viewables.find({ v:Viewable => v!=null && v.priority==0 }).get
     var mapSize:Size=map.getSize
   
@@ -39,12 +41,67 @@ trait TextDisplay extends DisplayInterface{
     for(i <- 0 until mapSize.length; j <- 0 until mapSize.width)
       tab(i)(j) = null
     
-    //remplir le tableau
     viewables.foreach(v => { if (tab( v.getLocation.x )( v.getLocation.y )==null || tab( v.getLocation.x )( v.getLocation.y ).priority<v.priority )
     							{tab( v.getLocation.x )( v.getLocation.y )=v }})
     
+							
+    for (a <- 0 until mapSize.length) {
+    	for (b <- 0 until mapSize.width) {
+    	  var str: String=tab(a)(b).view
+    	  (str.split((" "))(0) match{
+    	   case "Plant" =>
+    			if (tab(a)(b).getLocation.x > -1  && tab(a)(b).getLocation.y > -1){
+    	    		for (i<-1 until 3){
+    	    		  tab (a+i)(b)=new Plant(new Location(-1,-1))
+    	    		  tab (a)(b+i)=new Plant(new Location(-1,-1))
+    	    		}
+    	    		for (i<-1 until 3){
+    	    		  for (j<-1 until 3){
+    	    		    tab(a+i)(b+j)=new Plant(new Location(-1,-1))
+    	    		  }
+    	    		}
+    	  		}
+    		case "Station" =>
+    			if (tab(a)(b).getLocation.x > -1  && tab(a)(b).getLocation.y > -1){
+    	    		for (i<-1 until 3){
+    	    		  tab (a+i)(b)=new Station(new Location(-1,-1))
+    	    		  tab (a)(b+i)=new Station (new Location(-1,-1))
+    	    		}
+    	    		for (i<-1 until 3){
+    	    		  for (j<-1 until 3){
+    	    		    tab(a+i)(b+j)=new Station(new Location(-1,-1))
+    	    		  }
+    	    		}
+    	  		}
+    		case "TransportCenter" =>
+    			if (tab(a)(b).getLocation.x > -1  && tab(a)(b).getLocation.y > -1){
+    	    		for (i<-1 until 7){
+    	    		  tab (a+i)(b)=new TransportCenter (new Location(-1,-1))
+    	    		  tab (a)(b+i)=new TransportCenter (new Location(-1,-1))
+    	    		}
+    	    		for (i<-1 until 7){
+    	    		  for (j<-1 until 7){
+    	    		    tab(a+i)(b+j)=new TransportCenter (new Location(-1,-1))
+    	    		  }
+    	    		}
+    	  		}
+    		case "Area" =>
+    			if (tab(a)(b).getLocation.x > -1  && tab(a)(b).getLocation.y > -1){
+    	    		for (i<-1 until 3){
+    	    		  tab (a+i)(b)=new Area(new Location(-1,-1))
+    	    		  tab (a)(b+i)=new Area (new Location(-1,-1))
+    	    		}
+    	    		for (i<-1 until 3){
+    	    		  for (j<-1 until 3){
+    	    		    tab(a+i)(b+j)=new Area (new Location(-1,-1))
+    	    		  }
+    	    		}
+    	  		}
+    	  }
+    	)}
+    }							
     
-    //l'afficher
+
     println("\n")
     for (a <- 0 until mapSize.length) {
     	for (b <- 0 until mapSize.width) {
@@ -54,6 +111,10 @@ trait TextDisplay extends DisplayInterface{
     	print("\n")
     }
     println("\n\n\n")
+  }
+  
+  def prepareSetOfViewbleToDisplay(tab :Viewable)={
+    
   }
   
   
