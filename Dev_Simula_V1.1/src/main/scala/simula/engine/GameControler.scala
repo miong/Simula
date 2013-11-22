@@ -19,7 +19,7 @@ import main.scala.simula.common._
  */
 class GameControler {
   var sideEffect: Set[SideEffect] = _
-  var ruleSet: Set[GameRule] = _
+  var ruleSet: Set[GameRuleInterface[scala.xml.Elem]] = _
   var volatRi: RetrievedInformationInterface = _ // non-persistent
 
   /**

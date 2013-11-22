@@ -14,6 +14,9 @@
  */
 package main.scala.simula.model
 
+import main.scala.simula.common._
 class RulesModelManager {
 
+  var rules: Set[GameRuleInterface[scala.xml.Elem]] = _
+  
 }

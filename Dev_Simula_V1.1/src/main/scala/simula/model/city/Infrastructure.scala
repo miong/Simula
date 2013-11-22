@@ -36,4 +36,6 @@ abstract class Infrastructure(var l: Location) extends Viewable {
   def priority(): Integer = {
     return 2
   }
+  
 }
+ 

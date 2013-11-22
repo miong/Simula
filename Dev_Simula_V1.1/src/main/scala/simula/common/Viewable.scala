@@ -16,7 +16,7 @@ package main.scala.simula.common
  * @author JC
  *
  */
-trait Viewable {
+@serializable trait Viewable extends Persistent{
   def view: String
   def getLocation: Location
   def getSize: Size

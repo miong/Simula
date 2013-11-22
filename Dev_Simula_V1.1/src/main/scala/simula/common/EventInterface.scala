@@ -20,5 +20,4 @@ abstract case class EventInterface {
   def location: Location
   def size: Size
   def description: String
-
 }
