@@ -44,21 +44,23 @@ class Engine(_model: AbstractModel, _view: AbstractView) extends EngineInterface
     return sendDataToView(getDataFromModel())
   }
 
-  def treatDataFromModel(data: RetrievedInformationInterface): RetrievedInformationInterface = {
-    return gameControler.treatDataFromModel(data)
+  def treatDataFromModel(data: RetrievedInformationInterface): Unit = {
+    gameControler.treatDataFromModel(data)
   }
 
   def sendDataToModel(data: RetrievedInformationInterface): Boolean = {
     return modelControler.sendDataToModel(data, model)
   }
 
-  def getFromModelToModel(): Boolean = {
-    return sendDataToModel(treatDataFromModel(getDataFromModel()))
-  }
-
   def evenOnMonth(): Unit = {
-    sendDataToView(getDataFromModel())
+    var ri:RetrievedInformationInterface = getDataFromModel();  
+    sendDataToView(ri)
+    treatDataFromModel(ri)
   }
   
+  def loadRules():Unit = {
+    gameControler.setModel(model)
+    gameControler.loadRulesFromModel
+  }
   
 }

@@ -31,5 +31,6 @@ class ModelEngineAdapter extends ModelEngineAdapterInterface {
   }
   def getData(): RetrievedInformationInterface = model.giveInformations
   def ack(data: RetrievedInformationInterface): Boolean = true;
-
+  def getRules():Set[GameRuleInterface] = model.giveRulesAccess.getRules
+  def getMapSize:Size = model.giveCityAccess.mapSize
 }

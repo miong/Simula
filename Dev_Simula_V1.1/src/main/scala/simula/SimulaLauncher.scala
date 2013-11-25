@@ -68,6 +68,8 @@ object SimulaLauncher {
     val timeManager: TimeManager = new TimeManager()
     timeManager.buildTimeManager()
     
+    
+    eng.loadRules
     timeManager.startTime();
     timeManager.registerMonthListener(eng)
     ui.updateView(mod.giveInformations)

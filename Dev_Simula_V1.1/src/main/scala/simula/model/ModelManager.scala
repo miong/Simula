@@ -18,6 +18,7 @@ import main.scala.simula.model.player.PlayerAccess
 import main.scala.simula.model.scanner._
 import main.scala.simula.common._
 import main.scala.simula.model.city.EnumType._
+import main.scala.simula.model.rules.RulesAccess
 
 class ModelManager extends ModelInterface {
 
@@ -46,4 +47,10 @@ class ModelManager extends ModelInterface {
     //return playerModelManager.givePlayerAccess();
     return null
   }
+  
+  def giveRulesAccess() : RulesAccess = {
+    return rules.RuleLibrary; 
+  }
+
+  
 }

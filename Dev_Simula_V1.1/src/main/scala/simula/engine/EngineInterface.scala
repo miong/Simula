@@ -20,8 +20,8 @@ trait EngineInterface extends MonthListener{
   def getDataFromModel(): RetrievedInformationInterface
   def sendDataToView(data: RetrievedInformationInterface): Boolean
   def getFromModelToView(): Boolean
-  def treatDataFromModel(data: RetrievedInformationInterface): RetrievedInformationInterface
+  def treatDataFromModel(data: RetrievedInformationInterface): Unit
   def sendDataToModel(data: RetrievedInformationInterface): Boolean
-  def getFromModelToModel(): Boolean
+  def loadRules:Unit
   
 }
