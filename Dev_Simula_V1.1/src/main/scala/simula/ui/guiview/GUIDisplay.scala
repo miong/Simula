@@ -16,8 +16,8 @@ import main.scala.simula.ui._
  * @author Scarpe
  *
  */
-trait GUIDisplay extends DisplayInterface {
-  def updateDisplay(d: RetrievedInformationInterface, actualState: RetrievedInformationInterface) {
-    print("TO DO")
-  }
+trait GUIDisplay extends DisplayInterface{
+	def updateDisplay(d:RetrievedInformationInterface,actualState:RetrievedInformationInterface){
+	  print("TO DO")
+	}
 }

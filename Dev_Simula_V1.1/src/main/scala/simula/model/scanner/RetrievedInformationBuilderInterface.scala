@@ -17,6 +17,6 @@ import main.scala.simula.common._
  */
 abstract class RetrievedInformationBuilderInterface {
 
-  def build(loc: Location, siz: Size): RetrievedInformationInterface
+  def build(loc:Location,siz:Size): RetrievedInformationInterface
 
 }

@@ -17,5 +17,5 @@ import main.scala.simula.common._
  *
  */
 trait DisplayInterface {
-  def updateDisplay(d: RetrievedInformationInterface, actualState: RetrievedInformationInterface)
+	def updateDisplay(d:RetrievedInformationInterface,actualState:RetrievedInformationInterface)
 }

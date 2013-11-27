@@ -15,8 +15,7 @@
 package main.scala.simula.model.city
 
 import main.scala.simula.common._
-import main.scala.simula.common.GroundType._
-import main.scala.simula.common.StructureType._
+import main.scala.simula.model.city.EnumType._
 
 class City(s: Size) extends CityAccess {
   var map: Map = new Map(s)
@@ -24,17 +23,17 @@ class City(s: Size) extends CityAccess {
   /*def getMapAccess(): Map = {
     return map;
   }*/
-
+  
   def mapSize = map.getSize();
-
-  def getMapAsViewabel(): Viewable = {
+  
+  def getMapAsViewabel():Viewable = {
     return map;
   }
-
-  def getCellAt(l: Location): Cell = map.getCellAt(l);
-
-  def constructInfrastructureAt(structType: StructureType, l: Location) = {
-    val i: Infrastructure = infraBuilder.build(structType, l)
+  
+  def getBoxAt(l:Location):Box = map.getBoxAt(l);
+  
+  def constructInfrastructureAt(InfrastructureType: EnumType,l:Location) = {
+    val i:Infrastructure = infraBuilder.build(InfrastructureType, l)
     map.constructInfrastructure(i)
   }
 

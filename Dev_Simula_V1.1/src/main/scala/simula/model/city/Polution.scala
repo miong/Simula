@@ -14,6 +14,6 @@ package main.scala.simula.model.city
  * @author ken
  *
  */
-class Polution extends Mesure {
+class Polution extends Mesure{
 
 }

@@ -17,12 +17,12 @@ import main.scala.simula.common._
  */
 class RetrievedInformationBuilder(scanner: GeneralScannerInterface) extends RetrievedInformationBuilderInterface {
 
-  def build(loc: Location, siz: Size): RetrievedInformationInterface = {
-    val nCitizen = scanner.ScanNumberOfCitizens(loc, siz)
-    val nGlobalPolution = scanner.ScanGlobalPolution(loc, siz)
-    val nGlobalCriminality = scanner.ScanGlobalCriminality(loc, siz)
-    val sViewable = scanner.scanViewableObjects(loc, siz)
-    var ri = new RetrievedInformation(nCitizen, nGlobalPolution, nGlobalCriminality, sViewable, loc, siz)
+  def build(loc:Location,siz:Size): RetrievedInformationInterface = {
+    val nCitizen = scanner.ScanNumberOfCitizens(loc,siz)
+    val nGlobalPolution = scanner.ScanGlobalPolution(loc,siz)
+    val nGlobalCriminality = scanner.ScanGlobalCriminality(loc,siz)
+    val sViewable = scanner.scanViewableObjects(loc,siz)
+    var ri = new RetrievedInformation(nCitizen, nGlobalPolution, nGlobalCriminality, sViewable,loc,siz)
     return ri
   }
 }

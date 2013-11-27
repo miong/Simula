@@ -15,16 +15,8 @@ import main.scala.simula.common._
 
 class ModelControler {
 
-  def getDataFromModel(m: AbstractModel): MapScreenShotInterface = {
-    return m.getScreenShot
-  }
-  
-  def getInformationsFromModel(m: AbstractModel):RetrievedInformationInterface = {
+  def getDataFromModel(m: AbstractModel): RetrievedInformationInterface = {
     return m.getData()
-  }
-  
-  def getMapScreenShot(m: AbstractModel):MapScreenShotInterface = {
-    return m.getScreenShot()
   }
   def sendDataToModel(data: RetrievedInformationInterface, m: AbstractModel): Boolean = {
     return m.ack(data)

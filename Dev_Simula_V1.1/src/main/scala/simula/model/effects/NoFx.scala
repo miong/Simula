@@ -11,15 +11,14 @@
 package main.scala.simula.model.effects
 
 import main.scala.simula.common._
-import main.scala.simula.engine.AbstractModel
+
 /**
  * @author Bubul
  *
  */
 
 // This is a doing nothing effect
-object NoFx extends SideEffectInterface {
-
-  var fx: Function[RetrievedInformationInterface, RetrievedInformationInterface] =
-    (ri: RetrievedInformationInterface) => new RetrievedInformation(0, 0, 0, Set(), new Location(0, 0), new Size(0, 0))
+object NoFx extends SideEffectInterface{
+  
+	var fx:Function[RetrievedInformationInterface,RetrievedInformationInterface] = (ri:RetrievedInformationInterface) => new RetrievedInformation(0,0,0,Set(),new Location(0,0),new Size(0,0))
 }
