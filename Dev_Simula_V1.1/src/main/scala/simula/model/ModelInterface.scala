@@ -23,14 +23,12 @@ trait ModelInterface {
 
   def giveCityAccess(): CityAccess;
   def givePlayerAccess(): PlayerAccess;
-  def giveInformations(): RetrievedInformationInterface;
   
-  def constructInfrastructureAt(InfrastructureType: StructureType, location: Location)
+  def constructInfrastructureAt(structType: StructureType, location: Location)
   def giveRulesAccess(): RulesAccess;
 
   def giveInformations(loc:Location,siz:Size): RetrievedInformationInterface;
   def getScreenShot():MapScreenShotInterface;
-  def constructInfrastructureAt(InfrastructureType: EnumType, location : Location)
-  def giveRulesAccess() : RulesAccess;
+
 
 }

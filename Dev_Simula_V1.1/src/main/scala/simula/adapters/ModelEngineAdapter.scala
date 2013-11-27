@@ -34,7 +34,5 @@ class ModelEngineAdapter extends ModelEngineAdapterInterface {
 
   def getRules(): Set[GameRuleInterface] = model.giveRulesAccess.getRules
   def getMapSize: Size = model.giveCityAccess.mapSize
-  def getScreenShot : MapScreenShotInterface = model.getScreenShot
-  def getActiveEffect : Set[SideEffectInterface] = return Set() /*FAKE*/
-  def setActiveEffect(fxs: Set[SideEffectInterface]) : Unit = {} /*FAKE*/
 }
+
