@@ -15,6 +15,6 @@ import main.scala.simula.ui._
  * @author Scarpe
  *
  */
-trait GUIUserListener extends UserListenerInterface {
+trait GUIUserListener extends UserListenerInterface{
 
 }

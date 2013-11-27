@@ -16,19 +16,14 @@ package main.scala.simula.model
 import main.scala.simula.model.city.CityAccess
 import main.scala.simula.model.rules.RulesAccess
 import main.scala.simula.model.player.PlayerAccess
-import main.scala.simula.common._
-import main.scala.simula.common.StructureType._
-
+import main.scala.simula.common.RetrievedInformationInterface
+import main.scala.simula.common.Location
+import main.scala.simula.model.city.EnumType._
 trait ModelInterface {
 
   def giveCityAccess(): CityAccess;
   def givePlayerAccess(): PlayerAccess;
-  
-  def constructInfrastructureAt(structType: StructureType, location: Location)
-  def giveRulesAccess(): RulesAccess;
-
-  def giveInformations(loc:Location,siz:Size): RetrievedInformationInterface;
-  def getScreenShot():MapScreenShotInterface;
-
-
+  def giveInformations(): RetrievedInformationInterface;
+  def constructInfrastructureAt(InfrastructureType: EnumType, location : Location)
+  def giveRulesAccess() : RulesAccess;
 }

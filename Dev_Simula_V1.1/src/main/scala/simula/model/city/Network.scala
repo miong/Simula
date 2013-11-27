@@ -17,8 +17,7 @@ package main.scala.simula.model.city
 import main.scala.simula.common._
 
 abstract class Network(l: Location) extends Infrastructure(l) {
-  var flux: Flux = new Flux
-
+  var flux:Flux = new Flux
   def view: String = {
     return "Network"
   }

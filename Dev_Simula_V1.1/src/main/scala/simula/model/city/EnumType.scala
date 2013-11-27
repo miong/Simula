@@ -8,13 +8,13 @@
  * Update 17 nov. 2013 19:33:01
  * *******************************************************
  */
-package main.scala.simula.common
+package main.scala.simula.model.city
 
 /**
  * @author ken
  *
  */
-object StructureType extends Enumeration {
-  type StructureType = Value
-  val TRANSPORT, AREA, PLANT, ROAD, STATION = Value
+object EnumType extends Enumeration{
+	type EnumType = Value
+	val AREA = Value
 }

@@ -17,7 +17,7 @@ import main.scala.simula.model.city.CityAccess
 import main.scala.simula.model.player.PlayerAccess
 import main.scala.simula.model.scanner._
 import main.scala.simula.common._
-import main.scala.simula.common.StructureType._
+import main.scala.simula.model.city.EnumType._
 import main.scala.simula.model.rules.RulesAccess
 
 class ModelManager extends ModelInterface {
@@ -27,24 +27,19 @@ class ModelManager extends ModelInterface {
   var scannerBuilder: GeneralScannerBuilderInterface = new GeneralScannerBuilder()
   var generalScanner: GeneralScannerInterface = scannerBuilder.ScannerBuilder(this)
   var infoBuilder: RetrievedInformationBuilderInterface = new RetrievedInformationBuilder(generalScanner)
-  val screenShotBuilder = new MapScreenShotBuilder(this)
-  
-  def getScreenShot():MapScreenShotInterface = {
-    return screenShotBuilder.build
-  }
-  
+
   def giveInformations(): RetrievedInformationInterface = {
-    return infoBuilder.build(new Location(0, 0), cityModelManager.giveCityAccess.mapSize)
+    return infoBuilder.build(new Location(0,0),cityModelManager.giveCityAccess.mapSize)
   }
-
-  def giveInformations(loc: Location, siz: Size): RetrievedInformationInterface = {
-    return infoBuilder.build(loc, siz)
+  
+  def giveInformations(loc:Location,siz:Size): RetrievedInformationInterface = {
+    return infoBuilder.build(loc,siz)
   }
-
-  def constructInfrastructureAt(InfrastructureType: StructureType, location: Location) {
+  
+  def constructInfrastructureAt(InfrastructureType: EnumType, location : Location){
     cityModelManager.giveCityAccess.constructInfrastructureAt(InfrastructureType, location)
   }
-
+  
   def giveCityAccess(): CityAccess = {
     return cityModelManager.giveCityAccess();
   }
@@ -52,9 +47,10 @@ class ModelManager extends ModelInterface {
     //return playerModelManager.givePlayerAccess();
     return null
   }
-
-  def giveRulesAccess(): RulesAccess = {
-    return rules.RuleLibrary;
+  
+  def giveRulesAccess() : RulesAccess = {
+    return rules.RuleLibrary; 
   }
 
+  
 }

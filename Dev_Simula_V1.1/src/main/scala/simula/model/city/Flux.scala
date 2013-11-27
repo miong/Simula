@@ -14,6 +14,6 @@ package main.scala.simula.model.city
  * @author Bubul
  *
  */
-class Flux extends Mesure {
+class Flux extends Mesure{
 
 }

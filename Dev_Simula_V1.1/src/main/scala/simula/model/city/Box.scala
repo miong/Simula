@@ -15,19 +15,18 @@
 package main.scala.simula.model.city
 
 import main.scala.simula.common._
-import main.scala.simula.common.GroundType._
-import main.scala.simula.common._
+import main.scala.simula.model.city.EnumBase._
 
-class Cell(l: Location, pbaseType: GroundType) extends Viewable {
+class Box(l: Location, boxBaseType : EnumBase) extends Viewable {
   var location: Location = l
   //Ajout pour coller avec diagramme de classe
   var value: EconomicEvaluation = new EconomicEvaluation
-  var population: Population = new Population;
-  var polution: Polution = new Polution;
-  var criminality: Criminality = new Criminality;
+  var population:Population = new Population;
+  var polution:Polution = new Polution;
+  var criminality:Criminality = new Criminality;
   var infrastructures: Set[Infrastructure] = Set();
   //ajout pour coller au diagramme de classe
-  var baseType: GroundType = pbaseType;
+  var baseType : EnumBase = boxBaseType;
 
   def addInfrastructure(i: Infrastructure) {
     infrastructures += i;
@@ -37,13 +36,10 @@ class Cell(l: Location, pbaseType: GroundType) extends Viewable {
       case EARTH => return "EARTH"
       case WATER => return "WATER"
       case TREE => return "TREE"
-      case STONE => return "STONE"
-      case GRASS => return "GRASS"
       case _ => return "??"
     }
   }
 
-  def getType = baseType
   def getSize(): Size = {
     return new Size(1, 1)
   }
