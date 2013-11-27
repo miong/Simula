@@ -21,18 +21,18 @@ class GameControler() {
   var sideEffects: Set[SideEffectInterface] = _
   var rules: Set[GameRuleInterface] = _
   var volatRi: RetrievedInformationInterface = _ // non-persistent
-  var mod:AbstractModel= _
+  var mod: AbstractModel = _
   /**
    * Complete operation to return a new state based on actual state which come from the UI.
    * That could be used by the Model or any following operations which need to.
    * params data: RetrievedInformationInterface
    * return RetrievedInformationInterface
    */
-  
-  def setModel(model:AbstractModel) = {
+
+  def setModel(model: AbstractModel) = {
     mod = model
   }
-  
+
   def treatDataFromUI(data: RetrievedInformationInterface): RetrievedInformationInterface = {
     data
   }
@@ -44,22 +44,28 @@ class GameControler() {
    * return RetrievedInformationInterface
    */
 
-  def treatDataFromModel(data: RetrievedInformationInterface): Unit = {
+  def treatDataFromModel(data: MapScreenShotInterface): Unit = {
     // Treatment of all Rules and generation of all the needed effects
-    var fxs:Set[SideEffectInterface] = Set()
-    for(r:GameRuleInterface <- rules){
-      if(r.isApplyable(data)){
-    	  fxs =  fxs.union(r.apply(data))
+    var fxs: Set[SideEffectInterface] = Set()
+    for (r: GameRuleInterface <- rules) {
+      if (r.isApplyable(data)) {
+        fxs = fxs.union(r.apply(data))
       }
     }
-    // Need FX applier to apply all the fx of fxs that return a new RetrievedInformationInterface
+    fxs = fxs.union(mod.getActiveEffect())
+    for(fx <- fxs){
+      fx.apply(mod)
+      fx.duration = fx.duration -1
+      if(fx.duration==0)
+        fxs = fxs - fx
+    }
+    mod.setActiveEffect(fxs)
+    // Need FX applier to apply all the fx of fxs
     // Fx applier need to modify the model to apply the fx on it to
   }
-  
-  
-  def loadRulesFromModel():Unit = {
+
+  def loadRulesFromModel(): Unit = {
     rules = mod.getRules();
   }
 
-  
 }

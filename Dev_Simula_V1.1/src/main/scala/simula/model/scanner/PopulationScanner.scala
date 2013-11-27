@@ -20,9 +20,9 @@ trait PopulationScanner extends InfrastructuresScanner {
 
   var model: ModelInterface
 
-  def ScanNumberOfCitizens(loc:Location,siz:Size): Integer = {
+  def ScanNumberOfCitizens(loc: Location, siz: Size): Integer = {
     var pop: Integer = 0;
-    var infra = this.getInfrastructures(model,loc,siz)
+    var infra = this.getInfrastructures(model, loc, siz)
     for (i: Infrastructure <- infra) {
       pop += i.population.getValue.toInt
     }
