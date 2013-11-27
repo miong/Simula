@@ -27,6 +27,9 @@ package main.scala.simula.time {
         tf.receiveTop;
     }
 
+    def upSpeed() = Clock.topTime - 50
+    def downSpeed() =Clock.topTime + 50
+    
     override def run(): Unit = {
       while (true) {
         Thread.sleep(Clock.topTime);
