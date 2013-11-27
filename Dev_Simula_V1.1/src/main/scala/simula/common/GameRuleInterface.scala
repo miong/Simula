@@ -23,7 +23,7 @@ abstract class GameRuleInterface{
   /**
    * Applying a game rule is the same as asking for new information state updated
    * params
-   * return Option[RetrievedInformationInterface]
+   * return Set[SideEffectInterface]
    */
   def apply(ri:RetrievedInformationInterface): Set[SideEffectInterface]
   
