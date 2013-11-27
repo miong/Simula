@@ -2,7 +2,7 @@
  * ********************************************************
  *               Simula                          *
  * *********************************************************
- * ui.textview
+ * main.scala.simula.ui.tuiview
  * TextView.scala
  * (c) Simula. on 6 nov. 2013 00:03:01
  * By JC
@@ -10,7 +10,7 @@
  *
  * *******************************************************
  */
-package main.scala.simula.ui.textview
+package main.scala.simula.ui.tuiview
 
 import main.scala.simula.ui._
 import main.scala.simula.common._
@@ -20,18 +20,18 @@ import Array._;
  * @author JC
  *
  */
-class TextView(ri: RetrievedInformationInterface,
+class TUIView(ri: RetrievedInformationInterface,
   ae: AbstractEngine,
-  size: Size, loc: Location) extends UIInterface with TextDisplay with TextUserListener{
+  size: Size, loc: Location) extends UIInterface with TUIDisplay with TUIUserListener {
   var maxSize = size
   var actualLocation = loc
   var engine = ae
   var actualState = ri
 
   def redefineView = println("CLIVIEW RedefineView Called")
-  
+
   def updateView(d: RetrievedInformationInterface) = {
-    updateDisplay(d,actualState)    
+    updateDisplay(d, actualState)
   }
-  
+
 }

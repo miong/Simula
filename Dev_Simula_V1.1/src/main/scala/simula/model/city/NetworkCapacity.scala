@@ -14,6 +14,6 @@ package main.scala.simula.model.city
  * @author ken
  *
  */
-class NetworkCapacity extends Mesure{
+class NetworkCapacity extends Mesure {
 
 }

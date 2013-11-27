@@ -15,5 +15,5 @@
 package main.scala.simula.model.player
 
 trait PlayerAccess {
-	def getMoneyAmount()
+  def getMoneyAmount()
 }

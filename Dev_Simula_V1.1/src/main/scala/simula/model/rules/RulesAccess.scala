@@ -16,6 +16,6 @@ import main.scala.simula.common.GameRuleInterface
  */
 trait RulesAccess {
 
-  def getRules():Set[GameRuleInterface];
-  
+  def getRules(): Set[GameRuleInterface];
+
 }

@@ -21,7 +21,7 @@ import main.scala.simula.common._
  */
 class GUIView(ri: RetrievedInformationInterface,
   ae: AbstractEngine,
-  size: Size, loc: Location) extends UIInterface with GUIDisplay with GUIUserListener{
+  size: Size, loc: Location) extends UIInterface with GUIDisplay with GUIUserListener {
   var engine = ae
   var maxSize = size
   var actualLocation = loc

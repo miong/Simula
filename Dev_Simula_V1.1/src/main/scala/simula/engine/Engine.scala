@@ -12,7 +12,7 @@ package main.scala.simula.engine
 
 import main.scala.simula.common._
 
-class Engine(_model: AbstractModel, _view: AbstractView) extends EngineInterface with MonthListener{
+class Engine(_model: AbstractModel, _view: AbstractView) extends EngineInterface with MonthListener {
 
   var modelControler: ModelControler = new ModelControler()
   var viewControler: ViewControler = new ViewControler()
@@ -25,14 +25,18 @@ class Engine(_model: AbstractModel, _view: AbstractView) extends EngineInterface
     //    match e {
     //      case 
     //    }
-    getDataFromModel() // Autre methode apres traitement de l'evenement
+    getInformationsFromModel() // Autre methode apres traitement de l'evenement
   }
 
   def permiteOperations(): List[Pair[String, Unit => Unit]] = {
     null
   }
 
-  def getDataFromModel(): RetrievedInformationInterface = {
+  def getInformationsFromModel(): RetrievedInformationInterface = {
+    return modelControler.getInformationsFromModel(model)
+  }
+  
+  def getDataFromModel():MapScreenShotInterface = {
     return modelControler.getDataFromModel(model)
   }
 
@@ -41,10 +45,10 @@ class Engine(_model: AbstractModel, _view: AbstractView) extends EngineInterface
   }
 
   def getFromModelToView(): Boolean = {
-    return sendDataToView(getDataFromModel())
+    return sendDataToView(getInformationsFromModel())
   }
 
-  def treatDataFromModel(data: RetrievedInformationInterface): Unit = {
+  def treatDataFromModel(data:MapScreenShotInterface): Unit = {
     gameControler.treatDataFromModel(data)
   }
 
@@ -53,14 +57,15 @@ class Engine(_model: AbstractModel, _view: AbstractView) extends EngineInterface
   }
 
   def evenOnMonth(): Unit = {
-    var ri:RetrievedInformationInterface = getDataFromModel();  
+    var ri: RetrievedInformationInterface = getDataFromModel();
+
     sendDataToView(ri)
-    treatDataFromModel(ri)
+    treatDataFromModel(mss)
   }
-  
-  def loadRules():Unit = {
+
+  def loadRules(): Unit = {
     gameControler.setModel(model)
     gameControler.loadRulesFromModel
   }
-  
+
 }

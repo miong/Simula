@@ -20,12 +20,12 @@ import main.scala.simula.common._
 
 trait InfrastructuresScanner {
 
-  def getInfrastructures(model: ModelInterface,loc:Location,siz:Size): Set[Infrastructure] = {
+  def getInfrastructures(model: ModelInterface, loc: Location, siz: Size): Set[Infrastructure] = {
     var infra = Set[Infrastructure]()
     val s = model.giveCityAccess.mapSize
-    for(i <- 0 until siz.length ; j <- 0 until siz.width){
-      for (inf <- model.giveCityAccess.getBoxAt(new Location(loc.x+i,loc.y+j)).infrastructures)
-    	  infra += inf
+    for (i <- 0 until siz.length; j <- 0 until siz.width) {
+      for (inf <- model.giveCityAccess.getCellAt(new Location(loc.x + i, loc.y + j)).infrastructures)
+        infra += inf
     }
     return infra
   }

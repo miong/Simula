@@ -26,10 +26,10 @@ package main.scala.simula.time {
       for (tf: TimeFilter <- filters)
         tf.receiveTop;
     }
-
-    def upSpeed() = Clock.topTime - 50
-    def downSpeed() =Clock.topTime + 50
     
+    def upSpeed() = Clock.topTime - 50
+    def downSpeed() = Clock.topTime + 50
+
     override def run(): Unit = {
       while (true) {
         Thread.sleep(Clock.topTime);
