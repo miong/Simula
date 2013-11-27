@@ -12,7 +12,7 @@ package main.scala.simula.engine
 
 import main.scala.simula.common._
 
-class Engine(_model: AbstractModel, _view: AbstractView) extends EngineInterface with MonthListener{
+class Engine(_model: AbstractModel, _view: AbstractView) extends EngineInterface with MonthListener {
 
   var modelControler: ModelControler = new ModelControler()
   var viewControler: ViewControler = new ViewControler()
@@ -57,15 +57,15 @@ class Engine(_model: AbstractModel, _view: AbstractView) extends EngineInterface
   }
 
   def evenOnMonth(): Unit = {
-    var mss:MapScreenShotInterface = getDataFromModel();
-    var ri:RetrievedInformationInterface = getInformationsFromModel();
+    var ri: RetrievedInformationInterface = getDataFromModel();
+
     sendDataToView(ri)
     treatDataFromModel(mss)
   }
-  
-  def loadRules():Unit = {
+
+  def loadRules(): Unit = {
     gameControler.setModel(model)
     gameControler.loadRulesFromModel
   }
-  
+
 }

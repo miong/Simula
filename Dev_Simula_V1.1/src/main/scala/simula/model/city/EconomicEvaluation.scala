@@ -14,6 +14,6 @@ package main.scala.simula.model.city
  * @author ken
  *
  */
-class EconomicEvaluation extends Mesure{
-	
+class EconomicEvaluation extends Mesure {
+
 }

@@ -14,6 +14,6 @@ package main.scala.simula.model.city
  * @author ken
  *
  */
-class Criminality extends Mesure{
+class Criminality extends Mesure {
 
 }

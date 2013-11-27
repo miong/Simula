@@ -21,7 +21,7 @@ abstract class Infrastructure(var l: Location) extends Viewable {
   var size: Size = new Size(0, 0);
   var topCornerLocation: Location = l
   //Ajout pour coller avec diagramme de classe
-  var price:Price = new Price;
+  var price: Price = new Price;
   var polution = new Polution;
   var criminality = new Criminality;
   var population: Population = new Population();
@@ -36,6 +36,5 @@ abstract class Infrastructure(var l: Location) extends Viewable {
   def priority(): Integer = {
     return 2
   }
-  
+
 }
- 

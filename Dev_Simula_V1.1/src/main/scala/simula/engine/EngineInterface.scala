@@ -13,7 +13,7 @@ package main.scala.simula.engine
 
 import main.scala.simula.common._
 
-trait EngineInterface extends MonthListener{
+trait EngineInterface extends MonthListener {
 
   def newEvent(e: EventInterface): RetrievedInformationInterface
   def permiteOperations(): List[Pair[String, Unit => Unit]]
@@ -23,6 +23,6 @@ trait EngineInterface extends MonthListener{
   def getFromModelToView(): Boolean
   def treatDataFromModel(data:MapScreenShotInterface): Unit
   def sendDataToModel(data: RetrievedInformationInterface): Boolean
-  def loadRules:Unit
-  
+  def loadRules: Unit
+
 }
