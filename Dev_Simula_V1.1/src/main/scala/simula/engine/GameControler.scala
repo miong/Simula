@@ -44,7 +44,7 @@ class GameControler() {
    * return RetrievedInformationInterface
    */
 
-  def treatDataFromModel(data: RetrievedInformationInterface): Unit = {
+  def treatDataFromModel(data: MapScreenShotInterface): Unit = {
     // Treatment of all Rules and generation of all the needed effects
     var fxs:Set[SideEffectInterface] = Set()
     for(r:GameRuleInterface <- rules){

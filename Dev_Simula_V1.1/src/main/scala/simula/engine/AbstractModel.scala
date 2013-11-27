@@ -18,4 +18,5 @@ trait AbstractModel {
   def ack(data: RetrievedInformationInterface): Boolean
   def getRules():Set[GameRuleInterface]
   def getMapSize():Size
+  def getScreenShot():MapScreenShotInterface
 }

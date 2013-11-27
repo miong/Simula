@@ -27,7 +27,12 @@ class ModelManager extends ModelInterface {
   var scannerBuilder: GeneralScannerBuilderInterface = new GeneralScannerBuilder()
   var generalScanner: GeneralScannerInterface = scannerBuilder.ScannerBuilder(this)
   var infoBuilder: RetrievedInformationBuilderInterface = new RetrievedInformationBuilder(generalScanner)
-
+  val screenShotBuilder = new MapScreenShotBuilder(this)
+  
+  def getScreenShot():MapScreenShotInterface = {
+    return screenShotBuilder.build
+  }
+  
   def giveInformations(): RetrievedInformationInterface = {
     return infoBuilder.build(new Location(0,0),cityModelManager.giveCityAccess.mapSize)
   }

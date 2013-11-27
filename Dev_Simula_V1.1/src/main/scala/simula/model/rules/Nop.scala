@@ -18,14 +18,14 @@ import main.scala.simula.common._
 // this is a doing nothing rule
 object Nop extends GameRuleInterface{
 	
-  def apply(ri:RetrievedInformationInterface): Set[SideEffectInterface] = {
+  def apply(data:MapScreenShotInterface): Set[SideEffectInterface] = {
     println("Nop invocked");
     var fxs:Set[SideEffectInterface] = Set()
     fxs += main.scala.simula.model.effects.NoFx;
     return fxs
   }
   
-  def isApplyable(ri:RetrievedInformationInterface): Boolean = {
+  def isApplyable(data:MapScreenShotInterface): Boolean = {
     return true;
   }
   

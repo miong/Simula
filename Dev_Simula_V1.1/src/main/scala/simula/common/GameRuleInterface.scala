@@ -25,13 +25,13 @@ abstract class GameRuleInterface{
    * params
    * return Option[RetrievedInformationInterface]
    */
-  def apply(ri:RetrievedInformationInterface): Set[SideEffectInterface]
+  def apply(data:MapScreenShotInterface): Set[SideEffectInterface]
   
   
   /**
    * Tell if the rule is applyable according to the state of the game
    */
-  def isApplyable(ri:RetrievedInformationInterface): Boolean;
+  def isApplyable(data:MapScreenShotInterface): Boolean;
 
   
   // MODO: Just Why ?? There's no need to combine 2 rules... and more over why just 2 ?!

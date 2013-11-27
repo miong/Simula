@@ -25,14 +25,18 @@ class Engine(_model: AbstractModel, _view: AbstractView) extends EngineInterface
     //    match e {
     //      case 
     //    }
-    getDataFromModel() // Autre methode apres traitement de l'evenement
+    getInformationsFromModel() // Autre methode apres traitement de l'evenement
   }
 
   def permiteOperations(): List[Pair[String, Unit => Unit]] = {
     null
   }
 
-  def getDataFromModel(): RetrievedInformationInterface = {
+  def getInformationsFromModel(): RetrievedInformationInterface = {
+    return modelControler.getInformationsFromModel(model)
+  }
+  
+  def getDataFromModel():MapScreenShotInterface = {
     return modelControler.getDataFromModel(model)
   }
 
@@ -41,10 +45,10 @@ class Engine(_model: AbstractModel, _view: AbstractView) extends EngineInterface
   }
 
   def getFromModelToView(): Boolean = {
-    return sendDataToView(getDataFromModel())
+    return sendDataToView(getInformationsFromModel())
   }
 
-  def treatDataFromModel(data: RetrievedInformationInterface): Unit = {
+  def treatDataFromModel(data:MapScreenShotInterface): Unit = {
     gameControler.treatDataFromModel(data)
   }
 
@@ -53,9 +57,10 @@ class Engine(_model: AbstractModel, _view: AbstractView) extends EngineInterface
   }
 
   def evenOnMonth(): Unit = {
-    var ri:RetrievedInformationInterface = getDataFromModel();  
+    var mss:MapScreenShotInterface = getDataFromModel();
+    var ri:RetrievedInformationInterface = getInformationsFromModel();
     sendDataToView(ri)
-    treatDataFromModel(ri)
+    treatDataFromModel(mss)
   }
   
   def loadRules():Unit = {

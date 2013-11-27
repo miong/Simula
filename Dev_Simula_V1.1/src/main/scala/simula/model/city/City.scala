@@ -32,6 +32,7 @@ class City(s: Size) extends CityAccess {
   
   def getBoxAt(l:Location):Box = map.getBoxAt(l);
   
+  
   def constructInfrastructureAt(InfrastructureType: EnumType,l:Location) = {
     val i:Infrastructure = infraBuilder.build(InfrastructureType, l)
     map.constructInfrastructure(i)
