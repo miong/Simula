@@ -52,7 +52,15 @@ class GameControler() {
     	  fxs =  fxs.union(r.apply(data))
       }
     }
-    // Need FX applier to apply all the fx of fxs that return a new RetrievedInformationInterface
+    fxs = fxs.union(mod.getActiveEffect())
+    for(fx <- fxs){
+      fx.apply(mod)
+      fx.duration = fx.duration -1
+      if(fx.duration==0)
+        fxs = fxs - fx
+    }
+    mod.setActiveEffect(fxs)
+    // Need FX applier to apply all the fx of fxs
     // Fx applier need to modify the model to apply the fx on it to
   }
   
