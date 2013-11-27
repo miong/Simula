@@ -18,17 +18,13 @@ import main.scala.simula.model.rules.RulesAccess
 import main.scala.simula.model.player.PlayerAccess
 import main.scala.simula.common._
 import main.scala.simula.common.StructureType._
-
 trait ModelInterface {
 
   def giveCityAccess(): CityAccess;
   def givePlayerAccess(): PlayerAccess;
-  
-  def constructInfrastructureAt(structType: StructureType, location: Location)
-  def giveRulesAccess(): RulesAccess;
-
+  def giveInformations(): RetrievedInformationInterface;
   def giveInformations(loc:Location,siz:Size): RetrievedInformationInterface;
   def getScreenShot():MapScreenShotInterface;
-
-
+  def constructInfrastructureAt(InfrastructureType: StructureType, location : Location)
+  def giveRulesAccess() : RulesAccess;
 }

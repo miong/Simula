@@ -2,7 +2,7 @@
  * ********************************************************
  *               Simula                          *
  * *********************************************************
- * simula.ui.tuiview
+ * simula.ui.textview
  * TextViewTest.scala
  * (c) Simula. on 6 nov. 2013 01:30:25
  * By JC

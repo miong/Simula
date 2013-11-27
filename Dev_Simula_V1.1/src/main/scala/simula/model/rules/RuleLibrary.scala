@@ -15,14 +15,14 @@ import main.scala.simula.common.GameRuleInterface
  * @author Bubul
  *
  */
-object RuleLibrary extends RulesAccess {
+object RuleLibrary extends RulesAccess{
 
-  var rules: Set[GameRuleInterface] = Set()
-
+  var rules:Set[GameRuleInterface] = Set()
+  
   rules += Nop
-
-  def getRules(): Set[GameRuleInterface] = {
+  
+  def getRules():Set[GameRuleInterface] = {
     return rules
   }
-
+  
 }

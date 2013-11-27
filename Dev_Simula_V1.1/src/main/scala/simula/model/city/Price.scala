@@ -14,6 +14,6 @@ package main.scala.simula.model.city
  * @author Bubul
  *
  */
-class Price extends Mesure {
+class Price extends Mesure{
 
 }

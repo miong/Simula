@@ -21,9 +21,9 @@ import main.scala.simula.common._
 trait CriminalityScanner extends InfrastructuresScanner {
   var model: ModelInterface
 
-  def ScanGlobalCriminality(loc: Location, siz: Size): Integer = {
+  def ScanGlobalCriminality(loc:Location,siz:Size): Integer = {
     var crim: Integer = 0;
-    var infra = getInfrastructures(model, loc, siz)
+    var infra = getInfrastructures(model,loc,siz)
     for (i: Infrastructure <- infra) {
       crim += i.criminality.getValue.toInt
     }

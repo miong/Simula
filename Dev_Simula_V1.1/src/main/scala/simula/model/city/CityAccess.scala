@@ -25,7 +25,7 @@ trait CityAccess {
   // def getMapAccess(): Map;
   //----------ajout pour coller au diag de classe
   def getCellAt(l: Location): Cell
-  def constructInfrastructureAt(InfrastructureType: StructureType, l: Location)
+  def constructInfrastructureAt(structType: StructureType, l: Location)
   def mapSize(): Size;
   def getMapAsViewabel(): Viewable;
 }

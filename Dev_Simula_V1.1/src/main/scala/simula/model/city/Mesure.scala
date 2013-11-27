@@ -15,13 +15,13 @@ package main.scala.simula.model.city
  *
  */
 abstract class Mesure {
-  var value: Double = 0.0
-
-  def getValue(): Double = {
-    return value
-  }
-
-  def setValue(d: Double) = {
-    value = d
-  }
+	var value : Double = 0.0
+	
+	def getValue():Double={
+	  return value
+	}
+	
+	def setValue(d:Double)={
+	  value=d
+	}
 }

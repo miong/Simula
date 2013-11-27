@@ -2,10 +2,10 @@
  * *******************************************************
  * SimulaGame
  * main.scala.simula.model.city
- * NetworkCapacity.scala
- * (c)SimulaGame on 17 nov. 2013 20:20:13
+ * EnumType.scala
+ * (c)SimulaGame on 17 nov. 2013 19:33:01
  * By ken
- * Update 17 nov. 2013 20:20:13
+ * Update 17 nov. 2013 19:33:01
  * *******************************************************
  */
 package main.scala.simula.model.city
@@ -14,6 +14,7 @@ package main.scala.simula.model.city
  * @author ken
  *
  */
-class NetworkCapacity extends Mesure{
-
+object EnumType extends Enumeration{
+	type EnumType = Value
+	val AREA = Value
 }

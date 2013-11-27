@@ -22,7 +22,7 @@ class Size(l: Int, w: Int) {
 	def Size(length:Int,width:Int);
 	*/
 
-  def numberOfCells(): Int = {
+  def numberOfBoxes(): Int = {
     return length * width;
   }
 }

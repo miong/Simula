@@ -34,17 +34,17 @@ class ModelManager extends ModelInterface {
   }
   
   def giveInformations(): RetrievedInformationInterface = {
-    return infoBuilder.build(new Location(0, 0), cityModelManager.giveCityAccess.mapSize)
+    return infoBuilder.build(new Location(0,0),cityModelManager.giveCityAccess.mapSize)
   }
-
-  def giveInformations(loc: Location, siz: Size): RetrievedInformationInterface = {
-    return infoBuilder.build(loc, siz)
+  
+  def giveInformations(loc:Location,siz:Size): RetrievedInformationInterface = {
+    return infoBuilder.build(loc,siz)
   }
-
-  def constructInfrastructureAt(InfrastructureType: StructureType, location: Location) {
-    cityModelManager.giveCityAccess.constructInfrastructureAt(InfrastructureType, location)
+  
+  def constructInfrastructureAt(structType: StructureType, location : Location){
+    cityModelManager.giveCityAccess.constructInfrastructureAt(structType, location)
   }
-
+  
   def giveCityAccess(): CityAccess = {
     return cityModelManager.giveCityAccess();
   }
@@ -52,9 +52,10 @@ class ModelManager extends ModelInterface {
     //return playerModelManager.givePlayerAccess();
     return null
   }
-
-  def giveRulesAccess(): RulesAccess = {
-    return rules.RuleLibrary;
+  
+  def giveRulesAccess() : RulesAccess = {
+    return rules.RuleLibrary; 
   }
 
+  
 }
