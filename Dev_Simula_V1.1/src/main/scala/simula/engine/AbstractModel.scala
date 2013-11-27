@@ -18,4 +18,7 @@ trait AbstractModel {
   def ack(data: RetrievedInformationInterface): Boolean
   def getRules():Set[GameRuleInterface]
   def getMapSize():Size
+  def getScreenShot():MapScreenShotInterface
+  def getActiveEffect(): Set[SideEffectInterface]
+  def setActiveEffect(newFxSet: Set[SideEffectInterface]): Unit
 }

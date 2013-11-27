@@ -17,10 +17,11 @@ trait EngineInterface extends MonthListener{
 
   def newEvent(e: EventInterface): RetrievedInformationInterface
   def permiteOperations(): List[Pair[String, Unit => Unit]]
-  def getDataFromModel(): RetrievedInformationInterface
+  def getInformationsFromModel(): RetrievedInformationInterface
+  def getDataFromModel(): MapScreenShotInterface
   def sendDataToView(data: RetrievedInformationInterface): Boolean
   def getFromModelToView(): Boolean
-  def treatDataFromModel(data: RetrievedInformationInterface): Unit
+  def treatDataFromModel(data:MapScreenShotInterface): Unit
   def sendDataToModel(data: RetrievedInformationInterface): Boolean
   def loadRules:Unit
   
