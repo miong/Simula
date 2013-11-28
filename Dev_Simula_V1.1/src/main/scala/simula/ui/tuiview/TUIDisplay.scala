@@ -26,11 +26,11 @@ trait TUIDisplay extends DisplayInterface {
   def updateDisplay(d: RetrievedInformationInterface, actualState: RetrievedInformationInterface) {
 
     println("Nombre d'habitants:"
-      + actualState.getNumberOfCitizen()
+      + d.getNumberOfCitizen()
       + " | Taux de criminalite:"
-      + actualState.getGlobalCriminality()
+      + d.getGlobalCriminality()
       + " | Taux de pollution:"
-      + actualState.getGlobalPolution())
+      + d.getGlobalPolution())
 
     var viewables: Set[Viewable] = d.getViewables();
     var map: Viewable = viewables.find({ v: Viewable => v != null && v.priority == 0 }).get
@@ -44,7 +44,8 @@ trait TUIDisplay extends DisplayInterface {
       if (tab(v.getLocation.x)(v.getLocation.y) == null || tab(v.getLocation.x)(v.getLocation.y).priority < v.priority) {
         //tab( v.getLocation.x )( v.getLocation.y )=v;
         for (a <- 0 until v.getSize.length; b <- 0 until v.getSize.width) {
-          tab(v.getLocation.x + a)(v.getLocation.y + b) = v
+          if(tab(v.getLocation.x + a)(v.getLocation.y + b)==null || tab(v.getLocation.x + a)(v.getLocation.y + b).priority < v.priority)
+        	  tab(v.getLocation.x + a)(v.getLocation.y + b) = v
         }
       }
     })
@@ -152,7 +153,10 @@ trait TUIDisplay extends DisplayInterface {
           return 'o'
         case "GRASS" =>
           return ';'
+        case "Map" =>
+          return 'M'
         case _ =>
+          println(str)
           return 'U';
       }
 

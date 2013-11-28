@@ -20,6 +20,7 @@ object RuleLibrary extends RulesAccess{
   var rules:Set[GameRuleInterface] = Set()
   
   rules += Nop
+  rules += AreaPopGrowth
   
   def getRules():Set[GameRuleInterface] = {
     return rules

@@ -18,6 +18,7 @@ import main.scala.simula.model.rules.RulesAccess
 import main.scala.simula.model.player.PlayerAccess
 import main.scala.simula.common._
 import main.scala.simula.common.StructureType._
+import main.scala.simula.model.scanner.GeneralScannerInterface
 trait ModelInterface {
 
   def giveCityAccess(): CityAccess;
@@ -27,4 +28,5 @@ trait ModelInterface {
   def getScreenShot():MapScreenShotInterface;
   def constructInfrastructureAt(InfrastructureType: StructureType, location : Location)
   def giveRulesAccess() : RulesAccess;
+  def giveScannerAccess(): GeneralScannerInterface;
 }

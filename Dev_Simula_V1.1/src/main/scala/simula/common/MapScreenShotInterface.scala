@@ -10,6 +10,8 @@
  */
 package main.scala.simula.common
 
+import main.scala.simula.model.city.Infrastructure
+
 /**
  * @author Bubul
  *
@@ -17,5 +19,6 @@ package main.scala.simula.common
 trait MapScreenShotInterface {
 	
 	def getInformationsOfBoxAt(loc:Location):RetrievedInformationInterface
-  
+	def getMapSize():Size
+	def getInfrastructures():Set[Infrastructure]
 }

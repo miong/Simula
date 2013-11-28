@@ -23,6 +23,7 @@ class MapScreenShotBuilder(model:ModelInterface) {
     var res = new MapScreenShot(mapSize)
     for(i <- 0 until mapSize.length; j <- 0 until mapSize.width)
         res.mss(i)(j) = model.giveInformations(new Location(i,j), new Size(1,1));
+    res.infras = model.giveScannerAccess.scanInfrastructures(new Location(0,0), mapSize)
     return res
   }
   

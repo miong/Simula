@@ -19,7 +19,15 @@ import main.scala.simula.model.city.EnumClass._
 class Population extends Mesure {
   var satisfaction: Integer = 0
   var rank: EnumClass = EnumClass.POOR
- 
+  var maxCapacity: Integer = 100 
+  
+  def setMaxCapacity(i:Integer) = {
+    maxCapacity = i
+  }
+  
+  def getMaxCapacity():Integer = {
+    return maxCapacity
+  }
   def getSatisfaction():Integer = {
     return satisfaction
   }

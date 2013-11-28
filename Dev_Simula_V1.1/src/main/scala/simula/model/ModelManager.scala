@@ -56,6 +56,10 @@ class ModelManager extends ModelInterface {
   def giveRulesAccess() : RulesAccess = {
     return rules.RuleLibrary; 
   }
+  
+  def giveScannerAccess(): GeneralScannerInterface = {
+    return generalScanner;
+  }
 
   
 }

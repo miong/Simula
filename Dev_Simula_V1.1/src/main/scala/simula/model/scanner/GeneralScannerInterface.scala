@@ -12,6 +12,7 @@ package main.scala.simula.model.scanner
 
 import main.scala.simula.model._
 import main.scala.simula.common._
+import main.scala.simula.model.city.Infrastructure
 
 trait GeneralScannerInterface {
 
@@ -21,6 +22,7 @@ trait GeneralScannerInterface {
   def ScanGlobalPolution(loc:Location,siz:Size): Integer
   def ScanGlobalCriminality(loc:Location,siz:Size): Integer
   def scanViewableObjects(loc:Location,siz:Size): Set[Viewable]
+  def scanInfrastructures(loc:Location,siz:Size):Set[Infrastructure]
 
 }
 

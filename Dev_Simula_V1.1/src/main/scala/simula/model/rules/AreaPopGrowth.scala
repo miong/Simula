@@ -2,31 +2,35 @@
  * *******************************************************
  * Simula_Dev1.0
  * main.scala.simula.model.rules
- * GameRule.scala
- * (c)Simula_Dev1.0 on 25 nov. 2013 10:58:29
+ * AreaPopGrowth.scala
+ * (c)Simula_Dev1.0 on 28 nov. 2013 15:25:55
  * By Bubul
- * Update 25 nov. 2013 10:58:29
+ * Update 28 nov. 2013 15:25:55
  * *******************************************************
  */
 package main.scala.simula.model.rules
+
 import main.scala.simula.common._
+import main.scala.simula.model.effects.AreaPopGrowthEffect
+import main.scala.simula.model.city.Infrastructure
+
 /**
  * @author Bubul
  *
  */
-
-// this is a doing nothing rule
-object Nop extends GameRuleInterface{
-	
+object AreaPopGrowth extends GameRuleInterface{
+  
   def apply(data:MapScreenShotInterface): Set[SideEffectInterface] = {
-    println("Nop invocked");
     var fxs:Set[SideEffectInterface] = Set()
-    fxs += main.scala.simula.model.effects.NoFx;
+    fxs = fxs +  AreaPopGrowthEffect
     return fxs
   }
   
   def isApplyable(data:MapScreenShotInterface): Boolean = {
-    return false;
+    return data.getInfrastructures.exists(
+    		(inf:Infrastructure) => {
+    			return inf.view.startsWith("Area")
+    		})
   }
-  
+
 }

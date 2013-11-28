@@ -12,12 +12,19 @@ package main.scala.simula.model.scanner
 
 import main.scala.simula.model.city._
 import main.scala.simula.model._
+import main.scala.simula.common.Location
+import main.scala.simula.common.Size
 
 class GeneralScanner extends GeneralScannerInterface
   with DisplayScanner
   with CriminalityScanner
   with NetworkScanner
   with PolutionScanner
-  with PopulationScanner {
+  with PopulationScanner
+  with InfrastructuresScanner {
 
+  def scanInfrastructures(loc:Location,siz:Size):Set[Infrastructure] = {
+    return this.getInfrastructures(model, loc, siz)
+  }
+  
 }

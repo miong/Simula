@@ -32,6 +32,7 @@ class TUIView(ri: RetrievedInformationInterface,
 
   def updateView(d: RetrievedInformationInterface) = {
     updateDisplay(d, actualState)
+    actualState = d
   }
 
 }
