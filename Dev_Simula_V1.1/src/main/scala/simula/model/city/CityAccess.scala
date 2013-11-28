@@ -21,7 +21,7 @@ trait CityAccess {
   /*
   	def getNumberOfCitizens():Int;
   	*/
-  def constructAnArea(l: Location);
+  //def constructAnArea(l: Location);
   // def getMapAccess(): Map;
   //----------ajout pour coller au diag de classe
   def getCellAt(l: Location): Cell

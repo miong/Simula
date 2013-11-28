@@ -33,6 +33,6 @@ class UIEngineAdapter extends UIEngineAdapterInterface {
     ui.updateView(d);
     return true;
   }
-  def updatedEvent(e: EventInterface) = { ; } //eng.updatedEvent(e)
+  def newAction(e: ActionInterface) = { ; } //eng.updatedEvent(e)
 
 }

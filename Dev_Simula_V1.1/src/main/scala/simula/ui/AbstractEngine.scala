@@ -18,5 +18,5 @@ import main.scala.simula.common._
  *
  */
 trait AbstractEngine {
-  def updatedEvent(e: EventInterface);
+  def newAction(a: ActionInterface): Unit
 }

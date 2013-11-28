@@ -21,11 +21,8 @@ class Engine(_model: AbstractModel, _view: AbstractView) extends EngineInterface
   var view: AbstractView = _view
   var persisri: RetrievedInformationInterface = _
 
-  def newEvent(e: EventInterface): RetrievedInformationInterface = {
-    //    match e {
-    //      case 
-    //    }
-    getInformationsFromModel() // Autre methode apres traitement de l'evenement
+  def newAction(a: ActionInterface): Unit = {
+    //VERRIFIER SI APPLICABLE ET SI OUI APPLIQUER
   }
 
   def permiteOperations(): List[Pair[String, Unit => Unit]] = {

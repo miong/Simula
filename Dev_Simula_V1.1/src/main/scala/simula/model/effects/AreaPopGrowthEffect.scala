@@ -20,7 +20,7 @@ import main.scala.simula.engine.AbstractModel
  object AreaPopGrowthEffect extends SideEffectInterface{
 
   var fx:Function[AbstractModel,Unit] = (mod: AbstractModel) => {
-    println("Area Pop Growth Invoked")
+    //println("Area Pop Growth Invoked")
     var data = mod.getScreenShot
     for(inf <- data.getInfrastructures)
       if(inf.view.startsWith("Area") && inf.population.getMaxCapacity > inf.population.getValue){

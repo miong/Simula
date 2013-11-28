@@ -35,12 +35,12 @@ class City(s: Size) extends CityAccess {
 
   def constructInfrastructureAt(structType: StructureType, l: Location) = {
     val i: Infrastructure = infraBuilder.build(structType, l)
-    map.constructInfrastructure(i)
+    map.positionAnInfrastructure(i)
   }
 
-  def constructAnArea(l: Location) {
-    map.constructInfrastructure(new Area(l));
-  }
+//  def constructAnArea(l: Location) {
+//    map.positionAnInfrastructure(new Area(l))
+//  }
   /*
 	def getNumberOfCitizens():Int={
 	  return map.getNumberOfCitizens;

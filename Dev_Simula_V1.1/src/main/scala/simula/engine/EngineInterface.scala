@@ -15,7 +15,7 @@ import main.scala.simula.common._
 
 trait EngineInterface extends MonthListener{
 
-  def newEvent(e: EventInterface): RetrievedInformationInterface
+  def newAction(e: ActionInterface): Unit
   def permiteOperations(): List[Pair[String, Unit => Unit]]
   def getInformationsFromModel(): RetrievedInformationInterface
   def getDataFromModel(): MapScreenShotInterface

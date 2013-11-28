@@ -43,16 +43,16 @@ class Map(s: Size) extends Viewable {
     }
   }
 
-  /**
-   * TODO expliquer ce code
-   */
-  def constructInfrastructure(i: Infrastructure) {
-    for (a <- i.topCornerLocation.x until i.topCornerLocation.x + i.size.length) {
-      for (b <- i.topCornerLocation.y until i.topCornerLocation.y + i.size.width) {
-        tab(a)(b).addInfrastructure(i);
-      }
-    }
-  }
+//  /**
+//   * TODO expliquer ce code
+//   */
+//  def constructInfrastructure(i: Infrastructure) {
+//    for (a <- i.topCornerLocation.x until i.topCornerLocation.x + i.size.length) {
+//      for (b <- i.topCornerLocation.y until i.topCornerLocation.y + i.size.width) {
+//        tab(a)(b).addInfrastructure(i);
+//      }
+//    }
+//  }
   /*
 	def getNumberOfCitizens:Int={
 	  return population.getNumberOfCitizens();

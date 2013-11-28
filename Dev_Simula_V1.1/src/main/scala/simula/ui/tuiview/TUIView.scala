@@ -27,6 +27,7 @@ class TUIView(ri: RetrievedInformationInterface,
   var actualLocation = loc
   var engine = ae
   var actualState = ri
+  startListening
 
   def redefineView = println("CLIVIEW RedefineView Called")
 
