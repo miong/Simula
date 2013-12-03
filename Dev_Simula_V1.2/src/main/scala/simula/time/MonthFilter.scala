@@ -1,3 +1,4 @@
+
 /**
  * *******************************************************
  * Simula
@@ -18,6 +19,8 @@ import main.scala.simula.common.MonthListener
 
 class MonthFilter extends MonthFilterInterface {
 
+  var nbrMonth = 0;
+  val that = this;
   var month: Integer = TimeDefinition.n_month
   var cpt: Integer = 0;
   var filters: List[MonthListener] = Nil;
@@ -25,8 +28,8 @@ class MonthFilter extends MonthFilterInterface {
   def receiveTop(): Unit = {
     cpt = cpt + 1;
     if (cpt == month) {
-      cpt = 0;
-      sendMonth();
+      cpt = 0
+      sendMonth()
     }
   }
 
@@ -36,8 +39,7 @@ class MonthFilter extends MonthFilterInterface {
 
   def sendMonth(): Unit = {
     for (ml <- filters)
-      ml.evenOnMonth();
-    //println("Month sent")
+      ml.evenOnMonth()
   }
 
 }

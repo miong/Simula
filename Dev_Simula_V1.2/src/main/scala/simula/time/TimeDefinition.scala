@@ -15,6 +15,6 @@ package main.scala.simula.time
  *
  */
 object TimeDefinition {
-  val n_month: Int = 10
-  val n_year: Int = 12 * n_month
+  val n_month: Int = 15
+  val n_year: Int = 14 * n_month
 }

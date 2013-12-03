@@ -16,13 +16,16 @@
 package main.scala.simula.time {
 
   class Clock extends Thread with ClockInterface {
+    var t: Int = 0;
     var filters: List[TimeFilter] = Nil;
 
     def register(tf: TimeFilter): Unit = {
+
       filters = tf :: filters;
     }
 
     def sendTop(): Unit = {
+      t = t + 1;
       for (tf: TimeFilter <- filters)
         tf.receiveTop;
     }
@@ -38,7 +41,7 @@ package main.scala.simula.time {
   }
 
   object Clock {
-    val topTime = 3000
+    val topTime = 1000
   }
 
 }
