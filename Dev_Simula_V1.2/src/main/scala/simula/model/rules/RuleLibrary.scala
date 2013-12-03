@@ -21,6 +21,7 @@ object RuleLibrary extends RulesAccess{
   
   rules += Nop
   rules += AreaPopGrowth
+  rules += MoneyGrowth
   
   def getRules():Set[GameRuleInterface] = {
     return rules

@@ -20,7 +20,7 @@ import main.scala.simula.common.StructureType._
 
 class CityWithAreaBuilder extends CityBuilderInterface {
   def buildCity(): CityAccess = {
-    var c: CityAccess = new City(new Size(500, 500));
+    var c: CityAccess = new City(new Size(10, 10));
     //c.constructAnArea(new Location(0, 0));
     c.constructInfrastructureAt(AREA, new Location(0,0))
     return c;

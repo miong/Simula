@@ -26,4 +26,8 @@ trait AbstractModel {
   def getSizeOf(st:StructureType):Size
   def constructInfrastructureAt(InfrastructureType: StructureType, location : Location)
   def destroyAt(l:Location):Unit
+  def pay(sum:Integer):Boolean
+  def pay(st:StructureType):Boolean
+  def getPlayerMoneyAmout:Integer
+  def addToPlayerMoney(sum:Integer)
 }

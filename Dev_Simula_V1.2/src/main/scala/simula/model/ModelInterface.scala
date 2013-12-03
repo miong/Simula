@@ -33,4 +33,7 @@ trait ModelInterface {
   def destroyAt(l:Location)
   def getActiveEffect : Set[SideEffectInterface]
   def setActiveEffect(fxs: Set[SideEffectInterface])
+  def pay(sum:Integer):Boolean
+  def pay(st:StructureType):Boolean
+  def getPlayerMoneyAmout:Integer
 }

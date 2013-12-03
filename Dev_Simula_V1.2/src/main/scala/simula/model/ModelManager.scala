@@ -61,7 +61,7 @@ class ModelManager extends ModelInterface {
   }
   
   def getSizeOf(st:StructureType):Size = {
-    var l = new Location(-1,-1)
+    val l = new Location(-1,-1)
     st match {
       case StructureType.AREA => return new Area(l).getSize
       case StructureType.PLANT => return new Plant(l).getSize
@@ -77,5 +77,27 @@ class ModelManager extends ModelInterface {
 
   def destroyAt(l:Location):Unit = cityModelManager.giveCityAccess.destroyAt(l:Location)
   
+  def pay(sum:Integer):Boolean = {
+    playerModelManager.givePlayerAccess.retrieveMoney(sum)
+    return playerModelManager.givePlayerAccess.getMoneyAmount <0
+  }
+  
+  def pay(st:StructureType):Boolean = {
+    var sum:Int = 0
+    val l = new Location(-1,-1)
+    st match {
+      case StructureType.AREA => sum = new Area(l).price.getValue.toInt
+      case StructureType.PLANT => sum = new Plant(l).price.getValue.toInt
+      case StructureType.TRANSPORT => sum = new TransportWays(l).price.getValue.toInt
+      case StructureType.STATION => sum = new Station(l).price.getValue.toInt
+      case _ => sum = 0
+    }
+    playerModelManager.givePlayerAccess.retrieveMoney(sum)
+    return playerModelManager.givePlayerAccess.getMoneyAmount <0
+  }
+  
+  def getPlayerMoneyAmout():Integer = {
+    return playerModelManager.givePlayerAccess.getMoneyAmount
+  }
   
 }

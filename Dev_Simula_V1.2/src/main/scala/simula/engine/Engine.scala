@@ -41,12 +41,22 @@ class Engine(_model: AbstractModel, _view: AbstractView) extends EngineInterface
     if(model.getData(where,model.getSizeOf(st)).getViewables.exists(v => isAStructure(v))){
       view.printError("Vous ne pouvez pas construire a cet emplacement")
     }else{
-    	model.constructInfrastructureAt(st,where)
+    	if(model.getPlayerMoneyAmout<0)
+    	  view.printError("Vous n'avez pas assez d'argent pour construire ce batiment (vous avez deja des dette)")
+    	else{
+    		model.constructInfrastructureAt(st,where)
+    		val Debt = model.pay(st)
+    		if (Debt)
+    		  view.printError("Attention vous avez des dette")
+    	}
     }
   }
   
   def destroy(where:Location):Unit = {
     model.destroyAt(where)
+    val Debt = model.pay(10)
+    if (Debt)
+    	view.printError("Attention vous avez des dette")
   }
   
   def permiteOperations(): List[Pair[String, Unit => Unit]] = {
