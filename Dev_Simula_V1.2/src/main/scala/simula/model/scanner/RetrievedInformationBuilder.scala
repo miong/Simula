@@ -22,7 +22,8 @@ class RetrievedInformationBuilder(scanner: GeneralScannerInterface) extends Retr
     val nGlobalPolution = scanner.ScanGlobalPolution(loc,siz)
     val nGlobalCriminality = scanner.ScanGlobalCriminality(loc,siz)
     val sViewable = scanner.scanViewableObjects(loc,siz)
-    var ri = new RetrievedInformation(nCitizen, nGlobalPolution, nGlobalCriminality, sViewable,loc,siz)
+    val aMoney = scanner.getAmountOfMoney()
+    var ri = new RetrievedInformation(nCitizen, nGlobalPolution, nGlobalCriminality, sViewable,loc,siz,aMoney)
     return ri
   }
 }

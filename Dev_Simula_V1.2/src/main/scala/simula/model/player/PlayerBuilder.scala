@@ -15,5 +15,9 @@
 package main.scala.simula.model.player
 
 class PlayerBuilder extends PlayerBuilderInterface {
-
+	def build(money:Integer):PlayerAccess={
+	  var p:Player=new Player
+	  p.addToMoney(money)
+	  return p
+	}
 }

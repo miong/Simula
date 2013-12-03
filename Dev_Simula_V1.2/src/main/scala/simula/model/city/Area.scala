@@ -18,6 +18,7 @@ import main.scala.simula.common._
 
 class Area(l: Location) extends Building(l) {
   size = new Size(3, 3);
+  price.setValue(75)
   this.population.setMaxCapacity(90);
   def view: String = {
     return "Area x:" + l.x + " y:" + l.y

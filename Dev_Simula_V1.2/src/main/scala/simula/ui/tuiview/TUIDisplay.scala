@@ -25,7 +25,9 @@ trait TUIDisplay extends DisplayInterface {
 
   def updateDisplay(d: RetrievedInformationInterface, actualState: RetrievedInformationInterface) {
 
-    println("Nombre d'habitants:"
+    println("Tresorerie: "
+      + d.getAmountOfMoney()
+      + " | Nombre d'habitants:"
       + d.getNumberOfCitizen()
       + " | Taux de criminalite:"
       + d.getGlobalCriminality()

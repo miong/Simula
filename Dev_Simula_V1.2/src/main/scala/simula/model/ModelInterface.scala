@@ -31,4 +31,6 @@ trait ModelInterface {
   def giveScannerAccess(): GeneralScannerInterface;
   def getSizeOf(st:StructureType):Size
   def destroyAt(l:Location)
+  def getActiveEffect : Set[SideEffectInterface]
+  def setActiveEffect(fxs: Set[SideEffectInterface])
 }

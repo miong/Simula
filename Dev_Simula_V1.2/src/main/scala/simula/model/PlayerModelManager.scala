@@ -16,14 +16,12 @@ package main.scala.simula.model
 import main.scala.simula.model.player._
 
 class PlayerModelManager {
-  // default value added !! need to construct The Builder !!!
-  var playerAccess: PlayerAccess = null
 
-  def InitWith(pbi: PlayerBuilderInterface) {
-    //playerAccess=pbi.PlayerBuilder();
-  }
+  val pBuilder = new PlayerBuilder()
+  val initialAmountOfMoney:Integer = 500
+  var playerAccess: PlayerAccess = pBuilder.build(initialAmountOfMoney)
 
-  def givePlayeurAccess(): PlayerAccess = {
+  def givePlayerAccess(): PlayerAccess = {
     return playerAccess
   }
 }

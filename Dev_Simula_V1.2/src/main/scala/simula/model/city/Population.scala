@@ -15,6 +15,7 @@
 package main.scala.simula.model.city
 
 import main.scala.simula.model.city.EnumClass._
+import main.scala.simula.model.Mesure
 
 class Population extends Mesure {
   var satisfaction: Integer = 0

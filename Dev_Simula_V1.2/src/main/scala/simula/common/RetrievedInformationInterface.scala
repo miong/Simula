@@ -21,4 +21,5 @@ abstract class RetrievedInformationInterface {
   def getViewables(): Set[Viewable];
   def getLocationOfInfos():Location;
   def getSizeOfInfos():Size;
+  def getAmountOfMoney():Integer
 }

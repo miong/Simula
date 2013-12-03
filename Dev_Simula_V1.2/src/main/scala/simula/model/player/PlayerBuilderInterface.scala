@@ -16,4 +16,5 @@ package main.scala.simula.model.player
  */
 trait PlayerBuilderInterface {
 
+  def build(money:Integer):PlayerAccess
 }

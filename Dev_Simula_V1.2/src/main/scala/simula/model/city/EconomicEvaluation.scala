@@ -10,6 +10,8 @@
  */
 package main.scala.simula.model.city
 
+import main.scala.simula.model.Mesure
+
 /**
  * @author ken
  *

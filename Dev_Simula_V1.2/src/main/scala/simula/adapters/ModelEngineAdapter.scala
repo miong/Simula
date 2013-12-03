@@ -37,8 +37,8 @@ class ModelEngineAdapter extends ModelEngineAdapterInterface {
   def getRules():Set[GameRuleInterface] = model.giveRulesAccess.getRules
   def getMapSize:Size = model.giveCityAccess.mapSize
   def getScreenShot : MapScreenShotInterface = model.getScreenShot
-  def getActiveEffect : Set[SideEffectInterface] = return Set() /*FAKE*/
-  def setActiveEffect(fxs: Set[SideEffectInterface]) : Unit = {} /*FAKE*/
+  def getActiveEffect : Set[SideEffectInterface] = return model.getActiveEffect
+  def setActiveEffect(fxs: Set[SideEffectInterface]) : Unit = model.setActiveEffect(fxs)
   def getSizeOf(st:StructureType):Size = model.getSizeOf(st)
   def constructInfrastructureAt(InfrastructureType: StructureType, location : Location) = model.constructInfrastructureAt(InfrastructureType, location)
   def destroyAt(l:Location):Unit = model.destroyAt(l)

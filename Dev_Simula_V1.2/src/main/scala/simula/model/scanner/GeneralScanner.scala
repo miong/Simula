@@ -21,7 +21,8 @@ class GeneralScanner extends GeneralScannerInterface
   with NetworkScanner
   with PolutionScanner
   with PopulationScanner
-  with InfrastructuresScanner {
+  with InfrastructuresScanner
+  with PlayerScanner {
 
   def scanInfrastructures(loc:Location,siz:Size):Set[Infrastructure] = {
     return this.getInfrastructures(model, loc, siz)

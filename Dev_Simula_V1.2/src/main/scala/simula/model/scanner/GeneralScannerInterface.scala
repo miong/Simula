@@ -23,6 +23,7 @@ trait GeneralScannerInterface {
   def ScanGlobalCriminality(loc:Location,siz:Size): Integer
   def scanViewableObjects(loc:Location,siz:Size): Set[Viewable]
   def scanInfrastructures(loc:Location,siz:Size):Set[Infrastructure]
+  def getAmountOfMoney():Integer
 
 }
 

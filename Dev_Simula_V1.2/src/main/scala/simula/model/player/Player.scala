@@ -14,8 +14,21 @@
  */
 package main.scala.simula.model.player
 
+import main.scala.simula.model.Mesure
+
 class Player extends PlayerAccess {
-	def getMoneyAmount()={
+	
+  var money:Money = new Money()
+	
+	def getMoneyAmount():Integer={
+	  return money.getValue.toInt
+	}
+	
+	def addToMoney(sum:Integer)={
+	  money.setValue(money.getValue+sum)
+	}
+	def retrieveMoney(sum:Integer)={
+	  money.setValue(money.getValue-sum)
 	  
 	}
 }

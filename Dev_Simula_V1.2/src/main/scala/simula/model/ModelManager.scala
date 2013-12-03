@@ -28,7 +28,7 @@ class ModelManager extends ModelInterface {
   var generalScanner: GeneralScannerInterface = scannerBuilder.ScannerBuilder(this)
   var infoBuilder: RetrievedInformationBuilderInterface = new RetrievedInformationBuilder(generalScanner)
   val screenShotBuilder = new MapScreenShotBuilder(this)
-  
+  var effects:Set[SideEffectInterface] = Set()
   def getScreenShot():MapScreenShotInterface = {
     return screenShotBuilder.build
   }
@@ -49,8 +49,7 @@ class ModelManager extends ModelInterface {
     return cityModelManager.giveCityAccess();
   }
   def givePlayerAccess(): PlayerAccess = {
-    //return playerModelManager.givePlayerAccess();
-    return null
+    return playerModelManager.givePlayerAccess
   }
   
   def giveRulesAccess() : RulesAccess = {
@@ -71,6 +70,10 @@ class ModelManager extends ModelInterface {
       case _ => return new Size(0,0)
     }
   }
+  
+  def getActiveEffect : Set[SideEffectInterface] = return effects
+  
+  def setActiveEffect(fxs: Set[SideEffectInterface]) : Unit = { effects = fxs} 
 
   def destroyAt(l:Location):Unit = cityModelManager.giveCityAccess.destroyAt(l:Location)
   

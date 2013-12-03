@@ -8,7 +8,7 @@
  * Update 17 nov. 2013 20:08:21
  * *******************************************************
  */
-package main.scala.simula.model.city
+package main.scala.simula.model
 
 /**
  * @author ken
