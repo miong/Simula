@@ -18,6 +18,6 @@ object ActionType extends Enumeration {
   
   type ActionType = Value
   val QUIT,NOA,CONSTRUCT, DESTROY = Value
-  val size = 2;
+  val size = 2; // JC : ActionType.maxId permet de connaitre le nombre de val du type
 
 }
