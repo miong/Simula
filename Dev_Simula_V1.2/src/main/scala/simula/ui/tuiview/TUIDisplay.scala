@@ -57,7 +57,7 @@ trait TUIDisplay extends DisplayInterface {
   def writeWhiteShape(s: String, attr:TextAttrType.TextAttrType = TextAttrType.NONE) = "\033[37;" + TextAttrType.toASCode(attr)  + s + "\033[m"
   def writeMagentaShape(s: String, attr:TextAttrType.TextAttrType = TextAttrType.NONE) = "\033[35;" + TextAttrType.toASCode(attr) + s + "\033[m"
   def writeCyanShape(s: String, attr:TextAttrType.TextAttrType = TextAttrType.NONE) = "\033[36;" + TextAttrType.toASCode(attr) + s + "\033[m"
-  def writeBleuShape(s: String, attr:TextAttrType.TextAttrType = TextAttrType.NONE) = "\033[34;" + TextAttrType.toASCode(attr) + s + "\033[m"
+  def writeBlueShape(s: String, attr:TextAttrType.TextAttrType = TextAttrType.NONE) = "\033[34;" + TextAttrType.toASCode(attr) + s + "\033[m"
 
   // Background
   def writeBRedShape(s: String, attr:TextAttrType.TextAttrType = TextAttrType.NONE) = "\033[41;" + TextAttrType.toASCode(attr) + s + "\033[m"
@@ -67,7 +67,7 @@ trait TUIDisplay extends DisplayInterface {
   def writeBWhiteShape(s: String, attr:TextAttrType.TextAttrType = TextAttrType.NONE) = "\033[47;" + TextAttrType.toASCode(attr)  + s + "\033[m"
   def writeBMagentaShape(s: String, attr:TextAttrType.TextAttrType = TextAttrType.NONE) = "\033[45;" + TextAttrType.toASCode(attr) + s + "\033[m"
   def writeBCyanShape(s: String, attr:TextAttrType.TextAttrType = TextAttrType.NONE) = "\033[46;" + TextAttrType.toASCode(attr) + s + "\033[m"
-  def writeBBleuShape(s: String, attr:TextAttrType.TextAttrType = TextAttrType.NONE) = "\033[44;" + TextAttrType.toASCode(attr) + s + "\033[m"
+  def writeBBlueShape(s: String, attr:TextAttrType.TextAttrType = TextAttrType.NONE) = "\033[44;" + TextAttrType.toASCode(attr) + s + "\033[m"
   
   def clearDisplay() = println("\033[2J\033[0m")
   def updateDisplay(d: RetrievedInformationInterface, actualState: RetrievedInformationInterface) {
@@ -91,7 +91,7 @@ trait TUIDisplay extends DisplayInterface {
     })
     clearDisplay()
     println("Tresorerie : "
-      + writeYellowShape(d.getAmountOfMoney().toString(), TextAttrType.BLINK)
+      + writeYellowShape(d.getAmountOfMoney().toString(), (if (d.getAmountOfMoney() <= 0 )  TextAttrType.BLINK else TextAttrType.BOLD))
       + " | Nombre d'habitants : "
       + writeGreenShape(d.getNumberOfCitizen().toString())
       + " | Taux de criminalite : "
@@ -160,12 +160,17 @@ trait TUIDisplay extends DisplayInterface {
     //    }							
 
     println("\n")
+    for (b <- 0 until mapSize.width) print(" + –")
+    print("\n")
     for (a <- 0 until mapSize.length) {
+      print("|")
       for (b <- 0 until mapSize.width) {
-        print(writeChar((tab(a)(b))))
-        print(" ")
+        print(" " + writeChar((tab(a)(b))) + " ")
+        print("|")
       }
       print("\n")
+      for (b <- 0 until mapSize.width) print(" + –")
+      print("\n") 
     }
     println("\n")
   }
@@ -188,44 +193,44 @@ trait TUIDisplay extends DisplayInterface {
     println("WHAT a mentionné pour CONSTRUCT ne peut étre pour le moment que AREA")
   }	
 
-  def writeChar(v: Viewable): Char = {
+  def writeChar(v: Viewable): String = {
     if (v != null) {
       var str: String = v.view
       (str.split(" "))(0) match {
 
         case "Network" =>
-          return 'N'
+          return "N"
         case "ElectricGrid" =>
-          return 'E'
+          return "E"
         case "TransportWays" =>
-          return 'W'
+          return "W"
         case "Plant" =>
-          return 'P'
+          return "P"
         case "Station" =>
-          return 'S'
+          return "S"
         case "TransportCenter" =>
-          return 'T'
+          return "T"
         case "Area" =>
-          return 'A'
+          return writeCyanShape("A")
         case "EARTH" =>
-          return '#'
+          return "#"
         case "WATER" =>
-          return '~'
+          writeBlueShape("~")
         case "TREE" =>
-          return '^'
+          writeGreenShape("^")
         case "STONE" =>
-          return 'o'
+          writeBlackShape("o")
         case "GRASS" =>
-          return ';'
+          writeGreenShape(";")
         case "Map" =>
-          return 'M'
+          return "M"
         case _ =>
-          println(str)
-          return 'U';
+          //println(str)
+          writeBlackShape("U");
       }
 
-    }
-    return 'U'
+    }else
+    writeBlackShape("U")
   }
 
 }

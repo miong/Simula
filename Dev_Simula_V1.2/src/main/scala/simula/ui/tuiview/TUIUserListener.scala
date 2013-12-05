@@ -30,6 +30,7 @@ trait TUIUserListener extends UserListenerInterface{
 	def startListening():Unit = {
 		val t:Thread = new Thread(new Runnable(){
 		  def run() = {
+
 			  while(cmd!="QUIT") {
 				  cmd = sc.nextLine();
 				  engine.newAction(parse(cmd.toUpperCase()))
@@ -37,6 +38,7 @@ trait TUIUserListener extends UserListenerInterface{
 				    println("SEE YOU DUDE")
 				  }
 			  }
+
 		  }
 		})
 		t.start
