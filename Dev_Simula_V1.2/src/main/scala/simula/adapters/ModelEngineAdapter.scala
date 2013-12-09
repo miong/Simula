@@ -41,7 +41,7 @@ class ModelEngineAdapter extends ModelEngineAdapterInterface {
   def setActiveEffect(fxs: Set[SideEffectInterface]) : Unit = model.setActiveEffect(fxs)
   def getSizeOf(st:StructureType):Size = model.getSizeOf(st)
   def constructInfrastructureAt(InfrastructureType: StructureType, location : Location) = model.constructInfrastructureAt(InfrastructureType, location)
-  def destroyAt(l:Location):Unit = model.destroyAt(l)
+  def destroyAt(l:Location):Boolean = model.destroyAt(l)
   def pay(sum:Integer):Boolean = model.pay(sum)
   def pay(st:StructureType):Boolean = model.pay(st)
   def getPlayerMoneyAmout:Integer = model.getPlayerMoneyAmout

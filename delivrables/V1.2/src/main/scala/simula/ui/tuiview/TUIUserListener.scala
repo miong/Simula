@@ -30,13 +30,15 @@ trait TUIUserListener extends UserListenerInterface{
 	def startListening():Unit = {
 		val t:Thread = new Thread(new Runnable(){
 		  def run() = {
-			  while(cmd!="QUIT"){
+
+			  while(cmd!="QUIT") {
 				  cmd = sc.nextLine();
 				  engine.newAction(parse(cmd.toUpperCase()))
 				  if(cmd == "QUIT"){
 				    println("SEE YOU DUDE")
 				  }
 			  }
+
 		  }
 		})
 		t.start
@@ -49,7 +51,7 @@ trait TUIUserListener extends UserListenerInterface{
 		  var where: Location = new Location(0,0)
 		  var what: StructureType = NOTHING
 		  var actionType: ActionType = NOA
-		  
+		  ActionType.maxId
 		  array(0) match {
 		  case "QUIT" => actionType = QUIT
 		  case "CONSTRUCT" => actionType = CONSTRUCT

@@ -38,6 +38,10 @@ class Engine(_model: AbstractModel, _view: AbstractView) extends EngineInterface
   def isAStructure(v:Viewable):Boolean = return v.priority >= 2
   
   def construct(st:StructureType,where:Location):Unit = {
+    if(st==NOTHING){
+      view.printError("Le batiment demand� est inconnu de cet univers...")
+      return;
+    }
     if(model.getData(where,model.getSizeOf(st)).getViewables.exists(v => isAStructure(v))){
       view.printError("Vous ne pouvez pas construire a cet emplacement")
     }else{
@@ -53,10 +57,11 @@ class Engine(_model: AbstractModel, _view: AbstractView) extends EngineInterface
   }
   
   def destroy(where:Location):Unit = {
-    model.destroyAt(where)
-    val Debt = model.pay(10)
-    if (Debt)
-    	view.printError("Attention vous avez des dette")
+    if(model.destroyAt(where)){
+    	val Debt = model.pay(10)
+    			if (Debt)
+    				view.printError("Attention vous avez des dette")
+    }
   }
   
   def permiteOperations(): List[Pair[String, Unit => Unit]] = {

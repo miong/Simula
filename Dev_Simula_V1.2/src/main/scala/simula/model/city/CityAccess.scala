@@ -28,5 +28,5 @@ trait CityAccess {
   def constructInfrastructureAt(structType: StructureType, l: Location)
   def mapSize(): Size;
   def getMapAsViewabel(): Viewable;
-  def destroyAt(l:Location)
+  def destroyAt(l:Location):Boolean
 }

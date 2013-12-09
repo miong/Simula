@@ -76,7 +76,7 @@ class Map(s: Size) extends Viewable {
   def positionAnInfrastructure(i: Infrastructure) = {
     for (a <- i.topCornerLocation.x until i.topCornerLocation.x + i.size.length) {
       for (b <- i.topCornerLocation.y until i.topCornerLocation.y + i.size.width) {
-        tab(a)(b).addInfrastructure(i);
+        getCellAt(new Location(a,b)).addInfrastructure(i);
       }
     }
   }
@@ -90,10 +90,14 @@ class Map(s: Size) extends Viewable {
     return tab(l.x)(l.y)
   }
 
-  def destroyAt(l:Location) = {
+  def destroyAt(l:Location) :Boolean = {
     var cell = getCellAt(l);
-    if(cell.infrastructures.isEmpty && (cell.getType == TREE || cell.getType == STONE))
+    if(cell.getType == FAIRY)
+      return false
+    if(cell.infrastructures.isEmpty && (cell.getType == TREE || cell.getType == STONE)){
       cell.baseType = EARTH
+      return true
+    }
     if(!cell.infrastructures.isEmpty){
     	for(inf <- cell.infrastructures){
     		val s = inf.getSize
@@ -103,7 +107,9 @@ class Map(s: Size) extends Viewable {
     	    tmp.infrastructures = tmp.infrastructures.empty
     	  }
     	}
+    	return true
     }
+    return false
   }
   
   

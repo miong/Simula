@@ -18,6 +18,6 @@ import main.scala.simula.common._
 
 class CityBuilder extends CityBuilderInterface {
   def buildCity(): CityAccess = {
-    return new City(new Size(60, 60));
+    return new City(new Size(10, 10));
   }
 }

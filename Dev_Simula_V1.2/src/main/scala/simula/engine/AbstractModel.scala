@@ -25,7 +25,7 @@ trait AbstractModel {
   def setActiveEffect(newFxSet: Set[SideEffectInterface]): Unit
   def getSizeOf(st:StructureType):Size
   def constructInfrastructureAt(InfrastructureType: StructureType, location : Location)
-  def destroyAt(l:Location):Unit
+  def destroyAt(l:Location):Boolean
   def pay(sum:Integer):Boolean
   def pay(st:StructureType):Boolean
   def getPlayerMoneyAmout:Integer

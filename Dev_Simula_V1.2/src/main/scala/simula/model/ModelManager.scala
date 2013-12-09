@@ -75,7 +75,7 @@ class ModelManager extends ModelInterface {
   
   def setActiveEffect(fxs: Set[SideEffectInterface]) : Unit = { effects = fxs} 
 
-  def destroyAt(l:Location):Unit = cityModelManager.giveCityAccess.destroyAt(l:Location)
+  def destroyAt(l:Location):Boolean = cityModelManager.giveCityAccess.destroyAt(l:Location)
   
   def pay(sum:Integer):Boolean = {
     playerModelManager.givePlayerAccess.retrieveMoney(sum)

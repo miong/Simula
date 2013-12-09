@@ -21,18 +21,56 @@ import main.scala.simula.model.city.Area
  * @author Scarpe
  *
  */
+object TextAttrType extends Enumeration {
+  type TextAttrType = Value
+  val NONE, BOLD, UNDER, BLINK, REV, CONCEAL = Value
+  def toString(t:this.TextAttrType ): String = 
+    t match {
+    case NONE => "Rien"
+    case BOLD => "gras"
+    case UNDER=> "underline"
+    case BLINK=> "blink"
+    case REV  => "reverse"
+    case CONCEAL => "concealed"
+  }
+
+  def toASCode(t:this.TextAttrType ): String = 
+    t match {
+    case NONE => "1m"
+    case BOLD => "1m"
+    case UNDER=> "4m"
+    case BLINK=> "5m"
+    case REV  => "7m"
+    case CONCEAL => "8m"
+  }
+
+    
+}
+
 trait TUIDisplay extends DisplayInterface {
 
-  def updateDisplay(d: RetrievedInformationInterface, actualState: RetrievedInformationInterface) {
+  // Foreground
+  def writeRedShape(s: String, attr:TextAttrType.TextAttrType = TextAttrType.NONE) = "\033[31;" + TextAttrType.toASCode(attr) + s + "\033[m"
+  def writeGreenShape(s: String, attr:TextAttrType.TextAttrType = TextAttrType.NONE) = "\033[32;" + TextAttrType.toASCode(attr)  + s + "\033[m"
+  def writeYellowShape(s: String, attr:TextAttrType.TextAttrType = TextAttrType.NONE) = "\033[33;" + TextAttrType.toASCode(attr)  + s + "\033[m"
+  def writeBlackShape(s: String, attr:TextAttrType.TextAttrType = TextAttrType.NONE) = "\033[30;" + TextAttrType.toASCode(attr)  + s + "\033[m"
+  def writeWhiteShape(s: String, attr:TextAttrType.TextAttrType = TextAttrType.NONE) = "\033[37;" + TextAttrType.toASCode(attr)  + s + "\033[m"
+  def writeMagentaShape(s: String, attr:TextAttrType.TextAttrType = TextAttrType.NONE) = "\033[35;" + TextAttrType.toASCode(attr) + s + "\033[m"
+  def writeCyanShape(s: String, attr:TextAttrType.TextAttrType = TextAttrType.NONE) = "\033[36;" + TextAttrType.toASCode(attr) + s + "\033[m"
+  def writeBlueShape(s: String, attr:TextAttrType.TextAttrType = TextAttrType.NONE) = "\033[34;" + TextAttrType.toASCode(attr) + s + "\033[m"
 
-    println("Tresorerie: "
-      + d.getAmountOfMoney()
-      + " | Nombre d'habitants:"
-      + d.getNumberOfCitizen()
-      + " | Taux de criminalite:"
-      + d.getGlobalCriminality()
-      + " | Taux de pollution:"
-      + d.getGlobalPolution())
+  // Background
+  def writeBRedShape(s: String, attr:TextAttrType.TextAttrType = TextAttrType.NONE) = "\033[41;" + TextAttrType.toASCode(attr) + s + "\033[m"
+  def writeBGreenShape(s: String, attr:TextAttrType.TextAttrType = TextAttrType.NONE) = "\033[42;" + TextAttrType.toASCode(attr)  + s + "\033[m"
+  def writeBYellowShape(s: String, attr:TextAttrType.TextAttrType = TextAttrType.NONE) = "\033[43;" + TextAttrType.toASCode(attr)  + s + "\033[m"
+  def writeBBlackShape(s: String, attr:TextAttrType.TextAttrType = TextAttrType.NONE) = "\033[40;" + TextAttrType.toASCode(attr)  + s + "\033[m"
+  def writeBWhiteShape(s: String, attr:TextAttrType.TextAttrType = TextAttrType.NONE) = "\033[47;" + TextAttrType.toASCode(attr)  + s + "\033[m"
+  def writeBMagentaShape(s: String, attr:TextAttrType.TextAttrType = TextAttrType.NONE) = "\033[45;" + TextAttrType.toASCode(attr) + s + "\033[m"
+  def writeBCyanShape(s: String, attr:TextAttrType.TextAttrType = TextAttrType.NONE) = "\033[46;" + TextAttrType.toASCode(attr) + s + "\033[m"
+  def writeBBlueShape(s: String, attr:TextAttrType.TextAttrType = TextAttrType.NONE) = "\033[44;" + TextAttrType.toASCode(attr) + s + "\033[m"
+  
+  def clearDisplay() = println("\033[2J\033[0m")
+  def updateDisplay(d: RetrievedInformationInterface, actualState: RetrievedInformationInterface) {
 
     var viewables: Set[Viewable] = d.getViewables();
     var map: Viewable = viewables.find({ v: Viewable => v != null && v.priority == 0 }).get
@@ -51,6 +89,16 @@ trait TUIDisplay extends DisplayInterface {
         }
       }
     })
+    clearDisplay()
+    println("Tresorerie : "
+      + writeYellowShape(d.getAmountOfMoney().toString(), (if (d.getAmountOfMoney() <= 0 )  TextAttrType.BLINK else TextAttrType.BOLD))
+      + " | Nombre d'habitants : "
+      + writeGreenShape(d.getNumberOfCitizen().toString())
+      + " | Taux de criminalite : "
+      + writeRedShape(d.getGlobalCriminality().toString())
+      + " | Taux de pollution : "
+      + writeMagentaShape(d.getGlobalPolution().toString())
+      + " ")
 
     // POUR KENNY : NE SERAIT'IL PAS JUDICIEUX D'UTILISE LA SIZE DE L'OBJET ?? 
     // JE NE SAVAIS PAS QUE C'ETAIT A LA VUE DE DECLARER LA TAILLE DES OBJETS...
@@ -112,14 +160,19 @@ trait TUIDisplay extends DisplayInterface {
     //    }							
 
     println("\n")
+    for (b <- 0 until mapSize.width) print(" + –")
+    print("\n")
     for (a <- 0 until mapSize.length) {
+      print("|")
       for (b <- 0 until mapSize.width) {
-        print(writeChar((tab(a)(b))))
-        print(" ")
+        print(" " + writeChar((tab(a)(b))) + " ")
+        print("|")
       }
       print("\n")
+      for (b <- 0 until mapSize.width) print(" + –")
+      print("\n") 
     }
-    println("\n\n\n")
+    println("\n")
   }
   
   def printError(err:String):Unit = {
@@ -140,44 +193,44 @@ trait TUIDisplay extends DisplayInterface {
     println("WHAT a mentionné pour CONSTRUCT ne peut étre pour le moment que AREA")
   }	
 
-  def writeChar(v: Viewable): Char = {
+  def writeChar(v: Viewable): String = {
     if (v != null) {
       var str: String = v.view
       (str.split(" "))(0) match {
 
         case "Network" =>
-          return 'N'
+          return "N"
         case "ElectricGrid" =>
-          return 'E'
+          return "E"
         case "TransportWays" =>
-          return 'W'
+          return "W"
         case "Plant" =>
-          return 'P'
+          return "P"
         case "Station" =>
-          return 'S'
+          return "S"
         case "TransportCenter" =>
-          return 'T'
+          return "T"
         case "Area" =>
-          return 'A'
+          return writeCyanShape("A")
         case "EARTH" =>
-          return '#'
+          return "#"
         case "WATER" =>
-          return '~'
+          writeBlueShape("~")
         case "TREE" =>
-          return '^'
+          writeGreenShape("^")
         case "STONE" =>
-          return 'o'
+          writeBlackShape("o")
         case "GRASS" =>
-          return ';'
+          writeGreenShape(";")
         case "Map" =>
-          return 'M'
+          return "M"
         case _ =>
-          println(str)
-          return 'U';
+          //println(str)
+          writeBlackShape("U");
       }
 
-    }
-    return 'U'
+    }else
+    writeBlackShape("U")
   }
 
 }
