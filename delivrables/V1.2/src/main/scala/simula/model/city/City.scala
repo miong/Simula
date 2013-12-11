@@ -21,9 +21,6 @@ import main.scala.simula.common.StructureType._
 class City(s: Size) extends CityAccess {
   var map: Map = new Map(s)
   val infraBuilder = new InfrastructureBuilder()
-  /*def getMapAccess(): Map = {
-    return map;
-  }*/
 
   def mapSize = map.getSize();
 
@@ -40,13 +37,5 @@ class City(s: Size) extends CityAccess {
   }
   
   def destroyAt(l:Location) = map.destroyAt(l:Location)
-
-//  def constructAnArea(l: Location) {
-//    map.positionAnInfrastructure(new Area(l))
-//  }
-  /*
-	def getNumberOfCitizens():Int={
-	  return map.getNumberOfCitizens;
-	}*/
 
 }

@@ -60,8 +60,6 @@ class GameControler() {
         fxs = fxs - fx
     }
     mod.setActiveEffect(fxs)
-    // Need FX applier to apply all the fx of fxs
-    // Fx applier need to modify the model to apply the fx on it to
   }
   
   

@@ -37,4 +37,6 @@ class UIEngineAdapter extends UIEngineAdapterInterface {
   
   def printSyntaxe():Unit = ui.printSyntaxe
   def printError(err:String):Unit = ui.printError(err)
+  
+  def outroDisplay():Unit = ui.outroDisplay()
 }

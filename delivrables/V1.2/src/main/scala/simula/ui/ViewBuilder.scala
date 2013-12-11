@@ -28,7 +28,6 @@ class ViewBuilder extends ViewBuilderInterface {
     ri: RetrievedInformationInterface): UIInterface = {
 
     it match {
-      //QUESTION: la taille de la map est fournie comment à la construction? C'est l'Engine qui la donne?
 
       case TEXT =>
         return new TUIView(ri, ae, new Size(10, 10), new Location(0, 0))

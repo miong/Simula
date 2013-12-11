@@ -28,9 +28,23 @@ trait CLIDisplay extends DisplayInterface {
     println("Où :")
     println("ACTION peut être : CONSTRUCT/DESTROY")
     println("WHERE est de la forme: x,y")
-    println("WHAT a mentionné pour CONSTRUCT ne peut étre pour le moment que AREA")
+    println("WHAT a mentionné pour CONSTRUCT ne peut être pour le moment que AREA")
   }
   def printError(err:String):Unit = {
     println(err)
+  }
+  
+  def outroDisplay():Unit = {
+    println("\n\nSpecial thanks to :\n\n"+
+    		"Carpentier Sylvain :                       Game developper\n"+
+    		"Mbiada Jacques Charles :                   Game developper\n"+
+    		"Mion Giovanni :                            Game developper\n"+
+    		"Pancarte Kenny :                           Game developper\n\n"+
+    		"Gianas Yann Regis :                        HeadMaster of Mikey's production Inc.\n"+
+    		"Zacchiroli Stefano :                       Head of Architecture And Design Department\n"+
+    		"Varacca Daniele :                          Head of Test and Support Department\n\n"+
+    		"Hayley Jane Wakenshaw :                    For some mysterious ascii reason..."
+    		)
+    Thread.sleep(3000)
   }
 }

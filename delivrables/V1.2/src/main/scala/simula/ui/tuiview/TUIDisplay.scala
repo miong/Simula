@@ -49,6 +49,68 @@ object TextAttrType extends Enumeration {
 
 trait TUIDisplay extends DisplayInterface {
 
+  val copyrigth:Char = 0x00A9
+  
+  def introDisplay():Unit = {
+    println("\n\n\n\t**********************************************************")
+    println("\t**********************************************************")
+    println("\n\t\t\tMikey's production present\n")
+    Thread.sleep(2000)
+    println("\t\t\tSimula - SIMcity UnofficiaL Apps\n")
+    Thread.sleep(1000)
+    println("\t\t\tA Gianas required project\n")
+    Thread.sleep(1000)
+    println("\t**********************************************************")
+    println("\t**********************************************************\n\n\n")
+
+    print("\nLoading:")
+    System.out.flush()
+    var i = 1
+    while (i <= 100) {
+      Thread.sleep(100)
+      if (i % 10 == 0) {
+        print(".")
+        System.out.flush()
+      }
+      i += 1
+    }
+    println("DONE")
+    println("\n\n"+
+    		"    ,-\"\" \"\"-.          .-\"\" \"\"-.          \n"+
+    		"  .\"         \\        /         \".          \n"+
+    		" :            :      :           :          \n"+
+    		" :            7,----.'           :          \n"+
+    		"  `.        ,---. .---.        .'          \n"+
+    		"    \"-.   ,\"  __ v __   \".  .-\"          \n"+
+    		"       7 :   /  | |  \\  : <          \n"+
+    		"      ;  :   :,-| |-.:  :  \\          \n"+
+    		"      :   \\   \\_|_|_/   /   :          \n"+
+    		"      :,--.>  ',---.`  <,--.:          \n"+
+    		"      :    __ (     ) __    ;          \n"+
+    		"       \".   \\  `---'  /   ,\"          \n"+
+    		"         \".  \\-------/  ,\"          \n"+
+    		"           \"._`.___,'_,\"          \n"+
+    		"              \".___.\"          \n")
+    println("\n      ----> Game loaded! <----")
+    Thread.sleep(1500)
+  }
+  introDisplay
+  
+  
+  def outroDisplay():Unit = {
+    println("\n\nSpecial thanks to \n\n"+
+    		"Carpentier Sylvain :                 Game developper\n"+
+    		"Mbiada Jacques Charles :             Game developper\n"+
+    		"Mion Giovanni :                      Game developper\n"+
+    		"Pancarte Kenny :                     Game developper\n\n"+
+    		"Gianas Yann Regis :                  HeadMaster of Mikey's production Inc.\n"+
+    		"Zacchiroli Stefano :                 Head of Architecture And Design Department\n"+
+    		"Varacca Daniele :                    Head of Test and Support Department\n\n"+
+    		"Hayley Jane Wakenshaw :              For some mysterious ascii reason...\n\n"+
+    		copyrigth+" Mikey's Production, a sheep breeding compagny located in Bretagne.\n\n\n\n"
+    		)
+    Thread.sleep(3000)
+  }
   // Foreground
   def writeRedShape(s: String, attr:TextAttrType.TextAttrType = TextAttrType.NONE) = "\033[31;" + TextAttrType.toASCode(attr) + s + "\033[m"
   def writeGreenShape(s: String, attr:TextAttrType.TextAttrType = TextAttrType.NONE) = "\033[32;" + TextAttrType.toASCode(attr)  + s + "\033[m"
@@ -100,65 +162,7 @@ trait TUIDisplay extends DisplayInterface {
       + writeMagentaShape(d.getGlobalPolution().toString())
       + " ")
 
-    // POUR KENNY : NE SERAIT'IL PAS JUDICIEUX D'UTILISE LA SIZE DE L'OBJET ?? 
-    // JE NE SAVAIS PAS QUE C'ETAIT A LA VUE DE DECLARER LA TAILLE DES OBJETS...
-    // DE PLUS J'AI ESSAYER DE RUN -> ERREUR POUR UN MATCH AVEC EARTH... TA ESSAYER DE RUN ???    							
-    //    for (a <- 0 until mapSize.length) {
-    //    	for (b <- 0 until mapSize.width) {
-    //    	  var str: String=tab(a)(b).view
-    //    	  (str.split((" "))(0) match{
-    //    	   case "Plant" =>
-    //    			if (tab(a)(b).getLocation.x > -1  && tab(a)(b).getLocation.y > -1){
-    //    	    		for (i<-1 until 3){
-    //    	    		  tab (a+i)(b)=new Plant(new Location(-1,-1))
-    //    	    		  tab (a)(b+i)=new Plant(new Location(-1,-1))
-    //    	    		}
-    //    	    		for (i<-1 until 3){
-    //    	    		  for (j<-1 until 3){
-    //    	    		    tab(a+i)(b+j)=new Plant(new Location(-1,-1))
-    //    	    		  }
-    //    	    		}
-    //    	  		}
-    //    		case "Station" =>
-    //    			if (tab(a)(b).getLocation.x > -1  && tab(a)(b).getLocation.y > -1){
-    //    	    		for (i<-1 until 3){
-    //    	    		  tab (a+i)(b)=new Station(new Location(-1,-1))
-    //    	    		  tab (a)(b+i)=new Station (new Location(-1,-1))
-    //    	    		}
-    //    	    		for (i<-1 until 3){
-    //    	    		  for (j<-1 until 3){
-    //    	    		    tab(a+i)(b+j)=new Station(new Location(-1,-1))
-    //    	    		  }
-    //    	    		}
-    //    	  		}
-    //    		case "TransportCenter" =>
-    //    			if (tab(a)(b).getLocation.x > -1  && tab(a)(b).getLocation.y > -1){
-    //    	    		for (i<-1 until 7){
-    //    	    		  tab (a+i)(b)=new TransportCenter (new Location(-1,-1))
-    //    	    		  tab (a)(b+i)=new TransportCenter (new Location(-1,-1))
-    //    	    		}
-    //    	    		for (i<-1 until 7){
-    //    	    		  for (j<-1 until 7){
-    //    	    		    tab(a+i)(b+j)=new TransportCenter (new Location(-1,-1))
-    //    	    		  }
-    //    	    		}
-    //    	  		}
-    //    		case "Area" =>
-    //    			if (tab(a)(b).getLocation.x > -1  && tab(a)(b).getLocation.y > -1){
-    //    	    		for (i<-1 until 3){
-    //    	    		  tab (a+i)(b)=new Area(new Location(-1,-1))
-    //    	    		  tab (a)(b+i)=new Area (new Location(-1,-1))
-    //    	    		}
-    //    	    		for (i<-1 until 3){
-    //    	    		  for (j<-1 until 3){
-    //    	    		    tab(a+i)(b+j)=new Area (new Location(-1,-1))
-    //    	    		  }
-    //    	    		}
-    //    	  		}
-    //    	  }
-    //    	)}
-    //    }							
-
+    
     println("\n")
     for (b <- 0 until mapSize.width) print(" + –")
     print("\n")
@@ -190,7 +194,7 @@ trait TUIDisplay extends DisplayInterface {
     println("Où :")
     println("ACTION peut être : CONSTRUCT/DESTROY")
     println("WHERE est de la forme: x,y")
-    println("WHAT a mentionné pour CONSTRUCT ne peut étre pour le moment que AREA")
+    println("WHAT a mentionné pour CONSTRUCT ne peut être pour le moment que AREA")
   }	
 
   def writeChar(v: Viewable): String = {

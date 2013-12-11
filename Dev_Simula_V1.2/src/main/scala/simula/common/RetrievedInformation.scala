@@ -42,11 +42,5 @@ class RetrievedInformation(var numberOfCitizen: Integer, var globalPolution: Int
   def getAmountOfMoney():Integer={
     return money
   }
-  
-//  def +=(ri:RetrievedInformationInterface){
-//    this.numberOfCitizen = this.numberOfCitizen + ri.getNumberOfCitizen
-//    this.globalPolution = this.globalPolution + ri.getGlobalPolution
-//    this.globalCriminality = this.globalCriminality + ri.getGlobalCriminality
-//  }
 
 }

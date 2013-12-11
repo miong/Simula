@@ -20,7 +20,6 @@ import main.scala.simula.common.GroundType._
 
 class Map(s: Size) extends Viewable {
   var size: Size = s
-  //Ajout pour coller avec diagramme de classe
   var value = new EconomicEvaluation
   var polution = new Polution
   var criminality = new Criminality
@@ -43,21 +42,7 @@ class Map(s: Size) extends Viewable {
     }
   }
 
-//  /**
-//   * TODO expliquer ce code
-//   */
-//  def constructInfrastructure(i: Infrastructure) {
-//    for (a <- i.topCornerLocation.x until i.topCornerLocation.x + i.size.length) {
-//      for (b <- i.topCornerLocation.y until i.topCornerLocation.y + i.size.width) {
-//        tab(a)(b).addInfrastructure(i);
-//      }
-//    }
-//  }
-  /*
-	def getNumberOfCitizens:Int={
-	  return population.getNumberOfCitizens();
-	}
-	*/
+
   def view: String = {
     return "Map lenght:" + s.length + " width" + s.width
   }
@@ -72,7 +57,6 @@ class Map(s: Size) extends Viewable {
     return 0
   }
 
-  //Ajout pour coller avec diagramme de classe
   def positionAnInfrastructure(i: Infrastructure) = {
     for (a <- i.topCornerLocation.x until i.topCornerLocation.x + i.size.length) {
       for (b <- i.topCornerLocation.y until i.topCornerLocation.y + i.size.width) {

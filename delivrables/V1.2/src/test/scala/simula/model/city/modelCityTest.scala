@@ -31,17 +31,17 @@ class modelCityTest extends FlatSpec with ShouldMatchers {
     s.length should be(10)
   }
   "The method: constructAnArea in City" should "create an Infrastructure on the map at the given location" in {
-    city.getBoxAt(new Location(0,0)).infrastructures.isEmpty should be(false)
-    city.getBoxAt(new Location(0,1)).infrastructures.isEmpty should be(false)
-    city.getBoxAt(new Location(0,2)).infrastructures.isEmpty should be(false)
-    city.getBoxAt(new Location(1,0)).infrastructures.isEmpty should be(false)
-    city.getBoxAt(new Location(1,1)).infrastructures.isEmpty should be(false)
-    city.getBoxAt(new Location(1,2)).infrastructures.isEmpty should be(false)
-    city.getBoxAt(new Location(2,0)).infrastructures.isEmpty should be(false)
-    city.getBoxAt(new Location(2,1)).infrastructures.isEmpty should be(false)
-    city.getBoxAt(new Location(2,2)).infrastructures.isEmpty should be(false)
-    city.getBoxAt(new Location(3,0)).infrastructures.isEmpty should be(true)
-    city.getBoxAt(new Location(0,3)).infrastructures.isEmpty should be(true)
+    city.getCellAt(new Location(0,0)).infrastructures.isEmpty should be(false)
+    city.getCellAt(new Location(0,1)).infrastructures.isEmpty should be(false)
+    city.getCellAt(new Location(0,2)).infrastructures.isEmpty should be(false)
+    city.getCellAt(new Location(1,0)).infrastructures.isEmpty should be(false)
+    city.getCellAt(new Location(1,1)).infrastructures.isEmpty should be(false)
+    city.getCellAt(new Location(1,2)).infrastructures.isEmpty should be(false)
+    city.getCellAt(new Location(2,0)).infrastructures.isEmpty should be(false)
+    city.getCellAt(new Location(2,1)).infrastructures.isEmpty should be(false)
+    city.getCellAt(new Location(2,2)).infrastructures.isEmpty should be(false)
+    city.getCellAt(new Location(3,0)).infrastructures.isEmpty should be(true)
+    city.getCellAt(new Location(0,3)).infrastructures.isEmpty should be(true)
   }
 
 }

@@ -21,11 +21,6 @@ class CityModelManager {
 
   var defaultCityBuilder: CityBuilderInterface = new CityWithAreaBuilder()
   var cityAccess: CityAccess = defaultCityBuilder.buildCity();
-  /*
-	def retrievedNumberOfCitizens:Int={
-	  return cityAccess.getNumberOfCitizens()
-	}
-	*/
 
   def InitWith(cbi: CityBuilderInterface) {
     cityAccess = cbi.buildCity();

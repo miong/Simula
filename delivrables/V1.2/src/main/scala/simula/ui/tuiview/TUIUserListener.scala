@@ -34,9 +34,6 @@ trait TUIUserListener extends UserListenerInterface{
 			  while(cmd!="QUIT") {
 				  cmd = sc.nextLine();
 				  engine.newAction(parse(cmd.toUpperCase()))
-				  if(cmd == "QUIT"){
-				    println("SEE YOU DUDE")
-				  }
 			  }
 
 		  }
@@ -44,7 +41,6 @@ trait TUIUserListener extends UserListenerInterface{
 		t.start
 	}
 	
-	// action where what
 	def parse(str:String):ActionInterface={
 	  val array = str.split(" ")
 	  try{

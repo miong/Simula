@@ -20,13 +20,11 @@ import main.scala.simula.common._
 
 class Cell(l: Location, pbaseType: GroundType) extends Viewable {
   var location: Location = l
-  //Ajout pour coller avec diagramme de classe
   var value: EconomicEvaluation = new EconomicEvaluation
   var population: Population = new Population;
   var polution: Polution = new Polution;
   var criminality: Criminality = new Criminality;
   var infrastructures: Set[Infrastructure] = Set();
-  //ajout pour coller au diagramme de classe
   var baseType: GroundType = pbaseType;
 
   def addInfrastructure(i: Infrastructure) {

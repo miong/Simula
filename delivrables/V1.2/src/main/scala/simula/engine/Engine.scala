@@ -28,7 +28,7 @@ class Engine(_model: AbstractModel, _view: AbstractView) extends EngineInterface
     a.actionType match {
       case CONSTRUCT => construct(a.what,a.where)
       case DESTROY =>  destroy(a.where)
-      case QUIT => exit()
+      case QUIT => {view.outroDisplay();exit()}
       case _ => {
         view.printSyntaxe()
       }

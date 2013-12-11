@@ -34,7 +34,6 @@ package main.scala.simula.time {
       while (true) {
         Thread.sleep(Clock.topTime);
         sendTop();
-        //println("Clock sent")
       }
     }
 

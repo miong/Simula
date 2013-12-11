@@ -27,4 +27,5 @@ abstract case class UIInterface {
   def updateView(d: RetrievedInformationInterface)
   def printSyntaxe():Unit
   def printError(err:String):Unit
+  def outroDisplay():Unit
 }

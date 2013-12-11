@@ -16,4 +16,5 @@ trait AbstractView {
   def ack(data: RetrievedInformationInterface): Boolean
   def printSyntaxe():Unit
   def printError(err:String):Unit
+  def outroDisplay():Unit
 }

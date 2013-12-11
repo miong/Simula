@@ -18,12 +18,6 @@ import main.scala.simula.common._
 import main.scala.simula.common.StructureType._
 
 trait CityAccess {
-  /*
-  	def getNumberOfCitizens():Int;
-  	*/
-  //def constructAnArea(l: Location);
-  // def getMapAccess(): Map;
-  //----------ajout pour coller au diag de classe
   def getCellAt(l: Location): Cell
   def constructInfrastructureAt(structType: StructureType, l: Location)
   def mapSize(): Size;

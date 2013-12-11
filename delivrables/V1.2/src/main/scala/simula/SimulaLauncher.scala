@@ -26,31 +26,6 @@ object SimulaLauncher {
 
   def main(args: Array[String]) {
 
-//    println("\n\n\n\t**********************************************************")
-//    println("\t**********************************************************")
-//    println("\n\t\t\tMikey's production present\n")
-//    Thread.sleep(2000)
-//    println("\t\t\tSimula - SIMcity UnofficiaL Apps\n")
-//    Thread.sleep(1000)
-//    println("\t\t\tA Gianas required project\n")
-//    Thread.sleep(1000)
-//    println("\t**********************************************************")
-//    println("\t**********************************************************\n\n\n")
-//
-//    print("\nLoading:")
-//    System.out.flush()
-//    var i = 1
-//    while (i <= 100) {
-//      Thread.sleep(100)
-//      if (i % 10 == 0) {
-//        print(".")
-//        System.out.flush()
-//      }
-//      i += 1
-//    }
-//    println("OK\n ----> Game loaded!")
-//    Thread.sleep(1500)
-
     val viewBuilder: ViewBuilderInterface = new ViewBuilder()
     val engineBuilder: EngineBuilderInterface = new EngineBuilder()
     val modelBuilder: ModelBuilderInterface = new ModelBuilder()

@@ -14,12 +14,13 @@
  */
 package main.scala.simula.model.city
 
-import main.scala.simula.model.city.EnumClass._
+import main.scala.simula.common._
+import main.scala.simula.common.SocialClassType._
 import main.scala.simula.model.Mesure
 
 class Population extends Mesure {
   var satisfaction: Integer = 0
-  var rank: EnumClass = EnumClass.POOR
+  var rank: SocialClassType = POOR
   var maxCapacity: Integer = 100 
   
   def setMaxCapacity(i:Integer) = {
@@ -37,11 +38,11 @@ class Population extends Mesure {
     satisfaction = sat
   }
   
-  def getRank():EnumClass = {
+  def getRank():SocialClassType = {
     return rank
   }
   
-  def setRank(r:EnumClass) = {
+  def setRank(r:SocialClassType) = {
     rank = r
   }
 }
