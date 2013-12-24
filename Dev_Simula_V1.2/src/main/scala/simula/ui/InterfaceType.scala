@@ -18,5 +18,5 @@ package main.scala.simula.ui
 object InterfaceType extends Enumeration {
 
   type InterfaceType = Value
-  val TEXT, CLI, GUI, NUI = Value
+  val TEXT, CLI, GUI, JCUI, NUI = Value
 }

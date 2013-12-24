@@ -15,6 +15,7 @@ package main.scala.simula.ui
 import main.scala.simula.ui.tuiview._
 import main.scala.simula.ui.cliview.CLIView
 import main.scala.simula.ui.guiview.GUIView
+import main.scala.simula.ui.jcuiview.JCUIView
 import main.scala.simula.ui.InterfaceType._
 import main.scala.simula.common._
 /**
@@ -37,6 +38,9 @@ class ViewBuilder extends ViewBuilderInterface {
 
       case GUI =>
         return new GUIView(ri, ae, new Size(10, 10), new Location(0, 0))
+        
+      case JCUI =>
+        return new JCUIView(ri, ae, new Size(10, 10), new Location(0, 0)) // to be modified
     }
   }
 

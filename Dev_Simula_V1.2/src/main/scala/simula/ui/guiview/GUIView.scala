@@ -29,6 +29,6 @@ class GUIView(ri: RetrievedInformationInterface,
 
   def buildView = println("GUIVIEW buildView Called")
   def redefineView = println("GUIVIEW RedefineView Called")
-  def updateView(d: RetrievedInformationInterface) = println("GUIVIEW UpdateView Called")
+  def updateView(d: RetrievedInformationInterface) = updateDisplay(d, actualState)
 
 }

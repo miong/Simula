@@ -9,12 +9,19 @@
  * *******************************************************
  */
 package main.scala.simula.ui.guiview
+
 import main.scala.simula.common._
 import main.scala.simula.ui._
+import java.awt.event.ActionListener
+import java.awt.event.ActionEvent
 /**
  * @author Scarpe
  *
  */
-trait GUIUserListener extends UserListenerInterface {
+trait GUIUserListener extends UserListenerInterface with ActionListener{
 
+  def actionPerformed(arg:ActionEvent):Unit = {
+    
+  }
+  
 }

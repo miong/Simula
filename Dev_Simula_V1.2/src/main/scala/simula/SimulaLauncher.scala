@@ -34,7 +34,7 @@ object SimulaLauncher {
     val modelEngineAdapter: ModelEngineAdapterInterface = new ModelEngineAdapter()
 
     val mod: ModelInterface = modelBuilder.ModelBuilder()
-    val ui: UIInterface = viewBuilder.buildView(TEXT, uiEngineAdapter, mod.giveInformations())
+    val ui: UIInterface = viewBuilder.buildView(GUI, uiEngineAdapter, mod.giveInformations())
     val eng: EngineInterface = engineBuilder.build(modelEngineAdapter, uiEngineAdapter)
 
     uiEngineAdapter.INIT(ui, eng)
