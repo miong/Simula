@@ -26,20 +26,25 @@ import Array._
  * @author Scarpe
  *
  */
-trait GUIDisplay extends DisplayInterface {
+trait GUIDisplay extends DisplayInterface with ActionListener{
   
   var win:JFrame = _
   val commandPanel:JPanel = new JPanel();
   val mapPanel:JPanel = new JPanel();
+  mapPanel.setPreferredSize(new Dimension (500,30))
+  mapPanel.setMaximumSize(new Dimension (500,30))
+  mapPanel.setMinimumSize(new Dimension (500,30))
   val printPanel:JPanel = new JPanel();
   val areaB = new JButton(new ImageIcon("./images/cArea.png"));
+  areaB.addActionListener(this);
   val destroy = new JButton(new ImageIcon("./images/destroy.png"));
+  destroy.addActionListener(this);
   
   def constructWindow(){
 	  win = new JFrame("SIMULA - SIMcity UnofficiaL Apps");
 	  val layout = new BorderLayout();
 	  win.setLayout(layout);
-	  win.setPreferredSize(new Dimension(1200,700))
+	  win.setPreferredSize(new Dimension(1200,550))
 	  win.add(printPanel,BorderLayout.LINE_START)
 	  win.add(commandPanel,BorderLayout.CENTER)
 	  win.add(mapPanel,BorderLayout.LINE_END)
@@ -99,14 +104,22 @@ trait GUIDisplay extends DisplayInterface {
     val mapView = new JPanel();
     val mapLayout = new GridLayout(mapSize.length,mapSize.width);
     mapView.setLayout(mapLayout);
-    for(a <- 0 until mapSize.length ; b <- 0 until mapSize.width)
-      mapView.add(viewableToLabel(tab(a)(b)))
+    for(a <- 0 until mapSize.length ; b <- 0 until mapSize.width){
+      val v = viewableToLabel(tab(a)(b),a,b)
+      v.setBorderPainted(false);
+      v.setContentAreaFilled(false)
+      v.addActionListener(this)
+      mapView.add(v)
+    }
+    mapView.setPreferredSize(new Dimension (60,60))
+    mapView.setMaximumSize(new Dimension (60,60))
+    mapView.setMinimumSize(new Dimension (60,60))
     mapPanel.add(mapView,BorderLayout.CENTER)
     win.pack()
     win.repaint()
   }
   
-  def viewableToLabel(v:Viewable):JLabel = {
+  def viewableToLabel(v:Viewable,a:Integer,b:Integer):JButton = {
     var image:ImageIcon = null ;
     if (v != null) {
       var str: String = v.view
@@ -144,7 +157,7 @@ trait GUIDisplay extends DisplayInterface {
     }else{
     	image = new ImageIcon("./images/unknown.png")
     }
-    return new JLabel(image)
+    return new Button(image,a,b)
   }
   
   def printSyntaxe():Unit = {}
@@ -152,6 +165,7 @@ trait GUIDisplay extends DisplayInterface {
   def printError(err:String):Unit = {
     val msg = new JTextArea(err)
     msg.setEditable(false)
+    printPanel.removeAll()
     printPanel.add(msg)
   }
   
@@ -231,6 +245,8 @@ trait GUIDisplay extends DisplayInterface {
 	        case e:Exception => ;
 	      }
   }
+  
+  def actionPerformed(arg:ActionEvent):Unit;
   
   
 }

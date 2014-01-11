@@ -40,7 +40,7 @@ package main.scala.simula.time {
   }
 
   object Clock {
-    val topTime = 1000
+    val topTime = 250
   }
 
 }

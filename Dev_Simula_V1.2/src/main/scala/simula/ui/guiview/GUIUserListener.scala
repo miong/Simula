@@ -14,14 +14,43 @@ import main.scala.simula.common._
 import main.scala.simula.ui._
 import java.awt.event.ActionListener
 import java.awt.event.ActionEvent
+import javax.swing._
+import main.scala.simula.common.StructureType._
+import main.scala.simula.common.ActionType._
 /**
  * @author Scarpe
  *
  */
 trait GUIUserListener extends UserListenerInterface with ActionListener{
 
+  val destroy : JButton;
+  val areaB : JButton;
+  var actBuilder:ActionBuilder = new ActionBuilder()
+  var engine:AbstractEngine
+  var where: Location = new Location(0,0)
+  var what: StructureType = NOTHING
+  var actionType: ActionType = NOA
+  
   def actionPerformed(arg:ActionEvent):Unit = {
-    
+    val src = arg.getSource()
+    ActionType.maxId
+    if (src == destroy) {
+      actionType = DESTROY
+    } else if (src == areaB) {
+      actionType = CONSTRUCT
+      what = AREA
+    } else if (src.isInstanceOf[Button]) {
+      val but:Button = src.asInstanceOf[Button]
+      if(actionType == NOA){
+        // SHOW DETAIL ON THE ZONE
+      }else{
+        where = new Location(but.getPosX,but.getPosY);
+        if (actionType==CONSTRUCT)
+          engine.newAction(actBuilder.build(actionType,what,where))
+        else
+          engine.newAction(actBuilder.build(actionType,where))
+      }
+    }
   }
   
 }
