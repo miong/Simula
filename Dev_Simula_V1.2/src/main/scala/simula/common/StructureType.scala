@@ -16,5 +16,5 @@ package main.scala.simula.common
  */
 object StructureType extends Enumeration {
   type StructureType = Value
-  val TRANSPORT, AREA, PLANT, ROAD, STATION, POLICECENTER , RESIDENCE, POWERPLANT, ELECTRICLINE, NOTHING = Value
+  val TRANSPORT, AREA, PLANT, ROAD, STATION, POLICECENTER, RESIDENCE, POWERPLANT, ELECTRICLINE, NOTHING = Value
 }

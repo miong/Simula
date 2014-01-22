@@ -60,7 +60,10 @@ class Map(s: Size) extends Viewable {
   def positionAnInfrastructure(i: Infrastructure) = {
     for (a <- i.topCornerLocation.x until i.topCornerLocation.x + i.size.length) {
       for (b <- i.topCornerLocation.y until i.topCornerLocation.y + i.size.width) {
-        getCellAt(new Location(a,b)).addInfrastructure(i);
+        val c = getCellAt(new Location(a,b));
+        c.addInfrastructure(i);
+        c.baseType = GroundType.EARTH
+        
       }
     }
   }

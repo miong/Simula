@@ -36,16 +36,22 @@ class Engine(_model: AbstractModel, _view: AbstractView) extends EngineInterface
   }
   
   def isAStructure(v:Viewable):Boolean = return v.priority >= 2
+
+  def isWater(v:Viewable):Boolean = v.view.split(" ")(0).equals("WATER")
   
+  def isWaterProof(st:StructureType):Boolean = st match { 
+    case ROAD => true
+    case _ => false}
   def construct(st:StructureType,where:Location):Unit = {
-    if(st==NOTHING){
+    
+    if(st == NOTHING){
       view.printError("Le batiment demande est inconnu de cet univers...")
       return;
     }
-    if(model.getData(where,model.getSizeOf(st)).getViewables.exists(v => isAStructure(v))){
+    if(model.getData(where, model.getSizeOf(st)).getViewables.exists(v => (isAStructure(v) || (!isWaterProof(st) && isWater(v))) )){
       view.printError("Vous ne pouvez pas construire a cet emplacement")
     }else{
-    	if(model.getPlayerMoneyAmout<0)
+    	if(model.getPlayerMoneyAmout < 0)
     	  view.printError("Vous n'avez pas assez d'argent pour construire ce batiment (vous avez deja des dette)")
     	else{
     		model.constructInfrastructureAt(st,where)
