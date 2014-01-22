@@ -6,6 +6,9 @@ Vous pouvez utiliser le fichier jar deja compilé (recommandé) grâce à la com
 
 # scala Simula_V2.0.jar
 
+/!\ L'interface text du jar présente des bugs du a l'encodage.
+
+
 Sinon les fichers du projet se trouvent dans le dossier source_code.
 Il suffit de copier l'intégralité de ce dossier et d'utiliser SBT
 depuis la destination de la copie.
