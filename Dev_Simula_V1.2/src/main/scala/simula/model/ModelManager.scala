@@ -95,6 +95,11 @@ class ModelManager extends ModelInterface {
       case StructureType.PLANT => sum = new Plant(l).price.getValue.toInt
       case StructureType.TRANSPORT => sum = new TransportWays(l).price.getValue.toInt
       case StructureType.STATION => sum = new Station(l).price.getValue.toInt
+      case StructureType.ELECTRICLINE=> sum= new ElectricLine(l).price.getValue.toInt
+      case StructureType.POLICECENTER=> sum= new PoliceCenter(l).price.getValue.toInt
+      case StructureType.POWERPLANT=> sum= new PowerPlant(l).price.getValue.toInt
+      case StructureType.RESIDENCE=> sum= new Residence(l).price.getValue.toInt
+      case StructureType.ROAD=> sum= new Road(l).price.getValue.toInt
       case _ => sum = 0
     }
     playerModelManager.givePlayerAccess.retrieveMoney(sum)
