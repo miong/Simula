@@ -21,12 +21,30 @@ import java.awt.event.WindowEvent
 import java.awt.event.ActionListener
 import java.awt.event.ActionEvent
 import Array._
+import main.scala.simula.SimulaLauncher
 
 /**
  * @author Scarpe
  *
  */
 trait GUIDisplay extends DisplayInterface with ActionListener{
+  
+  
+  val iMickey = getClass().getClassLoader().getResource("images/mickey.png")
+  val iUnknown = getClass().getClassLoader().getResource("images/unknown.png")
+  val icArea = getClass().getClassLoader().getResource("images/cArea.png")
+  val iResidence = getClass().getClassLoader().getResource("images/residence.png")
+  val iRoad = getClass().getClassLoader().getResource("images/road.png")
+  val iPoliceC = getClass().getClassLoader().getResource("images/policecenter.png")
+  val iPowerP = getClass().getClassLoader().getResource("images/powerplant.png")
+  val iElecLine = getClass().getClassLoader().getResource("images/electricline.png")
+  val iArea = getClass().getClassLoader().getResource("images/area.png")
+  val iEarth = getClass().getClassLoader().getResource("images/earth.png")
+  val iWater = getClass().getClassLoader().getResource("images/water.png")
+  val iTree = getClass().getClassLoader().getResource("images/tree.png")
+  val iStone = getClass().getClassLoader().getResource("images/stone.png")
+  val iGrass = getClass().getClassLoader().getResource("images/grass.png")
+  val iDestroy = getClass().getClassLoader().getResource("images/destroy.png")
   
   var win:JFrame = _
   val commandPanel:JPanel = new JPanel();
@@ -35,12 +53,12 @@ trait GUIDisplay extends DisplayInterface with ActionListener{
   mapPanel.setMaximumSize(new Dimension (500,30))
   mapPanel.setMinimumSize(new Dimension (500,30))
   val printPanel:JPanel = new JPanel();
-  val areaB = new JButton(new ImageIcon("./images/cArea.png"));
-  val residenceB = new JButton(new ImageIcon("./images/residence.png"));
-  val roadB = new JButton(new ImageIcon("./images/road.png"));
-  val policeCenterB = new JButton(new ImageIcon("./images/policecenter.png"));
-  val powerPlantB = new JButton(new ImageIcon("./images/powerplant.png"));
-  val electricLineB = new JButton(new ImageIcon("./images/electricline.png"));
+  val areaB = new JButton(new ImageIcon(icArea));
+  val residenceB = new JButton(new ImageIcon(iResidence));
+  val roadB = new JButton(new ImageIcon(iRoad));
+  val policeCenterB = new JButton(new ImageIcon(iPoliceC));
+  val powerPlantB = new JButton(new ImageIcon(iPowerP));
+  val electricLineB = new JButton(new ImageIcon(iElecLine));
   areaB.addActionListener(this);
   residenceB.addActionListener(this);
   roadB.addActionListener(this);
@@ -48,7 +66,7 @@ trait GUIDisplay extends DisplayInterface with ActionListener{
   powerPlantB.addActionListener(this);
   electricLineB.addActionListener(this);
   
-  val destroy = new JButton(new ImageIcon("./images/destroy.png"));
+  val destroy = new JButton(new ImageIcon(iDestroy));
   destroy.addActionListener(this);
   
   def constructWindow(){
@@ -142,46 +160,46 @@ trait GUIDisplay extends DisplayInterface with ActionListener{
       (str.split(" "))(0) match {
 
         case "Network" =>
-          image = new ImageIcon("./images/unknown.png")
+          image = new ImageIcon(iUnknown)
         case "ElectricGrid" =>
-          image = new ImageIcon("./images/unknown.png")
+          image = new ImageIcon(iUnknown)
         case "TransportWays" =>
-          image = new ImageIcon("./images/unknown.png")
+          image = new ImageIcon(iUnknown)
         case "Plant" =>
-          image = new ImageIcon("./images/unknown.png")
+          image = new ImageIcon(iUnknown)
         case "Station" =>
-          image = new ImageIcon("./images/unknown.png")
+          image = new ImageIcon(iUnknown)
         case "TransportCenter" =>
-          image = new ImageIcon("./images/unknown.png")
+          image = new ImageIcon(iUnknown)
         case "Area" =>
-          image = new ImageIcon("./images/area.png")
+          image = new ImageIcon(iArea)
         case "EARTH" =>
-          image = new ImageIcon("./images/earth.png")
+          image = new ImageIcon(iEarth)
         case "WATER" =>
-          image = new ImageIcon("./images/water.png")
+          image = new ImageIcon(iWater)
         case "TREE" =>
-          image = new ImageIcon("./images/tree.png")
+          image = new ImageIcon(iTree)
         case "STONE" =>
-          image = new ImageIcon("./images/stone.png")
+          image = new ImageIcon(iStone)
         case "GRASS" =>
-          image = new ImageIcon("./images/grass.png")
+          image = new ImageIcon(iGrass)
         case "Map" =>
-          image = new ImageIcon("./images/unknown.png")
+          image = new ImageIcon(iUnknown)
         case "PoliceCenter" =>
-          image = new ImageIcon("./images/policecenter.png")
+          image = new ImageIcon(iPoliceC)
         case "Residence" =>
-          image = new ImageIcon("./images/residence.png")
+          image = new ImageIcon(iResidence)
         case "PowerPlant" =>
-          image = new ImageIcon("./images/powerplant.png")
+          image = new ImageIcon(iPowerP)
         case "Road" =>
-          image = new ImageIcon("./images/road.png")
+          image = new ImageIcon(iRoad)
         case "ElectricLine" =>
-          image = new ImageIcon("./images/electricline.png")  
+          image = new ImageIcon(iElecLine)  
         case _ =>
-          image = new ImageIcon("./images/unknown.png")
+          image = new ImageIcon(iUnknown)
       }
     }else{
-    	image = new ImageIcon("./images/unknown.png")
+    	image = new ImageIcon(iUnknown)
     }
     return new Button(image,a,b)
   }
@@ -237,7 +255,7 @@ trait GUIDisplay extends DisplayInterface with ActionListener{
 	introWin.remove(prog);
 	introWin.remove(in1);
 	introWin.pack();
-	val mickey = new ImageIcon("./images/mickey.png");
+	val mickey = new ImageIcon(iMickey);
 	val in2 = new JLabel(mickey);
 	introWin.add(in2);
 	introWin.pack();
