@@ -25,6 +25,11 @@ class InfrastructureBuilder {
       case StructureType.PLANT => return new Plant(l)
       case StructureType.TRANSPORT => return new TransportWays(l)
       case StructureType.STATION => return new Station(l)
+      case StructureType.ROAD => return new Road(l)
+      case StructureType.POLICECENTER => return new PoliceCenter(l) 
+      case StructureType.RESIDENCE => return new Residence(l) 
+      case StructureType.POWERPLANT=> return new PowerPlant(l) 
+      case StructureType.ELECTRICLINE=> return new ElectricLine(l)
       case _ => return new Area(l);
     }
   }

@@ -62,6 +62,11 @@ trait TUIUserListener extends UserListenerInterface{
 		  if(array.length > 2){
 			  array(2) match {
 			  case "AREA" => what = AREA
+			  case "POLICECENTER" => what = POLICECENTER
+			  case "RESIDENCE"=> what = RESIDENCE
+			  case "POWERPLANT" => what=POWERPLANT
+			  case "ROAD"=> what=ROAD
+			  case "ELECTRICLINE"=> what=ELECTRICLINE 
 			  case _ => what = NOTHING
 			  }
 			  return actBuilder.build(actionType,what,where)

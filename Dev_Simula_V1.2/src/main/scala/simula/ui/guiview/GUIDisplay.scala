@@ -36,7 +36,18 @@ trait GUIDisplay extends DisplayInterface with ActionListener{
   mapPanel.setMinimumSize(new Dimension (500,30))
   val printPanel:JPanel = new JPanel();
   val areaB = new JButton(new ImageIcon("./images/cArea.png"));
+  val residenceB = new JButton(new ImageIcon("./images/residence.png"));
+  val roadB = new JButton(new ImageIcon("./images/road.png"));
+  val policeCenterB = new JButton(new ImageIcon("./images/policecenter.png"));
+  val powerPlantB = new JButton(new ImageIcon("./images/powerplant.png"));
+  val electricLineB = new JButton(new ImageIcon("./images/electricline.png"));
   areaB.addActionListener(this);
+  residenceB.addActionListener(this);
+  roadB.addActionListener(this);
+  policeCenterB.addActionListener(this);
+  powerPlantB.addActionListener(this);
+  electricLineB.addActionListener(this);
+  
   val destroy = new JButton(new ImageIcon("./images/destroy.png"));
   destroy.addActionListener(this);
   
@@ -63,6 +74,11 @@ trait GUIDisplay extends DisplayInterface with ActionListener{
 	  
 	  commandPanel.setLayout(new FlowLayout())
 	  commandPanel.add(areaB);
+	  commandPanel.add(residenceB);
+	  commandPanel.add(electricLineB);
+	  commandPanel.add(roadB);
+	  commandPanel.add(powerPlantB);
+	  commandPanel.add(policeCenterB);  
 	  commandPanel.add(destroy);
 	  commandPanel.repaint();
 	  
@@ -151,6 +167,16 @@ trait GUIDisplay extends DisplayInterface with ActionListener{
           image = new ImageIcon("./images/grass.png")
         case "Map" =>
           image = new ImageIcon("./images/unknown.png")
+        case "PoliceCenter" =>
+          image = new ImageIcon("./images/policecenter.png")
+        case "Residence" =>
+          image = new ImageIcon("./images/residence.png")
+        case "PowerPlant" =>
+          image = new ImageIcon("./images/powerplant.png")
+        case "Road" =>
+          image = new ImageIcon("./images/road.png")
+        case "ElectricLine" =>
+          image = new ImageIcon("./images/electricline.png")  
         case _ =>
           image = new ImageIcon("./images/unknown.png")
       }

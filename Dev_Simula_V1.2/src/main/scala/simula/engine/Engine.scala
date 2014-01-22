@@ -39,7 +39,7 @@ class Engine(_model: AbstractModel, _view: AbstractView) extends EngineInterface
   
   def construct(st:StructureType,where:Location):Unit = {
     if(st==NOTHING){
-      view.printError("Le batiment demand� est inconnu de cet univers...")
+      view.printError("Le batiment demande est inconnu de cet univers...")
       return;
     }
     if(model.getData(where,model.getSizeOf(st)).getViewables.exists(v => isAStructure(v))){

@@ -67,6 +67,11 @@ class ModelManager extends ModelInterface {
       case StructureType.PLANT => return new Plant(l).getSize
       case StructureType.TRANSPORT => return new TransportWays(l).getSize
       case StructureType.STATION => return new Station(l).getSize
+      case StructureType.POLICECENTER => return new PoliceCenter(l).getSize
+      case StructureType.RESIDENCE => return new Residence(l).getSize
+      case StructureType.POWERPLANT => return new PowerPlant(l).getSize
+      case StructureType.ROAD=> return new Road(l).getSize
+      case StructureType.ELECTRICLINE=> return new ElectricLine(l).getSize
       case _ => return new Size(0,0)
     }
   }

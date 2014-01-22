@@ -25,6 +25,12 @@ trait GUIUserListener extends UserListenerInterface with ActionListener{
 
   val destroy : JButton;
   val areaB : JButton;
+  val roadB : JButton;
+  val residenceB : JButton;
+  val electricLineB : JButton;
+  val powerPlantB : JButton;
+  val policeCenterB : JButton;
+  
   var actBuilder:ActionBuilder = new ActionBuilder()
   var engine:AbstractEngine
   var where: Location = new Location(0,0)
@@ -39,6 +45,21 @@ trait GUIUserListener extends UserListenerInterface with ActionListener{
     } else if (src == areaB) {
       actionType = CONSTRUCT
       what = AREA
+    } else if (src == roadB) {
+      actionType = CONSTRUCT
+      what = ROAD
+    } else if (src == electricLineB) {
+      actionType = CONSTRUCT
+      what = ELECTRICLINE
+    } else if (src == residenceB) {
+      actionType = CONSTRUCT
+      what = RESIDENCE
+    } else if (src == powerPlantB) {
+      actionType = CONSTRUCT
+      what = POWERPLANT
+    } else if (src == policeCenterB) {
+      actionType = CONSTRUCT
+      what = POLICECENTER
     } else if (src.isInstanceOf[Button]) {
       val but:Button = src.asInstanceOf[Button]
       if(actionType == NOA){

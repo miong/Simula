@@ -18,7 +18,7 @@ import main.scala.simula.model.player._
 class PlayerModelManager {
 
   val pBuilder = new PlayerBuilder()
-  val initialAmountOfMoney:Integer = 100
+  val initialAmountOfMoney:Integer = 1000
   var playerAccess: PlayerAccess = pBuilder.build(initialAmountOfMoney)
 
   def givePlayerAccess(): PlayerAccess = {

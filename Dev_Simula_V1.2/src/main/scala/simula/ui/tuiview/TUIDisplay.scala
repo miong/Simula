@@ -228,6 +228,16 @@ trait TUIDisplay extends DisplayInterface {
           writeGreenShape(";")
         case "Map" =>
           return "M"
+        case "PoliceCenter" =>
+          return "PC"
+        case "Residence" =>
+          return "R"
+        case "PowerPlant" =>
+          return "PW"
+        case "Road" =>
+          return "*"
+        case "ElectricLine" =>
+          return "k"   
         case _ =>
           //println(str)
           writeBlackShape("U");

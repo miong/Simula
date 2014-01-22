@@ -18,6 +18,13 @@ import main.scala.simula.common._
 
 abstract class Network(l: Location) extends Infrastructure(l) {
   var flux:Flux = new Flux
+  
+  price.setValue(10)
+  this.population.setMaxCapacity(0)
+  this.size=new Size(1,1)
+  this.polution.setValue(2)
+  this.criminality.setValue(3)
+  
   def view: String = {
     return "Network"
   }
